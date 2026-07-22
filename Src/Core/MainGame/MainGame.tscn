@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://die48pt43kpam"]
+
+[ext_resource type="Script" uid="uid://c0c6avwyq0wob" path="res://Src/Core/MainGame/main_game.gd" id="1_vw7tv"]
+[ext_resource type="PackedScene" uid="uid://bqtyecw1bcdxa" path="res://Src/Gameplay/Player/Player.tscn" id="2_ludp0"]
+
+[node name="MainGame" type="Node" unique_id=1014377801]
+process_mode = 3
+script = ExtResource("1_vw7tv")
+player = ExtResource("2_ludp0")
+
+[node name="Systems" type="Node" parent="." unique_id=609838860]
+process_mode = 1
+
+[node name="World" type="Node" parent="." unique_id=1346114624]
+process_mode = 1
+
+[node name="LevelRoot" type="Node" parent="World" unique_id=2007276902]
+
+[node name="EntityRoot" type="Node" parent="World" unique_id=1776142941]
+
+[node name="EffectRoot" type="Node" parent="World" unique_id=498982328]
+
+[node name="HudLayer" type="CanvasLayer" parent="." unique_id=972520075]
+process_mode = 1
+layer = 100
+
+[node name="HudRoot" type="Control" parent="HudLayer" unique_id=2114980731]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PauseLayer" type="CanvasLayer" parent="." unique_id=156184588]
+process_mode = 2
+layer = 200
+
+[node name="PauseRoot" type="Control" parent="PauseLayer" unique_id=1722666995]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TransitionLayer" type="CanvasLayer" parent="." unique_id=798602876]
+process_mode = 3
+layer = 300
+
+[node name="TransitionRoot" type="Control" parent="TransitionLayer" unique_id=1714769533]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="DebugLayer" type="CanvasLayer" parent="." unique_id=1627534542]
+process_mode = 3
+layer = 400
+
+[node name="DebugRoot" type="Control" parent="DebugLayer" unique_id=30148925]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0

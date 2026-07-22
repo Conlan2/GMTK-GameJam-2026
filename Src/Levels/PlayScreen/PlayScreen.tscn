@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dtr6pr2oqnui"]
+
+[ext_resource type="Script" uid="uid://cy78ge3exbgxj" path="res://Src/Levels/PlayScreen/play_screen.gd" id="1_3qknf"]
+
+[node name="PlayScreen" type="Node3D" unique_id=179326684]
+script = ExtResource("1_3qknf")

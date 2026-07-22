@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b8ibmli73b5vb"]
+
+[ext_resource type="Texture2D" uid="uid://bd1qopdbflv68" path="res://Assets/Radar/PNG/RadarBackground.png" id="1_hbnbh"]
+
+[node name="Radar" type="Node2D" unique_id=1130873436]
+
+[node name="Background" type="Node" parent="." unique_id=235417644]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1194131031]
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("1_hbnbh")
