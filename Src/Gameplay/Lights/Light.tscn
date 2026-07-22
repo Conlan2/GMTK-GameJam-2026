@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cwkqg7b278d5s"]
+
+[ext_resource type="Script" uid="uid://bnx2x3dj0wbtb" path="res://Src/Gameplay/Lights/light.gd" id="1_t2r12"]
+
+[node name="SpotLight3D" type="SpotLight3D" unique_id=1731974892]
+light_color = Color(1, 0.83, 0.83, 1)
+spot_range = 14.586
+script = ExtResource("1_t2r12")

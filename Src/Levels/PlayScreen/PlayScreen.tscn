@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://c8a6eevj2lpau" path="res://Src/Gameplay/Geometry/Walls/Walls.tscn" id="3_rf1ey"]
 [ext_resource type="PackedScene" uid="uid://blclublamwu4n" path="res://Src/Gameplay/Player/Spawner/PlayerSpawner.tscn" id="4_7opcy"]
 [ext_resource type="PackedScene" uid="uid://ddaip7h0veyd5" path="res://Src/Gameplay/Geometry/NukeDesk/NukeDesk.tscn" id="4_f8yna"]
+[ext_resource type="PackedScene" uid="uid://cwkqg7b278d5s" path="res://Src/Gameplay/Lights/Light.tscn" id="6_ib1hx"]
 [ext_resource type="PackedScene" uid="uid://bq2avqe351rnd" path="res://Src/Gameplay/Camera/CameraPositions/CameraPositions.tscn" id="6_yrc57"]
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 
@@ -46,15 +47,10 @@ metadata/_edit_lock_ = true
 
 [node name="Lights" type="Node" parent="." unique_id=265775821]
 
-[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=468107290]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9315758, -0.5449064)
-light_color = Color(0.65, 0.4116667, 0.078, 1)
-light_energy = 1.793
-omni_range = 84.465
-omni_attenuation = 0.255
-metadata/_edit_lock_ = true
-
 [node name="Interactable" type="Node" parent="." unique_id=1431242840]
+
+[node name="SpotLight3D" parent="Interactable" unique_id=1731974892 instance=ExtResource("6_ib1hx")]
+transform = Transform3D(1, 0, 0, 0, 0.2734053, 0.961899, 0, -0.961899, 0.2734053, 0, 4.179714, 0)
 
 [node name="Spawners" type="Node" parent="." unique_id=831314474]
 
