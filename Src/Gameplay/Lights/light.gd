@@ -1,7 +1,8 @@
 extends SpotLight3D
 
-
-const FLICKER_STRENGTH: float = 0.2
+@export var base_light_energy = 1.0
+@export var flicker_strength: float = 0.2
+@export var flicker_interval: float = 1.0
 
 func _process(delta: float) -> void:
-	light_energy = 1.0 + FLICKER_STRENGTH * sin(Time.get_ticks_msec())
+	light_energy = base_light_energy + flicker_strength * sin(Time.get_ticks_msec() / flicker_interval)

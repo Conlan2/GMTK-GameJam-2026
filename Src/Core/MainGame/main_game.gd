@@ -95,6 +95,7 @@ func _setup_level_camera() -> void:
 		return
 		
 	entity_root.add_child(camera)
+	CameraMananger.camera = camera
 		
 	
 func _process(delta: float) -> void:

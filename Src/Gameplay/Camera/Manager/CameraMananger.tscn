@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://br4gu7jxxlx3m"]
+
+[ext_resource type="Script" uid="uid://siulvdceaund" path="res://Src/Gameplay/Camera/Manager/camera_mananger.gd" id="1_2yroy"]
+
+[node name="CameraMananger" type="Node" unique_id=143396412 node_paths=PackedStringArray("move_timer")]
+script = ExtResource("1_2yroy")
+move_timer = NodePath("MoveTimer")
+
+[node name="MoveTimer" type="Timer" parent="." unique_id=319075322]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="MoveTimer" to="." method="_on_move_timer_timeout"]

@@ -9,14 +9,19 @@
 [ext_resource type="PackedScene" uid="uid://cwkqg7b278d5s" path="res://Src/Gameplay/Lights/Light.tscn" id="6_ib1hx"]
 [ext_resource type="PackedScene" uid="uid://bq2avqe351rnd" path="res://Src/Gameplay/Camera/CameraPositions/CameraPositions.tscn" id="6_yrc57"]
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
+[ext_resource type="Script" uid="uid://cd0gyx0vwbdya" path="res://Src/Levels/PlayScreen/camera_positions.gd" id="8_thj8l"]
 
-[node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner")]
+[node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
 player_spawner = NodePath("Spawners/PlayerSpawner")
-camera_spawner = NodePath("CameraPositions/RadarPosition")
+camera_spawner = NodePath("CameraPositions/CenterPosition")
 Camera_Scene = ExtResource("2_vmich")
+Camera_Position_Root = NodePath("CameraPositions")
 
 [node name="Geometry" type="Node" parent="." unique_id=279591163]
+
+[node name="CrtMonitor" parent="Geometry" unique_id=954634751 instance=ExtResource("8_dki3i")]
+transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 0.63982296, 1.1302415, -2.1954815)
 
 [node name="NukeDesk" parent="Geometry" unique_id=2067194689 instance=ExtResource("4_f8yna")]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0252797, 0.12881589, -2.0114841)
@@ -50,7 +55,10 @@ metadata/_edit_lock_ = true
 [node name="Interactable" type="Node" parent="." unique_id=1431242840]
 
 [node name="SpotLight3D" parent="Interactable" unique_id=1731974892 instance=ExtResource("6_ib1hx")]
-transform = Transform3D(1, 0, 0, 0, 0.2734053, 0.961899, 0, -0.961899, 0.2734053, 0, 4.179714, 0)
+transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
+base_light_energy = 4.0
+flicker_strength = 2.0
+flicker_interval = 4.0
 
 [node name="Spawners" type="Node" parent="." unique_id=831314474]
 
@@ -58,15 +66,20 @@ transform = Transform3D(1, 0, 0, 0, 0.2734053, 0.961899, 0, -0.961899, 0.2734053
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2203411, 1.2693235)
 
 [node name="CameraPositions" type="Node" parent="." unique_id=817002696]
+script = ExtResource("8_thj8l")
 
 [node name="CenterPosition" parent="CameraPositions" unique_id=206721357 instance=ExtResource("6_yrc57")]
-transform = Transform3D(1, 0, 0, 0, 0.819152, 0.5735764, 0, -0.5735764, 0.819152, -0.007993728, 1.5079839, -1.2448424)
+transform = Transform3D(1, 0, 0, 0, 0.93969256, 0.3420201, 0, -0.3420201, 0.93969256, -0.22481588, 1.5079839, -1.0082167)
+position_name = "Center"
+left_pos_name = "Back"
+right_pos_name = "Radar"
 
 [node name="RadarPosition" parent="CameraPositions" unique_id=300848391 instance=ExtResource("6_yrc57")]
 transform = Transform3D(1, 0, 0, 0, 0.93969256, 0.3420201, 0, -0.3420201, 0.93969256, 0.635, 1.55, -1.261)
+position_name = "Radar"
+left_pos_name = "Center"
 
 [node name="BackPosition" parent="CameraPositions" unique_id=294651067 instance=ExtResource("6_yrc57")]
 transform = Transform3D(-1, -5.0143644e-08, 7.161254e-08, 0, 0.819152, 0.5735764, -8.742278e-08, 0.5735764, -0.819152, -0.007993728, 1.4549211, -1.034884)
-
-[node name="CrtMonitor" parent="." unique_id=954634751 instance=ExtResource("8_dki3i")]
-transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 0.63982296, 1.1302415, -2.1954815)
+position_name = "Back"
+right_pos_name = "Center"
