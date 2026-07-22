@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b0ykdejhsh35m"]
+
+[ext_resource type="PackedScene" uid="uid://85kyiyq6d6lu" path="res://Src/Gameplay/CRT-Monitor/CRT-display-imported.tscn" id="1_ifsfm"]
+
+[node name="CrtMonitor" type="StaticBody3D" unique_id=954634751]
+
+[node name="CrtDisplay" parent="." unique_id=909907278 instance=ExtResource("1_ifsfm")]

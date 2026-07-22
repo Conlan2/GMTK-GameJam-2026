@@ -7,11 +7,12 @@
 [ext_resource type="PackedScene" uid="uid://blclublamwu4n" path="res://Src/Gameplay/Player/Spawner/PlayerSpawner.tscn" id="4_7opcy"]
 [ext_resource type="PackedScene" uid="uid://ddaip7h0veyd5" path="res://Src/Gameplay/Geometry/NukeDesk/NukeDesk.tscn" id="4_f8yna"]
 [ext_resource type="PackedScene" uid="uid://bq2avqe351rnd" path="res://Src/Gameplay/Camera/CameraPositions/CameraPositions.tscn" id="6_yrc57"]
+[ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner")]
 script = ExtResource("1_3qknf")
 player_spawner = NodePath("Spawners/PlayerSpawner")
-camera_spawner = NodePath("CameraPositions/BackPosition")
+camera_spawner = NodePath("CameraPositions/RadarPosition")
 Camera_Scene = ExtResource("2_vmich")
 
 [node name="Geometry" type="Node" parent="." unique_id=279591163]
@@ -66,7 +67,10 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2203411, 1.2693235)
 transform = Transform3D(1, 0, 0, 0, 0.819152, 0.5735764, 0, -0.5735764, 0.819152, -0.007993728, 1.5079839, -1.2448424)
 
 [node name="RadarPosition" parent="CameraPositions" unique_id=300848391 instance=ExtResource("6_yrc57")]
-transform = Transform3D(1, 0, 0, 0, 0.9993908, 0.03489949, 0, -0.03489949, 0.9993908, 0.63478637, 1.1298867, -1.2611797)
+transform = Transform3D(1, 0, 0, 0, 0.93969256, 0.3420201, 0, -0.3420201, 0.93969256, 0.635, 1.55, -1.261)
 
 [node name="BackPosition" parent="CameraPositions" unique_id=294651067 instance=ExtResource("6_yrc57")]
 transform = Transform3D(-1, -5.0143644e-08, 7.161254e-08, 0, 0.819152, 0.5735764, -8.742278e-08, 0.5735764, -0.819152, -0.007993728, 1.4549211, -1.034884)
+
+[node name="CrtMonitor" parent="." unique_id=954634751 instance=ExtResource("8_dki3i")]
+transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 0.63982296, 1.1302415, -2.1954815)

@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://85kyiyq6d6lu"]
+
+[ext_resource type="PackedScene" uid="uid://p5e05h3atxxr" path="res://Assets/Radar/Blender/CrtDisplay.glb" id="1_ejw05"]
+[ext_resource type="PackedScene" uid="uid://ru5tufwkgryn" path="res://Src/Gameplay/Radar/RadarWorld/RadarWorld.tscn" id="2_5ygka"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_5ygka"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sfknv"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_5ygka")
+metallic_specular = 0.21
+roughness = 0.55
+emission = Color(0.00088031596, 0.056453004, 0, 1)
+uv1_scale = Vector3(4.4, 4.4, 4.4)
+uv1_offset = Vector3(0.42, 0.85, 0)
+
+[sub_resource type="World3D" id="World3D_5ygka"]
+
+[node name="CrtDisplay" unique_id=1491291621 instance=ExtResource("1_ejw05")]
+
+[node name="Cube" parent="." index="0" unique_id=1087042042]
+surface_material_override/1 = SubResource("StandardMaterial3D_sfknv")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="." index="1" unique_id=885505607]
+visible = false
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SubViewport" type="SubViewport" parent="." index="2" unique_id=1915438747]
+world_3d = SubResource("World3D_5ygka")
+handle_input_locally = false
+size = Vector2i(1000, 1000)
+render_target_update_mode = 4
+
+[node name="RadarWorld" parent="SubViewport" index="0" unique_id=1989488353 instance=ExtResource("2_5ygka")]
+position = Vector2(500, 500)

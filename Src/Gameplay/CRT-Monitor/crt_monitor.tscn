@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dfas4gwap24el"]
+
+[ext_resource type="PackedScene" uid="uid://dmcf6nt3rv7pp" path="res://Assets/Radar/Blender/CrtMonitor.glb" id="1_k1brs"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_cersw"]
+viewport_path = NodePath("Monitor/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_k1brs"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_cersw")
+uv1_offset = Vector3(100, 100, 100)
+
+[node name="CrtMonitor" unique_id=698520260 instance=ExtResource("1_k1brs")]
+
+[node name="Monitor" parent="." index="0" unique_id=683924772]
+surface_material_override/0 = SubResource("StandardMaterial3D_k1brs")

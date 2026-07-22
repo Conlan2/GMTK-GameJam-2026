@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://ru5tufwkgryn"]
+
+[ext_resource type="PackedScene" uid="uid://b8ibmli73b5vb" path="res://Src/Gameplay/Radar/Radar.tscn" id="1_62u8d"]
+
+[node name="RadarWorld" type="Node2D" unique_id=1989488353]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=923470823]
+position = Vector2(1, 1)
+limit_enabled = false
+
+[node name="Radar" parent="." unique_id=1130873436 instance=ExtResource("1_62u8d")]

@@ -6,7 +6,7 @@
 
 [node name="Radar" type="Node2D" unique_id=1130873436]
 
-[node name="Background" type="Node" parent="." unique_id=235417644]
+[node name="Background" type="Node2D" parent="." unique_id=1276611452]
 
 [node name="Background" type="Sprite2D" parent="Background" unique_id=1194131031]
 z_index = -5
@@ -18,5 +18,3 @@ texture = ExtResource("2_nufh0")
 
 [node name="RadarDetectionLine" parent="." unique_id=1866728889 instance=ExtResource("3_bwd16")]
 z_index = 1
-
-[node name="DEBUGCAMERAs" type="Camera2D" parent="." unique_id=195932544]
