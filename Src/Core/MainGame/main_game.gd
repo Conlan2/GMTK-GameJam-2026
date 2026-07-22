@@ -24,7 +24,7 @@ var _current_level: BaseLevel = null
 
 
 func _ready() -> void:
-	init_player(PLAYER)
+	#init_player(PLAYER)
 	load_level(START_SCENE)
 
 
@@ -84,7 +84,7 @@ func _place_player_at_spawn() -> void:
 	player.global_position = _current_level.get_default_player_spawn()
 	
 func _setup_level_camera() -> void:
-	if !is_instance_valid(player) or !is_instance_valid(_current_level):
+	if !is_instance_valid(_current_level):
 		push_error("Level or Player not valid to create Camera")
 		return
 		

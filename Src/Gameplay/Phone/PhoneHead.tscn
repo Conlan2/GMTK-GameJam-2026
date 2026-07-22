@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://hl1xedpgouq6"]
+
+[ext_resource type="PackedScene" uid="uid://brr8h3d374xnx" path="res://Assets/LandLine/Base/Phone.glb" id="1_ql7nk"]
+
+[node name="PhoneHead" type="Node3D" unique_id=1811615914]
+
+[node name="Phone2" parent="." unique_id=2070346812 instance=ExtResource("1_ql7nk")]

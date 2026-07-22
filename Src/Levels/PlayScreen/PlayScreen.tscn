@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://bq2avqe351rnd" path="res://Src/Gameplay/Camera/CameraPositions/CameraPositions.tscn" id="6_yrc57"]
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 [ext_resource type="Script" uid="uid://cd0gyx0vwbdya" path="res://Src/Levels/PlayScreen/camera_positions.gd" id="8_thj8l"]
+[ext_resource type="PackedScene" uid="uid://hl1xedpgouq6" path="res://Src/Gameplay/Phone/PhoneHead.tscn" id="9_hqfgc"]
+[ext_resource type="PackedScene" uid="uid://m2pktt77w64v" path="res://Src/Gameplay/Phone/PhoneBase.tscn" id="11_bsaxd"]
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
@@ -50,15 +52,21 @@ metadata/_edit_lock_ = true
 transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 0, 0, 0, 1, 0, 5.429694, 0)
 metadata/_edit_lock_ = true
 
+[node name="PhoneBase" parent="Geometry" unique_id=1629503737 instance=ExtResource("11_bsaxd")]
+transform = Transform3D(0.2, 0, 0, 0, 0.16463916, -0.11355151, 0, 0.11355151, 0.16463916, 0.1195447, 1.2416551, -2.1693242)
+
 [node name="Lights" type="Node" parent="." unique_id=265775821]
 
-[node name="Interactable" type="Node" parent="." unique_id=1431242840]
-
-[node name="SpotLight3D" parent="Interactable" unique_id=1731974892 instance=ExtResource("6_ib1hx")]
+[node name="SpotLight3D" parent="Lights" unique_id=1731974892 instance=ExtResource("6_ib1hx")]
 transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
 base_light_energy = 4.0
 flicker_strength = 2.0
 flicker_interval = 4.0
+
+[node name="Interactable" type="Node" parent="." unique_id=1431242840]
+
+[node name="PhoneHead" parent="Interactable" unique_id=1811615914 instance=ExtResource("9_hqfgc")]
+transform = Transform3D(0.18, 0, 0, 0, 0.14816456, -0.10221188, 0, 0.10221188, 0.14816456, 0.12, 1.221313, -2.1848211)
 
 [node name="Spawners" type="Node" parent="." unique_id=831314474]
 
