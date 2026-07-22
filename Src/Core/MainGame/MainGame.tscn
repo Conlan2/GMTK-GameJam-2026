@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://die48pt43kpam"]
 
 [ext_resource type="Script" uid="uid://c0c6avwyq0wob" path="res://Src/Core/MainGame/main_game.gd" id="1_vw7tv"]
-[ext_resource type="PackedScene" uid="uid://bqtyecw1bcdxa" path="res://Src/Gameplay/Player/Player.tscn" id="2_ludp0"]
 
 [node name="MainGame" type="Node" unique_id=1014377801]
 process_mode = 3
 script = ExtResource("1_vw7tv")
-player = ExtResource("2_ludp0")
 
 [node name="Systems" type="Node" parent="." unique_id=609838860]
 process_mode = 1

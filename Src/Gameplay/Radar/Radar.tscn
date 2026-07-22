@@ -1,11 +1,22 @@
 [gd_scene format=3 uid="uid://b8ibmli73b5vb"]
 
 [ext_resource type="Texture2D" uid="uid://bd1qopdbflv68" path="res://Assets/Radar/PNG/RadarBackground.png" id="1_hbnbh"]
+[ext_resource type="Texture2D" uid="uid://btfquljm28y1q" path="res://Assets/Radar/PNG/RadarLines.png" id="2_nufh0"]
+[ext_resource type="PackedScene" uid="uid://dxpsanio6m2tr" path="res://Src/Gameplay/Radar/RadarDetectionLine/RadarDetectionLine.tscn" id="3_bwd16"]
 
 [node name="Radar" type="Node2D" unique_id=1130873436]
 
 [node name="Background" type="Node" parent="." unique_id=235417644]
 
-[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=1194131031]
-scale = Vector2(0.4, 0.4)
+[node name="Background" type="Sprite2D" parent="Background" unique_id=1194131031]
+z_index = -5
 texture = ExtResource("1_hbnbh")
+
+[node name="Sprite2D" type="Sprite2D" parent="Background" unique_id=869938896]
+z_index = -3
+texture = ExtResource("2_nufh0")
+
+[node name="RadarDetectionLine" parent="." unique_id=1866728889 instance=ExtResource("3_bwd16")]
+z_index = 1
+
+[node name="DEBUGCAMERAs" type="Camera2D" parent="." unique_id=195932544]

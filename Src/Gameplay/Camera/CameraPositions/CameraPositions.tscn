@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bq2avqe351rnd"]
+
+[ext_resource type="Script" uid="uid://ddk545gjvnjsa" path="res://Src/Gameplay/Camera/CameraPositions/camera_positions.gd" id="1_bf8sc"]
+
+[node name="CameraPosition" type="Marker3D" unique_id=206721357]
+script = ExtResource("1_bf8sc")

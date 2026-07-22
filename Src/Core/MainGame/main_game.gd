@@ -4,9 +4,11 @@ extends Node
 
 
 
-@export var player: PackedScene
-@export var start_scene: PackedScene
+@export var PLAYER: String = "uid://bqtyecw1bcdxa"
+@export var START_SCENE: String = "uid://dtr6pr2oqnui"
 
+var player: Node = null
+var camera: Camera3D = null
 var _current_level: BaseLevel = null
 
 # World Root Nodes
@@ -22,20 +24,25 @@ var _current_level: BaseLevel = null
 
 
 func _ready() -> void:
-	init_player()
+	init_player(PLAYER)
+	load_level(START_SCENE)
 
 
-func init_player() -> void:
-	if !is_instance_valid(player) or !player.can_instantiate():
+func init_player(start_player_uid: String) -> void:
+	var player_packed : PackedScene =\
+		ResourceLoader.load(start_player_uid, "PackedScene") as PackedScene
+	
+	
+	if !is_instance_valid(player_packed) or !player_packed.can_instantiate():
 		push_error("Player instance is not valid, player initiation failed.")
 		return
 		
-	var player_scene: Player = player.instantiate() as Player
-	if !is_instance_valid(player_scene):
+	player = player_packed.instantiate() as Player
+	if !is_instance_valid(player):
 		push_error("Player instance was created, but is not valid.")
 		return
 		
-	entity_root.add_child(player_scene)
+	entity_root.add_child(player)
 	
 func load_level(level_scene: String) -> void:
 	_defered_load_level.call_deferred(level_scene)
@@ -62,7 +69,7 @@ func _defered_load_level(packed_scene_uid: String) -> void:
 		
 	level_root.add_child(_current_level)
 	await get_tree().process_frame
-	_place_player_at_spawn()
+	#_place_player_at_spawn()
 	_setup_level_camera()
 	
 func _place_player_at_spawn() -> void:
@@ -82,12 +89,13 @@ func _setup_level_camera() -> void:
 		return
 		
 		
-	var camera: Node = _current_level.get_player_camera()
+	camera = _current_level.get_player_camera()
 	if !is_instance_valid(camera):
 		push_error("Created Camera not valid for level.")
 		return
 		
-	camera.target = player
+	entity_root.add_child(camera)
+		
 	
 func _process(delta: float) -> void:
 	pass

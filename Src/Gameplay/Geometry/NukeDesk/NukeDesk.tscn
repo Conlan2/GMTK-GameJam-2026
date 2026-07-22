@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ddaip7h0veyd5"]
+
+[ext_resource type="PackedScene" uid="uid://dqqr2bqqp2oye" path="res://Assets/Desk/NukeDesk.glb" id="1_vt2qu"]
+
+[node name="NukeDesk" type="StaticBody3D" unique_id=2067194689]
+
+[node name="NukeDesk" parent="." unique_id=494878929 instance=ExtResource("1_vt2qu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4814565, 0, 0)

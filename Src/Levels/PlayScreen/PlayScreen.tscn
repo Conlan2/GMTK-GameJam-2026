@@ -1,6 +1,72 @@
 [gd_scene format=3 uid="uid://dtr6pr2oqnui"]
 
 [ext_resource type="Script" uid="uid://cy78ge3exbgxj" path="res://Src/Levels/PlayScreen/play_screen.gd" id="1_3qknf"]
+[ext_resource type="PackedScene" uid="uid://dg1addw5efpc8" path="res://Src/Gameplay/Geometry/Floor/Floor.tscn" id="2_m1ckf"]
+[ext_resource type="PackedScene" uid="uid://dyvm1pqqngnmv" path="res://Src/Gameplay/Camera/Camera.tscn" id="2_vmich"]
+[ext_resource type="PackedScene" uid="uid://c8a6eevj2lpau" path="res://Src/Gameplay/Geometry/Walls/Walls.tscn" id="3_rf1ey"]
+[ext_resource type="PackedScene" uid="uid://blclublamwu4n" path="res://Src/Gameplay/Player/Spawner/PlayerSpawner.tscn" id="4_7opcy"]
+[ext_resource type="PackedScene" uid="uid://ddaip7h0veyd5" path="res://Src/Gameplay/Geometry/NukeDesk/NukeDesk.tscn" id="4_f8yna"]
+[ext_resource type="PackedScene" uid="uid://bq2avqe351rnd" path="res://Src/Gameplay/Camera/CameraPositions/CameraPositions.tscn" id="6_yrc57"]
 
-[node name="PlayScreen" type="Node3D" unique_id=179326684]
+[node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner")]
 script = ExtResource("1_3qknf")
+player_spawner = NodePath("Spawners/PlayerSpawner")
+camera_spawner = NodePath("CameraPositions/BackPosition")
+Camera_Scene = ExtResource("2_vmich")
+
+[node name="Geometry" type="Node" parent="." unique_id=279591163]
+
+[node name="NukeDesk" parent="Geometry" unique_id=2067194689 instance=ExtResource("4_f8yna")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0.0252797, 0.12881589, -2.0114841)
+metadata/_edit_lock_ = true
+
+[node name="Floor" parent="Geometry" unique_id=372137077 instance=ExtResource("2_m1ckf")]
+metadata/_edit_lock_ = true
+
+[node name="Wall" parent="Geometry" unique_id=913896794 instance=ExtResource("3_rf1ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.9827857)
+metadata/_edit_lock_ = true
+
+[node name="Wall3" parent="Geometry" unique_id=1150688375 instance=ExtResource("3_rf1ey")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9834366)
+metadata/_edit_lock_ = true
+
+[node name="Wall2" parent="Geometry" unique_id=620732142 instance=ExtResource("3_rf1ey")]
+transform = Transform3D(0.00054104725, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 0.00054104725, -2.483111, 0, -0.50101805)
+metadata/_edit_lock_ = true
+
+[node name="Wall4" parent="Geometry" unique_id=606340290 instance=ExtResource("3_rf1ey")]
+transform = Transform3D(0.00054104725, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 0.00054104725, 2.483111, 0, -0.49833107)
+metadata/_edit_lock_ = true
+
+[node name="Roof" parent="Geometry" unique_id=822601176 instance=ExtResource("2_m1ckf")]
+transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 0, 0, 0, 1, 0, 5.429694, 0)
+metadata/_edit_lock_ = true
+
+[node name="Lights" type="Node" parent="." unique_id=265775821]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="Lights" unique_id=468107290]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.9315758, -0.5449064)
+light_color = Color(0.65, 0.4116667, 0.078, 1)
+light_energy = 1.793
+omni_range = 84.465
+omni_attenuation = 0.255
+metadata/_edit_lock_ = true
+
+[node name="Interactable" type="Node" parent="." unique_id=1431242840]
+
+[node name="Spawners" type="Node" parent="." unique_id=831314474]
+
+[node name="PlayerSpawner" parent="Spawners" unique_id=562050966 instance=ExtResource("4_7opcy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2203411, 1.2693235)
+
+[node name="CameraPositions" type="Node" parent="." unique_id=817002696]
+
+[node name="CenterPosition" parent="CameraPositions" unique_id=206721357 instance=ExtResource("6_yrc57")]
+transform = Transform3D(1, 0, 0, 0, 0.819152, 0.5735764, 0, -0.5735764, 0.819152, -0.007993728, 1.5079839, -1.2448424)
+
+[node name="RadarPosition" parent="CameraPositions" unique_id=300848391 instance=ExtResource("6_yrc57")]
+transform = Transform3D(1, 0, 0, 0, 0.9993908, 0.03489949, 0, -0.03489949, 0.9993908, 0.63478637, 1.1298867, -1.2611797)
+
+[node name="BackPosition" parent="CameraPositions" unique_id=294651067 instance=ExtResource("6_yrc57")]
+transform = Transform3D(-1, -5.0143644e-08, 7.161254e-08, 0, 0.819152, 0.5735764, -8.742278e-08, 0.5735764, -0.819152, -0.007993728, 1.4549211, -1.034884)

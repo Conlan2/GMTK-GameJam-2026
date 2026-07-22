@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://blclublamwu4n"]
+
+[ext_resource type="Script" uid="uid://cin5o8wnjm8y0" path="res://Src/Gameplay/Player/Spawner/player_spawner.gd" id="1_nil72"]
+
+[node name="PlayerSpawner" type="Marker3D" unique_id=562050966]
+script = ExtResource("1_nil72")
