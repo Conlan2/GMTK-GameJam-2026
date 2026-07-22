@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dxpsanio6m2tr"]
+
+[ext_resource type="Texture2D" uid="uid://denp0xqlvnuqk" path="res://Assets/Radar/PNG/RadarDetectionLine.png" id="1_k6hps"]
+[ext_resource type="Script" uid="uid://bjqqvdj8h5444" path="res://Src/Gameplay/Radar/RadarDetectionLine/radar_detection_line.gd" id="1_wi7w5"]
+[ext_resource type="PackedScene" uid="uid://bch2eeq3rvkpo" path="res://Src/Gameplay/Radar/RadarFadeLine/RadarFadeLine.tscn" id="2_pd00v"]
+
+[node name="RadarDetectionLine" type="Node2D" unique_id=1866728889]
+script = ExtResource("1_wi7w5")
+fadeout_packed = ExtResource("2_pd00v")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=12562828]
+texture = ExtResource("1_k6hps")

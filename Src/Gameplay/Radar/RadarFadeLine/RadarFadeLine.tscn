@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bch2eeq3rvkpo"]
+
+[ext_resource type="Script" uid="uid://dgdee37crubyj" path="res://Src/Gameplay/Radar/RadarFadeLine/radar_fade_line.gd" id="1_ynih7"]
+[ext_resource type="Texture2D" uid="uid://denp0xqlvnuqk" path="res://Assets/Radar/PNG/RadarDetectionLine.png" id="2_3ejxn"]
+
+[node name="RadarFadeLine" type="Node2D" unique_id=434925934]
+script = ExtResource("1_ynih7")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=374039300]
+texture = ExtResource("2_3ejxn")
