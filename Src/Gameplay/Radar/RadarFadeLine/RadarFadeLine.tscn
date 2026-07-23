@@ -7,4 +7,5 @@
 script = ExtResource("1_ynih7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=374039300]
+rotation = -1.5707964
 texture = ExtResource("2_3ejxn")

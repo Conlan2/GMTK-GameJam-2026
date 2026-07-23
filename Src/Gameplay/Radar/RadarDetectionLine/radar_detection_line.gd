@@ -2,14 +2,59 @@ extends Node2D
 
 
 
+enum RadarMode {
+	NO_LOCK,
+	LOCKED
+}
+
 const ROTATION_SPEED: float = 1
 const FADE_OUT_INTERVAL: int = 1
 
 @export var fadeout_packed: PackedScene
 
+var current_radar_mode: RadarMode = RadarMode.LOCKED
+var radar_lock_angle: float = 270
+var _rotate_left: bool = true
+
 func _physics_process(delta: float) -> void:
-	rotate(ROTATION_SPEED * delta)
+
+	handle_rotation(delta)
 	_create_fade_out()
+	
+
+	
+func handle_rotation(delta: float) -> void:
+
+	
+	
+	if current_radar_mode == RadarMode.NO_LOCK:
+		rotate(ROTATION_SPEED * delta)
+	else:
+		
+		var true_speed: float = ROTATION_SPEED * delta * 2
+
+		
+
+		
+		var target_angle = radar_lock_angle
+		var num_circles = int(rotation_degrees - int(rotation_degrees) % 360) / 360
+		target_angle = target_angle + 360 * num_circles
+		if target_angle - 20 > rotation_degrees:
+			_rotate_left = false
+			true_speed = true_speed * 2
+			
+		if target_angle + 20 < rotation_degrees:
+			_rotate_left = true
+			true_speed = true_speed * 2
+
+			
+		if _rotate_left:
+			rotate(-true_speed)
+		else:
+			rotate(true_speed)
+			
+		
+				
 	
 func _create_fade_out() -> void:
 	if Engine.get_process_frames() % FADE_OUT_INTERVAL != 0:

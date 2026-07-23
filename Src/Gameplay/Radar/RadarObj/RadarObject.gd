@@ -28,6 +28,9 @@ func _ready() -> void:
 	
 func _physics_process(delta: float) -> void:
 	position += _movement_vector * delta
+	
+func _process(delta: float) -> void:
+	check_special_properties()
 
 func create_radar_image() -> void:
 	if !is_instance_valid(packed_display_object) or !packed_display_object.can_instantiate():
@@ -47,4 +50,7 @@ func create_radar_image() -> void:
 	display_object.position = position
 	
 	get_parent().add_child(display_object)
+	
+func check_special_properties() -> void:
+	pass
 	

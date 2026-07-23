@@ -8,6 +8,7 @@ size = Vector2(2, 2)
 
 [node name="RadarObject" type="Area2D" unique_id=650020510]
 script = ExtResource("1_uguc5")
+movement_speed = 5.0
 packed_display_object = ExtResource("2_62mnm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1098478326]
