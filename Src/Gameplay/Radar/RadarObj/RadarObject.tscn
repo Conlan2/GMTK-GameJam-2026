@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://mpmxgs3ti7of"]
+
+[ext_resource type="Script" uid="uid://v6ywksg1wsyy" path="res://Src/Gameplay/Radar/RadarObj/RadarObject.gd" id="1_uguc5"]
+[ext_resource type="PackedScene" uid="uid://c6scut0ku47fh" path="res://Src/Gameplay/Radar/RadarObj/Display_Object/DisplayObject.tscn" id="2_62mnm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_62mnm"]
+size = Vector2(2, 2)
+
+[node name="RadarObject" type="Area2D" unique_id=650020510]
+script = ExtResource("1_uguc5")
+packed_display_object = ExtResource("2_62mnm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1098478326]
+shape = SubResource("RectangleShape2D_62mnm")

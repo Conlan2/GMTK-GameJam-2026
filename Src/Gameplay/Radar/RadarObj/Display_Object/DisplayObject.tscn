@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://c6scut0ku47fh"]
+
+[ext_resource type="Texture2D" uid="uid://bib7ijcp5hstm" path="res://Assets/Radar/PNG/RadarDetection.png" id="1_j678m"]
+[ext_resource type="Script" uid="uid://cr7hdnt852wva" path="res://Src/Gameplay/Radar/RadarObj/Display_Object/display_object.gd" id="1_o0p6k"]
+
+[node name="DisplayObject" type="Node2D" unique_id=1250032822]
+script = ExtResource("1_o0p6k")
+
+[node name="ObjectName" type="Label" parent="." unique_id=23128668]
+offset_left = 38.0
+offset_top = -2.0
+offset_right = 78.0
+offset_bottom = 15.0
+theme_override_colors/font_color = Color(0.19879997, 0.71, 0.26696002, 1)
+theme_override_font_sizes/font_size = 12
+text = "Test"
+
+[node name="Object Distance" type="Label" parent="." unique_id=1321843066]
+offset_left = 38.0
+offset_top = 9.0
+offset_right = 78.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0.2, 0.70980394, 0.26666668, 1)
+theme_override_font_sizes/font_size = 12
+text = "Test"
+
+[node name="Object Height" type="Label" parent="." unique_id=1710000046]
+offset_left = 38.0
+offset_top = 20.0
+offset_right = 78.0
+offset_bottom = 37.0
+theme_override_colors/font_color = Color(0.2, 0.70980394, 0.26666668, 1)
+theme_override_font_sizes/font_size = 12
+text = "Test"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=595263632]
+position = Vector2(18, 19)
+scale = Vector2(0.36, 0.39)
+texture = ExtResource("1_j678m")

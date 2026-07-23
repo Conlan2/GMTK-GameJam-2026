@@ -20,6 +20,8 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 CameraMananger="*uid://br4gu7jxxlx3m"
 HiddenButtonManager="*uid://br84fd6uq5vd5"
+NuclearWarManager="*uid://brbkm0s4oansd"
+RadarObjectTypes="*uid://b112qr05u2sml"
 
 [display]
 

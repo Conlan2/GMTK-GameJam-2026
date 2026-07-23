@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://brbkm0s4oansd"]
+
+[ext_resource type="Script" uid="uid://vxsbsspbwyvp" path="res://Src/Gameplay/Interactable/NukeButton/NuclearWarManager/nuclear_war_manager.gd" id="1_tbora"]
+
+[node name="NuclearWarMananger" type="Node" unique_id=972868730 node_paths=PackedStringArray("war_timer")]
+script = ExtResource("1_tbora")
+war_timer = NodePath("WarTimer")
+
+[node name="WarTimer" type="Timer" parent="." unique_id=2055195259]
+wait_time = 10.0

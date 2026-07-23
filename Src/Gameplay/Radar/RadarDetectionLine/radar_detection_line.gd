@@ -27,3 +27,8 @@ func _create_fade_out() -> void:
 	fadeout_line.rotation = rotation	
 		
 	get_parent().add_child(fadeout_line)
+
+
+func _on_detection_area_area_entered(area: Area2D) -> void:
+	if area is RadarObject:
+		area.create_radar_image()

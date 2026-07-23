@@ -12,20 +12,22 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Nuke Button" type="Button" parent="." unique_id=1261024431]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 278.0
-offset_top = 74.0
-offset_right = 322.0
-offset_bottom = 105.0
+offset_left = 303.0
+offset_top = 118.0
+offset_right = 347.0
+offset_bottom = 172.0
 text = "TEST"
 script = ExtResource("1_n3rwg")
 
 [node name="InterceptButton" type="Button" parent="." unique_id=700551327]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 273.0
-offset_top = 254.0
-offset_right = 317.0
-offset_bottom = 285.0
+offset_left = 303.0
+offset_top = 256.0
+offset_right = 347.0
+offset_bottom = 303.0
 text = "TEST"
 script = ExtResource("2_sll2n")
 

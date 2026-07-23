@@ -1,0 +1,9 @@
+extends Node
+
+
+enum type {
+	CIVILIAN,
+	ENEMY_AIR,
+	ENEMY_ALM,
+	ENEMY_HYPERSONIC,
+}

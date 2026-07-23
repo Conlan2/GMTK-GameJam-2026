@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://ru5tufwkgryn"]
 
 [ext_resource type="PackedScene" uid="uid://b8ibmli73b5vb" path="res://Src/Gameplay/Radar/Radar.tscn" id="1_62u8d"]
+[ext_resource type="PackedScene" uid="uid://mpmxgs3ti7of" path="res://Src/Gameplay/Radar/RadarObj/RadarObject.tscn" id="2_y4784"]
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -9,3 +10,8 @@ position = Vector2(1, 1)
 limit_enabled = false
 
 [node name="Radar" parent="." unique_id=1130873436 instance=ExtResource("1_62u8d")]
+
+[node name="RadarObject" parent="." unique_id=650020510 instance=ExtResource("2_y4784")]
+position = Vector2(80, -346)
+object_name = "Test Object"
+start_height = 1200.0

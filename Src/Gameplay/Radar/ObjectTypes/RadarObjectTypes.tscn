@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b112qr05u2sml"]
+
+[ext_resource type="Script" uid="uid://dsw7rwrn2qs31" path="res://Src/Gameplay/Radar/ObjectTypes/object_types.gd" id="1_5888t"]
+
+[node name="RadarObjectTypes" type="Node" unique_id=979773050]
+script = ExtResource("1_5888t")
