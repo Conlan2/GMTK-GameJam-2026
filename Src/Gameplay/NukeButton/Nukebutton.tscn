@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://1tp4557iv7n6"]
+
+[ext_resource type="PackedScene" uid="uid://c4gy6an3ki3ja" path="res://Assets/NukeButton/NukeButton.glb" id="1_3hhuq"]
+
+[node name="Nukebutton" type="Node3D" unique_id=1174929031]
+
+[node name="NukeButton" parent="." unique_id=1583823524 instance=ExtResource("1_3hhuq")]

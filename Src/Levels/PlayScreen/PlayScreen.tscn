@@ -11,7 +11,10 @@
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 [ext_resource type="Script" uid="uid://cd0gyx0vwbdya" path="res://Src/Levels/PlayScreen/camera_positions.gd" id="8_thj8l"]
 [ext_resource type="PackedScene" uid="uid://hl1xedpgouq6" path="res://Src/Gameplay/Phone/PhoneHead.tscn" id="9_hqfgc"]
+[ext_resource type="PackedScene" uid="uid://c4gy6an3ki3ja" path="res://Assets/NukeButton/NukeButton.glb" id="10_mwc0r"]
 [ext_resource type="PackedScene" uid="uid://m2pktt77w64v" path="res://Src/Gameplay/Phone/PhoneBase.tscn" id="11_bsaxd"]
+[ext_resource type="PackedScene" uid="uid://c4ffsdfcjxbyg" path="res://Src/Gameplay/Timers/NukeTimer/NukeTimer.tscn" id="11_s6dog"]
+[ext_resource type="PackedScene" uid="uid://bblvu2pftghd7" path="res://Src/Gameplay/Timers/InterceptTimer/InterceptTimer.tscn" id="12_hbd1k"]
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
@@ -53,7 +56,7 @@ transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 
 metadata/_edit_lock_ = true
 
 [node name="PhoneBase" parent="Geometry" unique_id=1629503737 instance=ExtResource("11_bsaxd")]
-transform = Transform3D(0.2, 0, 0, 0, 0.16463916, -0.11355151, 0, 0.11355151, 0.16463916, 0.1195447, 1.2416551, -2.1693242)
+transform = Transform3D(0.2, 0, 0, 0, 0.16180341, -0.11755705, 0, 0.11755705, 0.16180341, 0.1195447, 1.2416551, -2.1693242)
 
 [node name="Lights" type="Node" parent="." unique_id=265775821]
 
@@ -63,10 +66,27 @@ base_light_energy = 4.0
 flicker_strength = 2.0
 flicker_interval = 4.0
 
+[node name="SpotLight3D2" parent="Lights" unique_id=1205251488 instance=ExtResource("6_ib1hx")]
+transform = Transform3D(1, 0, 0, 0, 0.99926627, 0.038300544, 0, -0.038300544, 0.99926627, 0.63695043, 1.4103272, -1.5211422)
+light_color = Color(0.20329455, 0.37335882, 0.102753736, 1)
+light_energy = 0.2
+spot_range = 1.0
+base_light_energy = 2.0
+flicker_strength = 0.5
+
 [node name="Interactable" type="Node" parent="." unique_id=1431242840]
 
 [node name="PhoneHead" parent="Interactable" unique_id=1811615914 instance=ExtResource("9_hqfgc")]
-transform = Transform3D(0.18, 0, 0, 0, 0.14816456, -0.10221188, 0, 0.10221188, 0.14816456, 0.12, 1.221313, -2.1848211)
+transform = Transform3D(0.18, 0, 0, 0, 0.14562307, -0.10580135, 0, 0.10580135, 0.14562307, 0.12, 1.221313, -2.1848211)
+
+[node name="NukeButton" parent="Interactable" unique_id=1583823524 instance=ExtResource("10_mwc0r")]
+transform = Transform3D(-0.10000001, 5.138582e-09, -7.0726527e-09, 0, 0.080901705, 0.058778536, 8.742278e-09, 0.058778524, -0.08090171, -0.21279797, 1.2309045, -2.152368)
+
+[node name="NukeTimer" parent="Interactable" unique_id=161129933 instance=ExtResource("11_s6dog")]
+transform = Transform3D(0.1, 0, 0, 0, 0.079863556, -0.0601815, 0, 0.0601815, 0.079863556, -0.7398108, 1.2310207, -2.1524563)
+
+[node name="InterceptTimer" parent="Interactable" unique_id=73936983 instance=ExtResource("12_hbd1k")]
+transform = Transform3D(0.1, 0, 0, 0, 0.079863556, -0.0601815, 0, 0.0601815, 0.079863556, -0.74, 0.9246917, -1.7315022)
 
 [node name="Spawners" type="Node" parent="." unique_id=831314474]
 

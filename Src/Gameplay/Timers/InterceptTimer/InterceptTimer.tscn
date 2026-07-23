@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bblvu2pftghd7"]
+
+[ext_resource type="PackedScene" uid="uid://c23f4sj8gw8ee" path="res://Assets/Timer/Timer.glb" id="1_vml8k"]
+
+[node name="InterceptTimer" type="Node3D" unique_id=161129933]
+
+[node name="Timer" parent="." unique_id=54419799 instance=ExtResource("1_vml8k")]

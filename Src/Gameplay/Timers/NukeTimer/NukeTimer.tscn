@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://c4ffsdfcjxbyg"]
+
+[ext_resource type="PackedScene" uid="uid://c23f4sj8gw8ee" path="res://Assets/Timer/Timer.glb" id="1_3s3mp"]
+
+[node name="NukeTimer" type="Node3D" unique_id=161129933]
+
+[node name="Timer" parent="." unique_id=253471046 instance=ExtResource("1_3s3mp")]
