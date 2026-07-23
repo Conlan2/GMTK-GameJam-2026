@@ -8,7 +8,6 @@
 size = Vector2(513, 20)
 
 [node name="RadarDetectionLine" type="Node2D" unique_id=1866728889]
-rotation = 0.58119464
 script = ExtResource("1_wi7w5")
 fadeout_packed = ExtResource("2_pd00v")
 

@@ -13,8 +13,13 @@ const FADE_OUT_INTERVAL: int = 1
 @export var fadeout_packed: PackedScene
 
 var current_radar_mode: RadarMode = RadarMode.LOCKED
-var radar_lock_angle: float = 270
+var radar_lock_angle: float = 0
 var _rotate_left: bool = true
+
+func _ready() -> void:
+	HiddenButtonManager.set_radar_lock.connect(lock)
+	HiddenButtonManager.turn_radar_lock.connect(turn_radar)
+
 
 func _physics_process(delta: float) -> void:
 
@@ -23,9 +28,30 @@ func _physics_process(delta: float) -> void:
 	
 
 	
-func handle_rotation(delta: float) -> void:
+func lock() -> void:
+	if current_radar_mode == RadarMode.LOCKED:
+		current_radar_mode = RadarMode.NO_LOCK
+	else:
+		current_radar_mode = RadarMode.LOCKED
+	
+func turn_radar(turn_amount: float) -> void:
+	radar_lock_angle += turn_amount
+	if radar_lock_angle > 180:
+		radar_lock_angle -= 360
+		
+	if radar_lock_angle < -180:
+		radar_lock_angle += 360
+		
+	print(radar_lock_angle)
 
 	
+func handle_rotation(delta: float) -> void:
+
+	if rotation_degrees > 360 + 180:
+		rotation_degrees -= 360
+		
+	if rotation_degrees < -180:
+		rotation_degrees += 360
 	
 	if current_radar_mode == RadarMode.NO_LOCK:
 		rotate(ROTATION_SPEED * delta)
@@ -37,15 +63,27 @@ func handle_rotation(delta: float) -> void:
 
 		
 		var target_angle = radar_lock_angle
-		var num_circles = int(rotation_degrees - int(rotation_degrees) % 360) / 360
+		var num_circles = 0
+		num_circles = int(rotation_degrees - int(rotation_degrees) % 360) / 360
+
+		var ture_rot = rotation_degrees
 		target_angle = target_angle + 360 * num_circles
+				
+				
+		var within_range = true
 		if target_angle - 20 > rotation_degrees:
-			_rotate_left = false
+			within_range = false
 			true_speed = true_speed * 2
 			
 		if target_angle + 20 < rotation_degrees:
-			_rotate_left = true
+			within_range = false
 			true_speed = true_speed * 2
+			
+		if !within_range:
+			if rotation_degrees < target_angle:
+				_rotate_left = false
+			else:
+				_rotate_left = true
 
 			
 		if _rotate_left:

@@ -2,6 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c60y0u6pyc1px" path="res://Src/Ui/HiddenButtons/nukebutton.gd" id="1_n3rwg"]
 [ext_resource type="Script" uid="uid://cfoxt1oar3jjl" path="res://Src/Ui/HiddenButtons/intercept_button.gd" id="2_sll2n"]
+[ext_resource type="Script" uid="uid://btpm8jhe7t0vd" path="res://Src/Ui/HiddenButtons/radar_lock_button.gd" id="3_tacah"]
+[ext_resource type="Script" uid="uid://dtnx40tso11gb" path="res://Src/Ui/HiddenButtons/radar_left_button.gd" id="4_ukbsd"]
+[ext_resource type="Script" uid="uid://crq0o1ck88jwe" path="res://Src/Ui/HiddenButtons/radar_right_button.gd" id="5_3jsii"]
 
 [node name="HiddenButtonCenter" type="Control" unique_id=1201638531]
 layout_mode = 3
@@ -31,5 +34,42 @@ offset_bottom = 303.0
 text = "TEST"
 script = ExtResource("2_sll2n")
 
+[node name="Radar Lock Button" type="Button" parent="." unique_id=201950012]
+layout_mode = 0
+offset_left = 297.0
+offset_top = 280.0
+offset_right = 341.0
+offset_bottom = 334.0
+text = "Lock
+"
+script = ExtResource("3_tacah")
+
+[node name="RadarLeftButton" type="Button" parent="." unique_id=1105085259]
+layout_mode = 0
+offset_left = 246.0
+offset_top = 280.0
+offset_right = 290.0
+offset_bottom = 334.0
+keep_pressed_outside = true
+text = "Left
+"
+script = ExtResource("4_ukbsd")
+
+[node name="RadarRightButton" type="Button" parent="." unique_id=128732423]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 280.0
+offset_right = 397.0
+offset_bottom = 334.0
+text = "Right"
+script = ExtResource("5_3jsii")
+
 [connection signal="button_down" from="Nuke Button" to="Nuke Button" method="_on_button_down"]
 [connection signal="button_down" from="InterceptButton" to="InterceptButton" method="_on_button_down"]
+[connection signal="button_down" from="Radar Lock Button" to="Radar Lock Button" method="_on_button_down"]
+[connection signal="button_down" from="RadarLeftButton" to="RadarLeftButton" method="_on_button_down"]
+[connection signal="button_up" from="RadarLeftButton" to="RadarLeftButton" method="_on_button_up"]
+[connection signal="pressed" from="RadarLeftButton" to="RadarLeftButton" method="_on_pressed"]
+[connection signal="button_down" from="RadarRightButton" to="RadarRightButton" method="_on_button_down"]
+[connection signal="button_up" from="RadarRightButton" to="RadarRightButton" method="_on_button_up"]
+[connection signal="pressed" from="RadarRightButton" to="RadarRightButton" method="_on_pressed"]
