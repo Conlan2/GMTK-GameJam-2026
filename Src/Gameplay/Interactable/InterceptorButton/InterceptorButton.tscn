@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://dscrvxv32wx2y"]
+
+[ext_resource type="PackedScene" uid="uid://pha5dcsf3uey" path="res://Src/ImportedInherited/Nukebutton/nuke_button.tscn" id="1_npi8a"]
+[ext_resource type="Script" uid="uid://cvkxgiotrnjqa" path="res://Src/Gameplay/Interactable/InterceptorButton/interceptor_button.gd" id="1_yuwqf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yuwqf"]
+albedo_color = Color(0.40196085, 0.51987183, 1, 1)
+
+[node name="InterceptorButton" type="Node3D" unique_id=1283627247 node_paths=PackedStringArray("button_object")]
+script = ExtResource("1_yuwqf")
+button_object = NodePath("NukeButton")
+
+[node name="NukeButton" parent="." unique_id=1583823524 instance=ExtResource("1_npi8a")]
+button_replacement_material = SubResource("StandardMaterial3D_yuwqf")

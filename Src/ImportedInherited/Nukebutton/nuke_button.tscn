@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://pha5dcsf3uey"]
+
+[ext_resource type="PackedScene" uid="uid://c4gy6an3ki3ja" path="res://Assets/NukeButton/NukeButton.glb" id="1_vwerl"]
+[ext_resource type="Script" uid="uid://car4t645r7xux" path="res://Src/ImportedInherited/Nukebutton/nuke_button.gd" id="2_akqr1"]
+
+[node name="NukeButtonImported" unique_id=927441765 node_paths=PackedStringArray("button_mesh") instance=ExtResource("1_vwerl")]
+script = ExtResource("2_akqr1")
+button_mesh = NodePath("NukeButton/Skeleton3D/ButtonMesh")

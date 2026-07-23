@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://dbcidraogoip7"]
+
+[ext_resource type="Script" uid="uid://c60y0u6pyc1px" path="res://Src/Ui/HiddenButtons/nukebutton.gd" id="1_n3rwg"]
+[ext_resource type="Script" uid="uid://cfoxt1oar3jjl" path="res://Src/Ui/HiddenButtons/intercept_button.gd" id="2_sll2n"]
+
+[node name="HiddenButtonCenter" type="Control" unique_id=1201638531]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Nuke Button" type="Button" parent="." unique_id=1261024431]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 74.0
+offset_right = 322.0
+offset_bottom = 105.0
+text = "TEST"
+script = ExtResource("1_n3rwg")
+
+[node name="InterceptButton" type="Button" parent="." unique_id=700551327]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 254.0
+offset_right = 317.0
+offset_bottom = 285.0
+text = "TEST"
+script = ExtResource("2_sll2n")
+
+[connection signal="button_down" from="Nuke Button" to="Nuke Button" method="_on_button_down"]
+[connection signal="button_down" from="InterceptButton" to="InterceptButton" method="_on_button_down"]

@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://br84fd6uq5vd5"]
+
+[ext_resource type="Script" uid="uid://ch6hnt03t8awi" path="res://Src/Ui/HiddenButtons/Manager/hidden_button_manager.gd" id="1_1g6t5"]
+
+[node name="HiddenButtonManager" type="Node" unique_id=1710537321]
+script = ExtResource("1_1g6t5")
