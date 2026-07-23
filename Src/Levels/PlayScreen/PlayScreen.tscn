@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://hl1xedpgouq6" path="res://Src/Gameplay/Interactable/Phone/PhoneHead.tscn" id="9_hqfgc"]
 [ext_resource type="PackedScene" uid="uid://1tp4557iv7n6" path="res://Src/Gameplay/Interactable/NukeButton/Nukebutton.tscn" id="10_v1r55"]
 [ext_resource type="PackedScene" uid="uid://m2pktt77w64v" path="res://Src/Gameplay/Interactable/Phone/PhoneBase.tscn" id="11_bsaxd"]
+[ext_resource type="PackedScene" uid="uid://cyfyek8lhaydm" path="res://Src/ImportedInherited/LockButton/LockButton.tscn" id="11_i346g"]
 [ext_resource type="PackedScene" uid="uid://c4ffsdfcjxbyg" path="res://Src/Gameplay/Timers/NukeTimer/NukeTimer.tscn" id="11_s6dog"]
 [ext_resource type="PackedScene" uid="uid://bblvu2pftghd7" path="res://Src/Gameplay/Timers/InterceptTimer/InterceptTimer.tscn" id="12_hbd1k"]
 
@@ -42,16 +43,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1.9834366)
 metadata/_edit_lock_ = true
 
 [node name="Wall2" parent="Geometry" unique_id=620732142 instance=ExtResource("3_rf1ey")]
-transform = Transform3D(0.00054104725, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 0.00054104725, -2.483111, 0, -0.50101805)
+transform = Transform3D(0.00054104725, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 0.00054104725, -1.8027507, 0, -0.50101805)
 metadata/_edit_lock_ = true
 
 [node name="Wall4" parent="Geometry" unique_id=606340290 instance=ExtResource("3_rf1ey")]
-transform = Transform3D(0.00054104725, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 0.00054104725, 2.483111, 0, -0.49833107)
+transform = Transform3D(0.00054104725, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 0.00054104725, 1.5915442, 4.7683716e-07, -0.49833107)
 metadata/_edit_lock_ = true
 
 [node name="Roof" parent="Geometry" unique_id=822601176 instance=ExtResource("2_m1ckf")]
-transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 0, 0, 0, 1, 0, 5.429694, 0)
-metadata/_edit_lock_ = true
+transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 0, 0, 0, 1, 0, 2.008795, 0)
 
 [node name="PhoneBase" parent="Geometry" unique_id=1629503737 instance=ExtResource("11_bsaxd")]
 transform = Transform3D(0.2, 0, 0, 0, 0.16180341, -0.11755705, 0, 0.11755705, 0.16180341, 0.1195447, 1.2416551, -2.1693242)
@@ -60,6 +60,7 @@ transform = Transform3D(0.2, 0, 0, 0, 0.16180341, -0.11755705, 0, 0.11755705, 0.
 
 [node name="SpotLight3D" parent="Lights" unique_id=1731974892 instance=ExtResource("6_ib1hx")]
 transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
+light_specular = 0.37
 base_light_energy = 4.0
 flicker_strength = 2.0
 flicker_interval = 4.0
@@ -84,6 +85,9 @@ transform = Transform3D(0.18, 0, 0, 0, 0.14562307, -0.10580135, 0, 0.10580135, 0
 
 [node name="Nukebutton" parent="Interactable/Meshes" unique_id=1174929031 instance=ExtResource("10_v1r55")]
 transform = Transform3D(-0.1, 5.138582e-09, -7.0726514e-09, 0, 0.080901705, 0.058778524, 8.742278e-09, 0.058778524, -0.080901705, -0.213, 1.231, -2.152)
+
+[node name="LockButton" parent="Interactable/Meshes" unique_id=470249109 instance=ExtResource("11_i346g")]
+transform = Transform3D(0.075, 0, 0, 0, 0.080901705, -0.029389262, 0, 0.058778524, 0.040450852, 0.6401438, 0.98481107, -1.8268588)
 
 [node name="Spawners" type="Node" parent="." unique_id=831314474]
 

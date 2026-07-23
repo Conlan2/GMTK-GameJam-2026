@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://ccqvew2deu0je"]
+
+[ext_resource type="Script" uid="uid://c01dh4r7bg6l6" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawnController/radar_spawn_controller.gd" id="1_gw1vp"]
+[ext_resource type="PackedScene" uid="uid://b1pukekcu635y" path="res://Src/Gameplay/Radar/RadarObj/CivilianAirliner/CivilianAirliner.tscn" id="2_ab74f"]
+
+[node name="RadarSpawnController" type="Node2D" unique_id=334024726]
+script = ExtResource("1_gw1vp")
+DEBUG_PLANE = ExtResource("2_ab74f")

@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cyfyek8lhaydm"]
+
+[ext_resource type="PackedScene" uid="uid://3qj6wqq4vvnk" path="res://Src/ImportedInherited/LockButton/lock_button.tscn" id="1_2csjq"]
+[ext_resource type="Script" uid="uid://c3drnwsw1yift" path="res://Src/ImportedInherited/LockButton/lock_buttonh.gd" id="1_sn08t"]
+
+[node name="LockButton" type="Node3D" unique_id=470249109]
+script = ExtResource("1_sn08t")
+
+[node name="LockButton" parent="." unique_id=1631999251 instance=ExtResource("1_2csjq")]

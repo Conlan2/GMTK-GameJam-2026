@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b80y5n1b5okx4"]
+
+[ext_resource type="Script" uid="uid://cab0lclri8jjm" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/radar_spawner.gd" id="1_xpqup"]
+
+[node name="RadarSpawner" type="Marker2D" unique_id=2004940261]
+script = ExtResource("1_xpqup")

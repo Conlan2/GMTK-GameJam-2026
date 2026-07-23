@@ -2,9 +2,11 @@
 
 [ext_resource type="Script" uid="uid://rubarwwc7g04" path="res://Src/Gameplay/Interactable/NukeButton/nukebutton.gd" id="1_ai1u7"]
 [ext_resource type="PackedScene" uid="uid://pha5dcsf3uey" path="res://Src/ImportedInherited/Nukebutton/nuke_button.tscn" id="1_sgwt4"]
+[ext_resource type="Material" uid="uid://3pep8xwwdsfe" path="res://Src/Resources/Plastic/RedPlastic.tres" id="3_n6nar"]
 
 [node name="Nukebutton" type="Node3D" unique_id=1174929031 node_paths=PackedStringArray("button_object")]
 script = ExtResource("1_ai1u7")
 button_object = NodePath("NukeButton")
 
 [node name="NukeButton" parent="." unique_id=1583823524 instance=ExtResource("1_sgwt4")]
+button_replacement_material = ExtResource("3_n6nar")

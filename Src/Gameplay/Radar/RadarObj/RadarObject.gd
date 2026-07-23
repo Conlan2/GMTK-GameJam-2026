@@ -15,7 +15,7 @@ class_name RadarObject
 @export_group("Display")
 @export var packed_display_object: PackedScene
 
-var current_height: float = start_height
+var current_height: float
 var _movement_vector: Vector2
 
 
@@ -24,13 +24,15 @@ signal detected
 func _ready() -> void:
 	detected.connect(create_radar_image)
 	_movement_vector = Vector2(0, -movement_speed)\
-	.rotated(deg_to_rad(movement_angle_deg))
+		.rotated(deg_to_rad(movement_angle_deg))
+	current_height = start_height
 	
 func _physics_process(delta: float) -> void:
 	position += _movement_vector * delta
 	
 func _process(delta: float) -> void:
 	check_special_properties()
+	current_height -= height_change * delta
 
 func create_radar_image() -> void:
 	if !is_instance_valid(packed_display_object) or !packed_display_object.can_instantiate():
@@ -45,12 +47,21 @@ func create_radar_image() -> void:
 		return
 		
 	display_object.detected_name = object_name
-	display_object.detected_height = str(current_height)
-	display_object.detected_distance = str(position.distance_to(Vector2(0,0)))
+	display_object.detected_height = str(round(current_height))
+	display_object.detected_distance = str(\
+		round(position.distance_to(Vector2(0,0))*100)/100)
 	display_object.position = position
 	
 	get_parent().add_child(display_object)
 	
 func check_special_properties() -> void:
 	pass
+	
+func _on_area_entered(area: Area2D) -> void:
+	if area is RadarObject and \
+		(area.plane_type == RadarObjectTypes.type.INTERCEPTOR or\
+		 plane_type == RadarObjectTypes.type.INTERCEPTOR):
+			area.queue_free()
+			queue_free()
+		 
 	

@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://3qj6wqq4vvnk"]
+
+[ext_resource type="PackedScene" uid="uid://ddqde6ek6poel" path="res://Assets/Radar/Blender/LockButton.glb" id="1_xlrnw"]
+[ext_resource type="Script" uid="uid://boc173okov8ym" path="res://Src/ImportedInherited/LockButton/lock_button.gd" id="2_0o0ux"]
+
+[node name="LockButton" unique_id=246441658 node_paths=PackedStringArray("button_mesh") instance=ExtResource("1_xlrnw")]
+script = ExtResource("2_0o0ux")
+button_mesh = NodePath("Armature/Skeleton3D/Lock Button")

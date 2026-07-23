@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dg1addw5efpc8"]
 
+[ext_resource type="Material" uid="uid://d332y8ffgq1sc" path="res://Src/Resources/Metals/RustedMetalMaterial.tres" id="1_epb6u"]
+
 [sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_2koj0"]
 
 [sub_resource type="PlaneMesh" id="PlaneMesh_2koj0"]
+material = ExtResource("1_epb6u")
 size = Vector2(5, 5)
 
 [node name="Floor" type="StaticBody3D" unique_id=372137077]

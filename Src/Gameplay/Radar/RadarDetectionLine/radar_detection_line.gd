@@ -12,7 +12,7 @@ const FADE_OUT_INTERVAL: int = 1
 
 @export var fadeout_packed: PackedScene
 
-var current_radar_mode: RadarMode = RadarMode.LOCKED
+var current_radar_mode: RadarMode = RadarMode.NO_LOCK
 var radar_lock_angle: float = 0
 var _rotate_left: bool = true
 

@@ -35,21 +35,22 @@ text = "TEST"
 script = ExtResource("2_sll2n")
 
 [node name="Radar Lock Button" type="Button" parent="." unique_id=201950012]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 297.0
-offset_top = 280.0
-offset_right = 341.0
-offset_bottom = 334.0
+offset_left = 289.0
+offset_top = 303.0
+offset_right = 363.0
+offset_bottom = 339.0
 text = "Lock
 "
 script = ExtResource("3_tacah")
 
 [node name="RadarLeftButton" type="Button" parent="." unique_id=1105085259]
 layout_mode = 0
-offset_left = 246.0
-offset_top = 280.0
-offset_right = 290.0
-offset_bottom = 334.0
+offset_left = 234.0
+offset_top = 302.0
+offset_right = 278.0
+offset_bottom = 339.0
 keep_pressed_outside = true
 text = "Left
 "
@@ -57,10 +58,10 @@ script = ExtResource("4_ukbsd")
 
 [node name="RadarRightButton" type="Button" parent="." unique_id=128732423]
 layout_mode = 0
-offset_left = 348.0
-offset_top = 280.0
-offset_right = 397.0
-offset_bottom = 334.0
+offset_left = 372.0
+offset_top = 303.0
+offset_right = 421.0
+offset_bottom = 337.0
 text = "Right"
 script = ExtResource("5_3jsii")
 

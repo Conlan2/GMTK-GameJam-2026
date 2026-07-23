@@ -1,0 +1,17 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://3pep8xwwdsfe"]
+
+[ext_resource type="Texture2D" uid="uid://dwcmot37whrce" path="res://Assets/PBR/Plastic/worn-old-plastic-bl/worn-old-plastic_albedo.png" id="1_i6i36"]
+[ext_resource type="Texture2D" uid="uid://dy0g6bs2w8jif" path="res://Assets/PBR/Plastic/worn-old-plastic-bl/worn-old-plastic_metallic.png" id="2_3bj7e"]
+[ext_resource type="Texture2D" uid="uid://c3juclf012wk" path="res://Assets/PBR/Plastic/worn-old-plastic-bl/worn-old-plastic_normal-ogl.png" id="3_77bj0"]
+[ext_resource type="Texture2D" uid="uid://bqp5wf45ppg5d" path="res://Assets/PBR/Plastic/worn-old-plastic-bl/worn-old-plastic_roughness.png" id="4_vfb5i"]
+
+[resource]
+albedo_color = Color(1, 0.18039216, 0.18039216, 1)
+albedo_texture = ExtResource("1_i6i36")
+metallic = 1.0
+metallic_texture = ExtResource("2_3bj7e")
+metallic_texture_channel = 4
+roughness_texture = ExtResource("4_vfb5i")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_texture = ExtResource("3_77bj0")

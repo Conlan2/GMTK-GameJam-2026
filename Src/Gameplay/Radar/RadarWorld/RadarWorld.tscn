@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://ru5tufwkgryn"]
 
 [ext_resource type="PackedScene" uid="uid://b8ibmli73b5vb" path="res://Src/Gameplay/Radar/Radar.tscn" id="1_62u8d"]
-[ext_resource type="PackedScene" uid="uid://mpmxgs3ti7of" path="res://Src/Gameplay/Radar/RadarObj/RadarObject.tscn" id="2_y4784"]
+[ext_resource type="PackedScene" uid="uid://ccqvew2deu0je" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawnController/RadarSpawnController.tscn" id="3_07i7e"]
+[ext_resource type="Script" uid="uid://chyla2r1jmi7q" path="res://Src/Gameplay/Radar/RadarWorld/lock_display.gd" id="4_460j6"]
+[ext_resource type="PackedScene" uid="uid://b80y5n1b5okx4" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/RadarSpawner.tscn" id="4_fdkwe"]
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -11,7 +13,56 @@ limit_enabled = false
 
 [node name="Radar" parent="." unique_id=1130873436 instance=ExtResource("1_62u8d")]
 
-[node name="RadarObject" parent="." unique_id=650020510 instance=ExtResource("2_y4784")]
-position = Vector2(80, -346)
-object_name = "Test Object"
-start_height = 1200.0
+[node name="RadarSpawnController" parent="." unique_id=555480956 instance=ExtResource("3_07i7e")]
+
+[node name="CivilianAirlinesSouthToEast" parent="RadarSpawnController" unique_id=2004940261 instance=ExtResource("4_fdkwe")]
+position = Vector2(83.999985, 553)
+rotation = 0.23212878
+rotation_deviation = 5.0
+
+[node name="CivilianAirlinesEastToSouth" parent="RadarSpawnController" unique_id=1004965153 instance=ExtResource("4_fdkwe")]
+position = Vector2(461, -292.99994)
+rotation = 3.4906585
+rotation_deviation = 5.0
+
+[node name="CivilianAirlinesWestToEast" parent="RadarSpawnController" unique_id=640902060 instance=ExtResource("4_fdkwe")]
+position = Vector2(-564, -202)
+rotation = 1.436406
+rotation_deviation = 5.0
+
+[node name="CivilianAirlinesEastToWest" parent="RadarSpawnController" unique_id=644546554 instance=ExtResource("4_fdkwe")]
+position = Vector2(473.00012, -259)
+rotation = 4.7699847
+rotation_deviation = 5.0
+
+[node name="NorthBarrageLeft" parent="RadarSpawnController" unique_id=429759081 instance=ExtResource("4_fdkwe")]
+position = Vector2(-157.00006, -570)
+rotation = 2.7925267
+rotation_deviation = 5.0
+
+[node name="NorthBarrageRight" parent="RadarSpawnController" unique_id=1241518478 instance=ExtResource("4_fdkwe")]
+position = Vector2(118.99994, -594)
+rotation = 3.4470253
+
+[node name="LockDisplay" type="Node2D" parent="." unique_id=1946758950]
+visible = false
+position = Vector2(-1, 99)
+script = ExtResource("4_460j6")
+
+[node name="Label" type="Label" parent="LockDisplay" unique_id=2073068217]
+offset_left = -52.0
+offset_top = -493.0
+offset_right = 54.0
+offset_bottom = -470.0
+theme_override_colors/font_color = Color(0.23804268, 0.9175969, 0.33626828, 1)
+text = "Lock Engaged"
+
+[node name="Label2" type="Label" parent="LockDisplay" unique_id=89636533]
+visible = false
+offset_left = -52.0
+offset_top = -469.0
+offset_right = 54.0
+offset_bottom = -446.0
+theme_override_colors/font_color = Color(0.22783944, 0.87261593, 0.32291675, 1)
+text = "Degrees"
+horizontal_alignment = 1

@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c8a6eevj2lpau"]
 
-[ext_resource type="Material" uid="uid://31vif2tntt7k" path="res://Src/Resources/MetalType1.tres" id="1_d2mnf"]
+[ext_resource type="Material" uid="uid://d332y8ffgq1sc" path="res://Src/Resources/Metals/RustedMetalMaterial.tres" id="1_d2mnf"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_trayi"]
 size = Vector3(5, 10, 1)
