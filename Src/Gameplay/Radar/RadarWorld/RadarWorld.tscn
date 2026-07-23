@@ -58,7 +58,6 @@ theme_override_colors/font_color = Color(0.23804268, 0.9175969, 0.33626828, 1)
 text = "Lock Engaged"
 
 [node name="Label2" type="Label" parent="LockDisplay" unique_id=89636533]
-visible = false
 offset_left = -52.0
 offset_top = -469.0
 offset_right = 54.0
