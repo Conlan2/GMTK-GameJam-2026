@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://hl1xedpgouq6"]
 
+[ext_resource type="Script" uid="uid://cdjlaodsr5v8l" path="res://Src/Gameplay/Interactable/Phone/phone_head.gd" id="1_aeclq"]
 [ext_resource type="PackedScene" uid="uid://brr8h3d374xnx" path="res://Assets/LandLine/Base/Phone.glb" id="1_ql7nk"]
 
 [node name="PhoneHead" type="Node3D" unique_id=1811615914]
+script = ExtResource("1_aeclq")
 
 [node name="Phone2" parent="." unique_id=2070346812 instance=ExtResource("1_ql7nk")]

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://fgore3af6giy"]
+
+[ext_resource type="PackedScene" uid="uid://rekd1ip6k2jy" path="res://Assets/Light/OrangeLight.glb" id="1_j6rsn"]
+[ext_resource type="Script" uid="uid://bgwgg17xs4cx8" path="res://Src/Gameplay/Lights/OrangeLight/orange_light.gd" id="1_u6vpy"]
+
+[node name="OrangeLight" type="OmniLight3D" unique_id=271995569]
+light_color = Color(0.92520493, 0.49766952, 0.25892645, 1)
+omni_range = 40.0
+script = ExtResource("1_u6vpy")
+flicker_interval = 9.0
+
+[node name="OrangeLight" parent="." unique_id=487173933 instance=ExtResource("1_j6rsn")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.025077634, 0)

@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddaip7h0veyd5" path="res://Src/Gameplay/Geometry/NukeDesk/NukeDesk.tscn" id="4_f8yna"]
 [ext_resource type="PackedScene" uid="uid://cwkqg7b278d5s" path="res://Src/Gameplay/Lights/Light.tscn" id="6_ib1hx"]
 [ext_resource type="PackedScene" uid="uid://bq2avqe351rnd" path="res://Src/Gameplay/Camera/CameraPositions/CameraPositions.tscn" id="6_yrc57"]
+[ext_resource type="PackedScene" uid="uid://fgore3af6giy" path="res://Src/Gameplay/Lights/OrangeLight/OrangeLight.tscn" id="8_8afcl"]
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 [ext_resource type="Script" uid="uid://cd0gyx0vwbdya" path="res://Src/Levels/PlayScreen/camera_positions.gd" id="8_thj8l"]
 [ext_resource type="PackedScene" uid="uid://dscrvxv32wx2y" path="res://Src/Gameplay/Interactable/InterceptorButton/InterceptorButton.tscn" id="8_v1r55"]
@@ -18,6 +19,7 @@
 [ext_resource type="PackedScene" uid="uid://cyfyek8lhaydm" path="res://Src/ImportedInherited/LockButton/LockButton.tscn" id="11_i346g"]
 [ext_resource type="PackedScene" uid="uid://c4ffsdfcjxbyg" path="res://Src/Gameplay/Timers/NukeTimer/NukeTimer.tscn" id="11_s6dog"]
 [ext_resource type="PackedScene" uid="uid://bblvu2pftghd7" path="res://Src/Gameplay/Timers/InterceptTimer/InterceptTimer.tscn" id="12_hbd1k"]
+[ext_resource type="Script" uid="uid://cy1c2cgddmo3e" path="res://Src/Levels/PlayScreen/phone_positions.gd" id="20_hjvg2"]
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
@@ -52,7 +54,7 @@ transform = Transform3D(0.00054104725, 0, 0.9999999, 0, 1, 0, -0.9999999, 0, 0.0
 metadata/_edit_lock_ = true
 
 [node name="Roof" parent="Geometry" unique_id=822601176 instance=ExtResource("2_m1ckf")]
-transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 0, 0, 0, 1, 0, 2.008795, 0)
+transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 0, 0, 0, 1, 0, 4.613025, 0)
 
 [node name="PhoneBase" parent="Geometry" unique_id=1629503737 instance=ExtResource("11_bsaxd")]
 transform = Transform3D(0.2, 0, 0, 0, 0.16180341, -0.11755705, 0, 0.11755705, 0.16180341, 0.1195447, 1.2416551, -2.1693242)
@@ -62,8 +64,10 @@ transform = Transform3D(0.2, 0, 0, 0, 0.16180341, -0.11755705, 0, 0.11755705, 0.
 [node name="SpotLight3D" parent="Lights" unique_id=1731974892 instance=ExtResource("6_ib1hx")]
 transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
 light_specular = 0.37
-base_light_energy = 4.0
-flicker_strength = 2.0
+shadow_enabled = true
+spot_angle = 107.38
+base_light_energy = 2.0
+flicker_strength = 1.0
 flicker_interval = 4.0
 
 [node name="SpotLight3D2" parent="Lights" unique_id=1205251488 instance=ExtResource("6_ib1hx")]
@@ -82,6 +86,69 @@ light_specular = 0.37
 base_light_energy = 12.0
 flicker_strength = 2.0
 flicker_interval = 4.0
+
+[node name="OrangeLight" parent="Lights" unique_id=271995569 instance=ExtResource("8_8afcl")]
+transform = Transform3D(-3.5363257e-08, 2.569291e-08, 1, 0.58778524, 0.809017, 0, -0.809017, 0.58778524, -4.371139e-08, 1.0456616, 1.0421314, -1.8507068)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.5
+flicker_strength = 0.1
+
+[node name="OrangeLight2" parent="Lights" unique_id=1900757320 instance=ExtResource("8_8afcl")]
+transform = Transform3D(-3.5363257e-08, 2.569291e-08, 1, 0.58778524, 0.809017, 0, -0.809017, 0.58778524, -4.371139e-08, 1.0456616, 0.9608002, -1.7362317)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.5
+
+[node name="OrangeLight3" parent="Lights" unique_id=554115878 instance=ExtResource("8_8afcl")]
+transform = Transform3D(-3.5363257e-08, 2.569291e-08, 1, 0.58778524, 0.809017, 0, -0.809017, 0.58778524, -4.371139e-08, 1.0456616, 0.8792726, -1.6226758)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.5
+
+[node name="OrangeLight4" parent="Lights" unique_id=2007070884 instance=ExtResource("8_8afcl")]
+transform = Transform3D(-3.5363257e-08, 2.569291e-08, 1, 0.58778524, 0.809017, 0, -0.809017, 0.58778524, -4.371139e-08, 1.0456616, 1.1341332, -1.9767138)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.5
+
+[node name="OrangeLight5" parent="Lights" unique_id=238523757 instance=ExtResource("8_8afcl")]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -1.0933831, 0.86454785, -1.611601)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.3
+flicker_strength = 0.1
+flicker_interval = 1.0
+
+[node name="OrangeLight6" parent="Lights" unique_id=1835451026 instance=ExtResource("8_8afcl")]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -0.7765236, 0.86454785, -1.611601)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.3
+flicker_strength = 0.05
+flicker_interval = 0.1
+
+[node name="OrangeLight7" parent="Lights" unique_id=1622952830 instance=ExtResource("8_8afcl")]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -0.4144536, 0.86454785, -1.611601)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.3
+flicker_strength = 0.01
+flicker_interval = 1.0
 
 [node name="Interactable" type="Node" parent="." unique_id=1431242840]
 
@@ -142,9 +209,12 @@ transform = Transform3D(0.1, 0, 0, 0, 0.079863556, -0.0601815, 0, 0.0601815, 0.0
 transform = Transform3D(0.1, 0, 0, 0, 0.079863556, -0.0601815, 0, 0.0601815, 0.079863556, -0.74, 0.9246917, -1.7315022)
 
 [node name="PhonePositions" type="Node" parent="." unique_id=745836715]
+script = ExtResource("20_hjvg2")
 
-[node name="Phone Home Position" type="Marker3D" parent="PhonePositions" unique_id=709960192]
-transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, 0.12, 1.221, 1.269)
+[node name="ear" parent="PhonePositions" unique_id=921384122 instance=ExtResource("6_yrc57")]
+transform = Transform3D(-0.34331024, 0.93799603, -0.047977254, 0.5939527, 0.25639245, 0.7625502, 0.72757, 0.23329504, -0.64514756, -0.15648635, 1.3966311, -1.1554111)
+script = null
 
-[node name="Phone Ear Position" type="Marker3D" parent="PhonePositions" unique_id=764990053]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22966287, 1.3853253, -1.1012286)
+[node name="home" parent="PhonePositions" unique_id=1542860044 instance=ExtResource("6_yrc57")]
+transform = Transform3D(0.99999994, 0, 0, 0, 0.8090171, -0.58778524, 0, 0.5877853, 0.809017, 0.12, 1.221, -2.185)
+script = null

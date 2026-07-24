@@ -38,7 +38,7 @@ func _process(delta: float) -> void:
 		)
 	
 func change_camera_position(new_position_name: String) -> void:
-	if camera_moving:
+	if camera_moving or PhoneManager.phone_current_location.name != "home":
 		return
 	
 	if new_position_name not in camera_positions.keys():
