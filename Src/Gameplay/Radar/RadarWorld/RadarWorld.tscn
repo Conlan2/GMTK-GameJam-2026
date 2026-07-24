@@ -82,6 +82,12 @@ vertical_alignment = 1
 
 [node name="RadarObject" parent="." unique_id=650020510 instance=ExtResource("8_eblxc")]
 position = Vector2(2, 503)
-movement_speed = 30.0
+movement_speed = 25.0
+object_name = "TESTATTACK"
+plane_type = 3
+
+[node name="RadarObject3" parent="." unique_id=2005422469 instance=ExtResource("8_eblxc")]
+position = Vector2(-56, 661)
+movement_speed = 25.0
 object_name = "TESTATTACK"
 plane_type = 3

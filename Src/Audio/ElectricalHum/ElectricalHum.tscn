@@ -5,8 +5,11 @@
 
 [node name="ElectricalHum" type="AudioStreamPlayer3D" unique_id=1258871208]
 stream = ExtResource("1_lf6xs")
-volume_db = -20.0
+volume_db = -25.0
 autoplay = true
 script = ExtResource("2_12ir7")
 
+[node name="Timer" type="Timer" parent="." unique_id=1258159624]
+
 [connection signal="finished" from="." to="." method="_on_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

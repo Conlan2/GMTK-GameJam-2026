@@ -9,6 +9,7 @@ var active_incoming: bool = false
 
 signal add_tracked_object(object: RadarObject)
 signal delete_tracked_object(object: RadarObject)
+signal finished_update
 
 func _ready() -> void:
 	delete_tracked_object.connect(_delete_tracked_object)
@@ -19,6 +20,7 @@ func _add_tracked_object(object: RadarObject) -> void:
 		tracked_objects.append(object)
 
 	_calculate_impact_timer()
+	finished_update.emit()
 
 func _delete_tracked_object(index: int) -> void:
 
@@ -26,6 +28,8 @@ func _delete_tracked_object(index: int) -> void:
 		tracked_objects.remove_at(index)
 		
 	_calculate_impact_timer()
+	finished_update.emit()
+
 	
 func _process(delta: float) -> void:
 	if active_incoming:

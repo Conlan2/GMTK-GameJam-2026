@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://co6b534eh6ngo"]
+
+[ext_resource type="AudioStream" uid="uid://chyvxu1y5jata" path="res://Audio/HighSpeedAlarm.mp3" id="1_vul7e"]
+[ext_resource type="Script" uid="uid://x4h1vde03pkl" path="res://Src/Audio/Alarm/speed_alarm.gd" id="2_rkihu"]
+
+[node name="SpeedAlarm" type="AudioStreamPlayer3D" unique_id=1209617505]
+stream = ExtResource("1_vul7e")
+volume_db = -23.0
+script = ExtResource("2_rkihu")
