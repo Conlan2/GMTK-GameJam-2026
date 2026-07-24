@@ -62,10 +62,22 @@ func check_special_properties() -> void:
 	pass
 	
 func _on_area_entered(area: Area2D) -> void:
-	if area is RadarObject and \
-		(area.plane_type == RadarObjectTypes.type.INTERCEPTOR or\
-		 plane_type == RadarObjectTypes.type.INTERCEPTOR):
+	
+	
+	if area is RadarObject:
+		
+		# Reject Interceptor - Interceptor Collisions
+		if area.plane_type == RadarObjectTypes.type.INTERCEPTOR and\
+			plane_type == RadarObjectTypes.type.INTERCEPTOR:
+			return
+		
+		if area.plane_type == RadarObjectTypes.type.INTERCEPTOR or\
+			plane_type == RadarObjectTypes.type.INTERCEPTOR:
+				
 			area.queue_free()
 			queue_free()
+			
+			
+			
 		 
 	

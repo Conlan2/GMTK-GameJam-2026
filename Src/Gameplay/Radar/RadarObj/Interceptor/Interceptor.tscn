@@ -26,4 +26,5 @@ shape = SubResource("RectangleShape2D_oovuj")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="LockOn" unique_id=762791992]
 shape = SubResource("CircleShape2D_oovuj")
 
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_entered" from="LockOn" to="." method="_on_lock_on_area_entered"]

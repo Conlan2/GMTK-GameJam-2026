@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c6scut0ku47fh" path="res://Src/Gameplay/Radar/RadarObj/Display_Object/DisplayObject.tscn" id="2_62mnm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_62mnm"]
-size = Vector2(2, 2)
+size = Vector2(12, 10)
 
 [node name="RadarObject" type="Area2D" unique_id=650020510]
 script = ExtResource("1_uguc5")

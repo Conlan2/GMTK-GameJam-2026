@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://chyla2r1jmi7q" path="res://Src/Gameplay/Radar/RadarWorld/lock_display.gd" id="4_460j6"]
 [ext_resource type="PackedScene" uid="uid://b80y5n1b5okx4" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/RadarSpawner.tscn" id="4_fdkwe"]
 [ext_resource type="PackedScene" uid="uid://hllud8kpkk4d" path="res://Src/Gameplay/Radar/RadarObj/Interceptor/Interceptor.tscn" id="5_3us8k"]
+[ext_resource type="PackedScene" uid="uid://b1pukekcu635y" path="res://Src/Gameplay/Radar/RadarObj/CivilianAirliner/CivilianAirliner.tscn" id="7_uthek"]
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -71,3 +72,10 @@ offset_bottom = -446.0
 theme_override_colors/font_color = Color(0.22783944, 0.87261593, 0.32291675, 1)
 text = "Degrees"
 horizontal_alignment = 1
+
+[node name="CivilianAirliner" parent="." unique_id=1287891570 instance=ExtResource("7_uthek")]
+position = Vector2(191, -276)
+movement_angle_deg = 180.0
+
+[node name="CivilianAirliner2" parent="." unique_id=1562940055 instance=ExtResource("7_uthek")]
+position = Vector2(194, -180)
