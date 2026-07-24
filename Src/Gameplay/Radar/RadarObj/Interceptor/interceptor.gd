@@ -22,3 +22,9 @@ func check_special_properties() -> void:
 		movement_angle_deg = rad_to_deg((position - target.position).angle() - 90) 
 		_update_move_vector()
 		
+func _special_ready() -> void:
+	HiddenButtonManager.disarm_interceptors.connect(_disarmed)
+	
+func _disarmed() -> void:
+	queue_free()
+		

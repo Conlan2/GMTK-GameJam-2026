@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dksl8kes5kr5q"]
+
+[ext_resource type="PackedScene" uid="uid://cs8mikrsfv4p0" path="res://Assets/Disarm/DisarmKey.glb" id="1_qgb0j"]
+[ext_resource type="Script" uid="uid://6jbxj46r2py7" path="res://Src/Gameplay/Interactable/DisarmInterceptor/disarm_key_interceptor.gd" id="2_y2giv"]
+[ext_resource type="Material" uid="uid://bysoej347exa2" path="res://Src/Resources/Plastic/BluePlastic.tres" id="3_tp6p5"]
+
+[node name="DisarmKey" unique_id=1216760784 node_paths=PackedStringArray("button_mesh") instance=ExtResource("1_qgb0j")]
+script = ExtResource("2_y2giv")
+button_replacement_material = ExtResource("3_tp6p5")
+button_mesh = NodePath("Armature/Skeleton3D/Switch")
+mesh_replace_num = 0
+animation_name = "FlickOn"

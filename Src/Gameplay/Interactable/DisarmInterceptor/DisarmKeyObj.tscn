@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dqy220bhlmyfy"]
+
+[ext_resource type="PackedScene" uid="uid://dksl8kes5kr5q" path="res://Src/Gameplay/Interactable/DisarmInterceptor/disarm_key_interceptor.tscn" id="1_f15f3"]
+[ext_resource type="Script" uid="uid://cln1jvydqqi2l" path="res://Src/Gameplay/Interactable/DisarmInterceptor/disarm_key_obj.gd" id="1_q2hyg"]
+
+[node name="DisarmKeyObj" type="Node3D" unique_id=830955862]
+script = ExtResource("1_q2hyg")
+
+[node name="DisarmKey" parent="." unique_id=1216760784 instance=ExtResource("1_f15f3")]
+mesh_replace_num = 1

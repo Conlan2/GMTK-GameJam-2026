@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cyfyek8lhaydm" path="res://Src/ImportedInherited/LockButton/LockButton.tscn" id="11_i346g"]
 [ext_resource type="PackedScene" uid="uid://c4ffsdfcjxbyg" path="res://Src/Gameplay/Timers/NukeTimer/NukeTimer.tscn" id="11_s6dog"]
 [ext_resource type="PackedScene" uid="uid://bblvu2pftghd7" path="res://Src/Gameplay/Timers/InterceptTimer/InterceptTimer.tscn" id="12_hbd1k"]
+[ext_resource type="PackedScene" uid="uid://dqy220bhlmyfy" path="res://Src/Gameplay/Interactable/DisarmInterceptor/DisarmKeyObj.tscn" id="14_11i1f"]
+[ext_resource type="PackedScene" uid="uid://b5h4wqpt3ybfy" path="res://Src/Gameplay/Interactable/DisarmNuke/DisarmKeyNuke.tscn" id="15_48qf5"]
 [ext_resource type="Script" uid="uid://cy1c2cgddmo3e" path="res://Src/Levels/PlayScreen/phone_positions.gd" id="20_hjvg2"]
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
@@ -168,6 +170,12 @@ transform = Transform3D(-0.1, 5.138582e-09, -7.0726514e-09, 0, 0.080901705, 0.05
 
 [node name="LockButton" parent="Interactable/Meshes" unique_id=470249109 instance=ExtResource("11_i346g")]
 transform = Transform3D(0.075, 0, 0, 0, 0.080901705, -0.029389262, 0, 0.058778524, 0.040450852, 0.6401438, 0.98481107, -1.8268588)
+
+[node name="DisarmKeyObj" parent="Interactable/Meshes" unique_id=830955862 instance=ExtResource("14_11i1f")]
+transform = Transform3D(0.1, 0, 0, 0, 0.080901705, -0.04702282, 0, 0.058778524, 0.06472136, -0.2153611, 1.0147473, -1.860818)
+
+[node name="DisarmKeyNuke" parent="Interactable/Meshes" unique_id=1181899944 instance=ExtResource("15_48qf5")]
+transform = Transform3D(0.1, 0, 0, 0, 0.080901705, -0.04702282, 0, 0.058778524, 0.06472136, -0.215, 1.14868, -2.0370488)
 
 [node name="RightArrowButton" parent="Interactable" unique_id=1004500389 instance=ExtResource("8_y6pca")]
 transform = Transform3D(-0.05, 2.569291e-09, -3.5363257e-09, 0, 0.040450852, 0.029389262, 4.371139e-09, 0.029389262, -0.040450852, 0.745637, 0.98599064, -1.8224322)

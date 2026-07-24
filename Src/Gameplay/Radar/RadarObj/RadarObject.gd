@@ -26,6 +26,11 @@ func _ready() -> void:
 	_update_move_vector()
 	current_height = start_height
 	
+	_special_ready()
+	
+func _special_ready() -> void:
+	pass
+	
 	
 func _update_move_vector() -> void:
 	_movement_vector = Vector2(0, -movement_speed)\

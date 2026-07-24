@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b5h4wqpt3ybfy"]
+
+[ext_resource type="Script" uid="uid://bccxy7jlwbalm" path="res://Src/Gameplay/Interactable/DisarmNuke/disarm_key_obj.gd" id="1_6vjsv"]
+[ext_resource type="PackedScene" uid="uid://lbx1kvw046t6" path="res://Src/Gameplay/Interactable/DisarmNuke/disarm_key_nuke.tscn" id="2_1qxof"]
+
+[node name="DisarmKeyObj" type="Node3D" unique_id=830955862]
+script = ExtResource("1_6vjsv")
+
+[node name="NukeKey" parent="." unique_id=660270607 instance=ExtResource("2_1qxof")]
