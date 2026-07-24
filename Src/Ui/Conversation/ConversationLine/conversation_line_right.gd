@@ -5,5 +5,7 @@ class_name ConversationLine
 var text: String = ""
 
 
+
+
 func _ready() -> void:
 	label.text = text
