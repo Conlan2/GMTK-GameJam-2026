@@ -1,6 +1,6 @@
 extends Control
 
-@onready var container: VBoxContainer = $Container
+@onready var container: VFlowContainer = $Container
 @export var right_packed: PackedScene
 @export var left_packed: PackedScene
 

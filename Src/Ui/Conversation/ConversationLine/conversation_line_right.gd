@@ -1,7 +1,7 @@
-extends Panel
+extends Control
 class_name ConversationLine
 
-@onready var label: Label = $Label
+@export var label: Label = null
 var text: String = ""
 
 

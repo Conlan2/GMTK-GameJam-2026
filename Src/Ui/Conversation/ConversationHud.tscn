@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5d5cxfil04g8" path="res://Src/Ui/Conversation/conversation_hud.gd" id="1_ge5v0"]
 [ext_resource type="PackedScene" uid="uid://6cd35fm2037b" path="res://Src/Ui/Conversation/ConversationLine/ConversationLineRight.tscn" id="2_pyayf"]
+[ext_resource type="PackedScene" uid="uid://wus3ucayl2tn" path="res://Src/Ui/Conversation/ConversationLine/ConversationLineLeft.tscn" id="3_pciec"]
 
 [node name="ConversationHud" type="Control" unique_id=1251490237]
 visible = false
@@ -11,16 +12,21 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
 script = ExtResource("1_ge5v0")
 right_packed = ExtResource("2_pyayf")
+left_packed = ExtResource("3_pciec")
 
-[node name="Container" type="VBoxContainer" parent="." unique_id=273747761]
+[node name="Container" type="VFlowContainer" parent="." unique_id=215820442]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 111.0
+offset_top = 34.0
 offset_right = -130.0
-grow_horizontal = 2
-grow_vertical = 2
-alignment = 1
+offset_bottom = -29.0
+alignment = 2
+last_wrap_alignment = 2
+reverse_fill = true

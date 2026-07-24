@@ -2,19 +2,27 @@
 
 [ext_resource type="Script" uid="uid://cpnh5a48exaku" path="res://Src/Ui/Conversation/ConversationLine/conversation_line_right.gd" id="1_o8owx"]
 
-[node name="ConversationLineRight" type="Panel" unique_id=961098985]
-anchors_preset = -1
+[node name="HBoxContainer" type="HBoxContainer" unique_id=1758062194 node_paths=PackedStringArray("label")]
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_right = -331.0
-offset_bottom = -310.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
 script = ExtResource("1_o8owx")
+label = NodePath("ConversationLineRight/Label")
 
-[node name="Label" type="Label" parent="." unique_id=1007676291]
+[node name="Container" type="Panel" parent="." unique_id=2145112012]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ConversationLineRight" type="Panel" parent="." unique_id=961098985]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ConversationLineRight" unique_id=1007676291]
 layout_direction = 2
 layout_mode = 1
 anchors_preset = 15

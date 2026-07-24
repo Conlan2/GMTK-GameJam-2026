@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://wus3ucayl2tn"]
+
+[ext_resource type="Script" uid="uid://1jfdnmhsqw18" path="res://Src/Ui/Conversation/ConversationLine/conversation_line_left.gd" id="1_cfg5l"]
+
+[node name="ConversationLineLeft" type="HBoxContainer" unique_id=660221200 node_paths=PackedStringArray("label")]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+script = ExtResource("1_cfg5l")
+label = NodePath("ConversationLineLeft/Label")
+
+[node name="ConversationLineLeft" type="Panel" parent="." unique_id=961098985]
+custom_minimum_size = Vector2(200, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="ConversationLineLeft" unique_id=1007676291]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 18.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Example Text"
+vertical_alignment = 1
+text_direction = 2
+
+[node name="Container" type="Panel" parent="." unique_id=774730420]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(200, 30)
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 3
