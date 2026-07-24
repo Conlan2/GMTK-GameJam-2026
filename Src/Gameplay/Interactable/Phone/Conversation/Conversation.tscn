@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dijq5e6d6pe78"]
+
+[ext_resource type="Script" uid="uid://8fa8fktw0hxg" path="res://Src/Gameplay/Interactable/Phone/Conversation/conversation.gd" id="1_epxwu"]
+
+[node name="Conversation" type="Node" unique_id=1327096832]
+script = ExtResource("1_epxwu")

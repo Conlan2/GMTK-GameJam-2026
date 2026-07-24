@@ -10,8 +10,22 @@ var phone: Node3D
 
 var phone_moving: bool = false
 
+var conversation_queue: Array = []
+
+signal add_conversation_to_queue(conversation: Conversation)
+signal conversation_listened(conversation: Conversation)
+signal conversation_finished
+
 func _ready() -> void:
 	HiddenButtonManager.phone_move.connect(_move_phone)
+	add_conversation_to_queue.connect(_add_conversation)
+	conversation_finished.connect(_conversation_finished)
+	
+func _conversation_finished() -> void:
+	_move_phone("home")
+	
+func _add_conversation(conversation: Conversation) -> void:
+	conversation_queue.append(conversation)
 	
 func _process(delta: float) -> void:
 	if phone_moving:
@@ -37,6 +51,15 @@ func _move_phone(location_name: String) -> void:
 		
 	phone_moving = true
 	move_timer.start()	
+	
+	if location_name != "ear":
+		return
+		
+	if len(conversation_queue) <= 0:
+		return
+		
+	var next_conversation: Conversation = conversation_queue.pop_front()
+	conversation_listened.emit(next_conversation)
 
 
 func _on_move_timer_timeout() -> void:

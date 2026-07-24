@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://6cd35fm2037b"]
+
+[ext_resource type="Script" uid="uid://cpnh5a48exaku" path="res://Src/Ui/Conversation/ConversationLine/conversation_line_right.gd" id="1_o8owx"]
+
+[node name="ConversationLineRight" type="Panel" unique_id=961098985]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -331.0
+offset_bottom = -310.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_o8owx")
+
+[node name="Label" type="Label" parent="." unique_id=1007676291]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -19.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Example Text"
+horizontal_alignment = 2
+vertical_alignment = 1
+text_direction = 2

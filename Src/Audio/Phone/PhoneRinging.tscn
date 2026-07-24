@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://jkku5gpu6mhl"]
+
+[ext_resource type="AudioStream" uid="uid://cunvlcwsp1pmf" path="res://Audio/phone_ringing.mp3" id="1_ecyqj"]
+[ext_resource type="Script" uid="uid://b1in56fx52guu" path="res://Src/Audio/Phone/phone_ringing.gd" id="2_u28ix"]
+
+[node name="PhoneRinging" type="AudioStreamPlayer3D" unique_id=550576948]
+stream = ExtResource("1_ecyqj")
+volume_db = -20.0
+script = ExtResource("2_u28ix")

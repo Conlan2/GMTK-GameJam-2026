@@ -46,7 +46,6 @@ func turn_radar(turn_amount: float) -> void:
 	if radar_lock_angle < -180:
 		radar_lock_angle += 360
 		
-	print(radar_lock_angle)
 
 	
 func handle_rotation(delta: float) -> void:
