@@ -26,5 +26,5 @@ func _special_ready() -> void:
 	HiddenButtonManager.disarm_interceptors.connect(_disarmed)
 	
 func _disarmed() -> void:
-	queue_free()
+	_delete_self()
 		

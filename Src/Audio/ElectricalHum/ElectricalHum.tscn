@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dnny7y1lpf1me"]
+
+[ext_resource type="AudioStream" uid="uid://b03bgnlb8sb3c" path="res://Audio/ElectricalHum.mp3" id="1_lf6xs"]
+[ext_resource type="Script" uid="uid://d01n0te7q7cu" path="res://Src/Audio/ElectricalHum/electrical_hum.gd" id="2_12ir7"]
+
+[node name="ElectricalHum" type="AudioStreamPlayer3D" unique_id=1258871208]
+stream = ExtResource("1_lf6xs")
+volume_db = -20.0
+autoplay = true
+script = ExtResource("2_12ir7")
+
+[connection signal="finished" from="." to="." method="_on_finished"]

@@ -23,6 +23,7 @@
 [ext_resource type="PackedScene" uid="uid://b5h4wqpt3ybfy" path="res://Src/Gameplay/Interactable/DisarmNuke/DisarmKeyNuke.tscn" id="15_48qf5"]
 [ext_resource type="Script" uid="uid://cy1c2cgddmo3e" path="res://Src/Levels/PlayScreen/phone_positions.gd" id="20_hjvg2"]
 [ext_resource type="PackedScene" uid="uid://jkku5gpu6mhl" path="res://Src/Audio/Phone/PhoneRinging.tscn" id="23_mfnry"]
+[ext_resource type="PackedScene" uid="uid://dnny7y1lpf1me" path="res://Src/Audio/ElectricalHum/ElectricalHum.tscn" id="24_q8lxy"]
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
@@ -233,3 +234,7 @@ script = null
 [node name="PhoneRinging" parent="Audio" unique_id=550576948 instance=ExtResource("23_mfnry")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.077471316, 1.272092, -2.141278)
 volume_db = -25.0
+
+[node name="ElectricalHum" parent="Audio" unique_id=1258871208 instance=ExtResource("24_q8lxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5550447, 0)
+volume_db = -30.0

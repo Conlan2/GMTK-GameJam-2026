@@ -126,4 +126,5 @@ func _create_fade_out() -> void:
 
 func _on_detection_area_area_entered(area: Area2D) -> void:
 	if area is RadarObject:
+		RadarManager.add_tracked_object.emit(area)
 		area.create_radar_image()

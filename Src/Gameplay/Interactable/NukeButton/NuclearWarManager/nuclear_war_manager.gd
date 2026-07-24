@@ -9,7 +9,8 @@ func _ready() -> void:
 	HiddenButtonManager.disarm_nuke.connect(_cancel_launch)
 	
 func _start_launch() -> void:
-	war_timer.start()
+	if war_timer.is_stopped():
+		war_timer.start()
 	
 func _cancel_launch() -> void:
 	war_timer.stop()

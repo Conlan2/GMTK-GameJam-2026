@@ -79,10 +79,14 @@ func _on_area_entered(area: Area2D) -> void:
 		if area.plane_type == RadarObjectTypes.type.INTERCEPTOR or\
 			plane_type == RadarObjectTypes.type.INTERCEPTOR:
 				
-			area.queue_free()
-			queue_free()
+			_delete_self()
 			
 			
 			
-		 
+			
+func _delete_self() -> void:
+	var tracked: int = RadarManager.tracked_objects.find(self)
+	RadarManager.delete_tracked_object.emit(tracked)
+	queue_free()
+	
 	
