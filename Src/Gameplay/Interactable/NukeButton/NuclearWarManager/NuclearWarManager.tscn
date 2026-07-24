@@ -7,4 +7,4 @@ script = ExtResource("1_tbora")
 war_timer = NodePath("WarTimer")
 
 [node name="WarTimer" type="Timer" parent="." unique_id=2055195259]
-wait_time = 10.0
+wait_time = 15.0

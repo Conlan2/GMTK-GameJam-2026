@@ -36,6 +36,10 @@ window/size/viewport_height=360
 window/size/mode=2
 window/stretch/mode="canvas_items"
 
+[gui]
+
+theme/custom_font="uid://8akki3iutmmt"
+
 [input]
 
 turn_right={

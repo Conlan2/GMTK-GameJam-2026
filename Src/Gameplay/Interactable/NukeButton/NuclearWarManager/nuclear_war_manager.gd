@@ -6,6 +6,10 @@ extends Node
 
 func _ready() -> void:
 	HiddenButtonManager.nuke_button_pushed.connect(_start_launch)
+	HiddenButtonManager.disarm_nuke.connect(_cancel_launch)
 	
 func _start_launch() -> void:
 	war_timer.start()
+	
+func _cancel_launch() -> void:
+	war_timer.stop()

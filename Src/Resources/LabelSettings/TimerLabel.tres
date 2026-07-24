@@ -1,0 +1,8 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://cd8pq52ntxak7"]
+
+[ext_resource type="FontFile" uid="uid://8akki3iutmmt" path="res://Src/Resources/Fonts/Eighty-Four.ttf" id="1_j2wpe"]
+
+[resource]
+font = ExtResource("1_j2wpe")
+font_size = 500
+font_color = Color(0.63470423, 0.93738186, 0.35129273, 1)

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://bo24efrm43kor"]
+
+[ext_resource type="Texture2D" uid="uid://bd1qopdbflv68" path="res://Assets/Radar/PNG/RadarBackground.png" id="1_ofalt"]
+[ext_resource type="Script" uid="uid://b7vfukvk45l3t" path="res://Src/Gameplay/Timers/TimerWorld/timer_world.gd" id="1_ysobd"]
+[ext_resource type="LabelSettings" uid="uid://cd8pq52ntxak7" path="res://Src/Resources/LabelSettings/TimerLabel.tres" id="2_bf4cl"]
+
+[node name="TimerWorld" type="Node2D" unique_id=783992663]
+script = ExtResource("1_ysobd")
+
+[node name="RadarBackground" type="Sprite2D" parent="." unique_id=2035884198]
+position = Vector2(1, 0)
+texture = ExtResource("1_ofalt")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=377777133]
+position = Vector2(20, 60)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=463089886]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=607493419]
+offset_left = 97.0
+offset_top = -51.0
+offset_right = 285.0
+offset_bottom = 283.0
+text = "0"
+label_settings = ExtResource("2_bf4cl")

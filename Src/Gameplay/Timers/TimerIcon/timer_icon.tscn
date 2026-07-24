@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://u23oxc387t2f"]
+
+[ext_resource type="PackedScene" uid="uid://dn3s17xxdoxrj" path="res://Assets/Timer/TimerIcon.glb" id="1_qjj04"]
+[ext_resource type="Script" uid="uid://8cbs2xx22xq5" path="res://Src/Gameplay/Timers/TimerIcon/timer_icon.gd" id="2_534cm"]
+[ext_resource type="Material" uid="uid://cxalnaiwv4axx" path="res://Src/Gameplay/Timers/TimerIcon/TimerMaterialTemplate.tres" id="3_iu34i"]
+
+[node name="TimerIcon" unique_id=1684783061 instance=ExtResource("1_qjj04")]
+script = ExtResource("2_534cm")
+
+[node name="Icon" parent="." index="0" unique_id=189669863]
+surface_material_override/0 = ExtResource("3_iu34i")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="." index="1" unique_id=1869847579]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 0, 1.0070745, 0)
+light_color = Color(0.535704, 0.8688229, 0, 1)
+spot_range = 1.513
+spot_angle_attenuation = 0.17677672

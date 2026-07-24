@@ -1,26 +1,100 @@
 [gd_scene format=3 uid="uid://c4ffsdfcjxbyg"]
 
 [ext_resource type="PackedScene" uid="uid://c23f4sj8gw8ee" path="res://Assets/Timer/Timer.glb" id="1_3s3mp"]
-[ext_resource type="PackedScene" uid="uid://dn3s17xxdoxrj" path="res://Assets/Timer/TimerIcon.glb" id="2_pry6u"]
+[ext_resource type="PackedScene" uid="uid://u23oxc387t2f" path="res://Src/Gameplay/Timers/TimerIcon/timer_icon.tscn" id="2_r0h31"]
+[ext_resource type="PackedScene" uid="uid://bo24efrm43kor" path="res://Src/Gameplay/Timers/TimerWorld/TimerWorld.tscn" id="3_gu2d8"]
+[ext_resource type="Script" uid="uid://cvqnoifvigk3l" path="res://Src/Gameplay/Timers/TimerIcon/10secondTimer.gd" id="3_ljerj"]
+[ext_resource type="Script" uid="uid://26pebo0qmu4k" path="res://Src/Gameplay/Timers/TimerIcon/seconds10.gd" id="5_ljerj"]
+[ext_resource type="Script" uid="uid://bbgr46bryjc0a" path="res://Src/Gameplay/Timers/TimerIcon/miliseconds.gd" id="6_ghr2o"]
+[ext_resource type="Script" uid="uid://cwj1alo80h8nr" path="res://Src/Gameplay/Timers/TimerIcon/milliseonds2.gd" id="7_oxk3n"]
+[ext_resource type="Script" uid="uid://bmkp2a4f7eurt" path="res://Src/Gameplay/Timers/TimerIcon/milliseconds___1.gd" id="8_0hq1f"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_ljerj"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_h60o5"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_ljerj")
+metallic = 0.46
+metallic_specular = 1.0
+uv1_scale = Vector3(1.1, 1.1, 1.1)
+uv1_offset = Vector3(0.06, -0.24, 0)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_jrrru"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_mt8br"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_jrrru")
+metallic = 0.46
+metallic_specular = 1.0
+uv1_scale = Vector3(1.1, 1.1, 1.1)
+uv1_offset = Vector3(-0.03, -0.24, 0)
 
 [node name="NukeTimer" type="Node3D" unique_id=161129933]
 
 [node name="Timer" parent="." unique_id=253471046 instance=ExtResource("1_3s3mp")]
 
-[node name="Seconds10s" parent="." unique_id=1684783061 instance=ExtResource("2_pry6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4571915, 0, -0.00943109)
+[node name="Seconds10s2" parent="." unique_id=1684783061 node_paths=PackedStringArray("timer_world") instance=ExtResource("2_r0h31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.461754, 0, 0)
+script = ExtResource("3_ljerj")
+surface_world = SubResource("StandardMaterial3D_h60o5")
+timer_world = NodePath("SubViewport/TimerWorld")
 
-[node name="Seconds1s" parent="." unique_id=270538877 instance=ExtResource("2_pry6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0155962, 0, -0.00943109)
+[node name="SubViewport" type="SubViewport" parent="Seconds10s2" unique_id=1309339779]
 
-[node name="Milliseconds_1" parent="." unique_id=265075759 instance=ExtResource("2_pry6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.49503183, 0, -0.00943109)
+[node name="TimerWorld" parent="Seconds10s2/SubViewport" unique_id=783992663 instance=ExtResource("3_gu2d8")]
+text = "0"
 
-[node name="Milliseconds__1" parent="." unique_id=1065056623 instance=ExtResource("2_pry6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.965539, 0, -0.00943109)
+[node name="Seconds1s2" parent="." unique_id=1540642794 node_paths=PackedStringArray("timer_world") instance=ExtResource("2_r0h31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.0040984, 0, 0)
+script = ExtResource("5_ljerj")
+surface_world = SubResource("StandardMaterial3D_h60o5")
+timer_world = NodePath("SubViewport/TimerWorld")
 
-[node name="Milliseconds___1" parent="." unique_id=195183384 instance=ExtResource("2_pry6u")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.4266217, 0, -0.00943109)
+[node name="SubViewport" type="SubViewport" parent="Seconds1s2" unique_id=1734142137]
 
-[node name="Colon" parent="." unique_id=839604922 instance=ExtResource("2_pry6u")]
-transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, -0.74839306, 0, -0.00943109)
+[node name="TimerWorld" parent="Seconds1s2/SubViewport" unique_id=1990602404 instance=ExtResource("3_gu2d8")]
+text = "0"
+
+[node name="Milliseconds_2" parent="." unique_id=16228237 node_paths=PackedStringArray("timer_world") instance=ExtResource("2_r0h31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.50854754, 0, 0)
+script = ExtResource("6_ghr2o")
+surface_world = SubResource("StandardMaterial3D_h60o5")
+timer_world = NodePath("SubViewport/TimerWorld")
+
+[node name="SubViewport" type="SubViewport" parent="Milliseconds_2" unique_id=1914673802]
+
+[node name="TimerWorld" parent="Milliseconds_2/SubViewport" unique_id=54552052 instance=ExtResource("3_gu2d8")]
+text = "0"
+
+[node name="Milliseconds__2" parent="." unique_id=1699313843 node_paths=PackedStringArray("timer_world") instance=ExtResource("2_r0h31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.9667865, 0, 0)
+script = ExtResource("7_oxk3n")
+surface_world = SubResource("StandardMaterial3D_h60o5")
+timer_world = NodePath("SubViewport/TimerWorld")
+
+[node name="SubViewport" type="SubViewport" parent="Milliseconds__2" unique_id=1522369848]
+
+[node name="TimerWorld" parent="Milliseconds__2/SubViewport" unique_id=311027634 instance=ExtResource("3_gu2d8")]
+text = "0"
+
+[node name="Milliseconds___2" parent="." unique_id=1285509753 node_paths=PackedStringArray("timer_world") instance=ExtResource("2_r0h31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.426722, 0, 0)
+script = ExtResource("8_0hq1f")
+surface_world = SubResource("StandardMaterial3D_h60o5")
+timer_world = NodePath("SubViewport/TimerWorld")
+
+[node name="SubViewport" type="SubViewport" parent="Milliseconds___2" unique_id=2143921264]
+
+[node name="TimerWorld" parent="Milliseconds___2/SubViewport" unique_id=1861247105 instance=ExtResource("3_gu2d8")]
+text = "0"
+
+[node name="Colon2" parent="." unique_id=528193961 instance=ExtResource("2_r0h31")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, -0.7442174, 0, 0)
+surface_world = SubResource("StandardMaterial3D_mt8br")
+
+[node name="SubViewport" type="SubViewport" parent="Colon2" unique_id=1058911824]
+
+[node name="TimerWorld" parent="Colon2/SubViewport" unique_id=301943807 instance=ExtResource("3_gu2d8")]
+text = ":"
