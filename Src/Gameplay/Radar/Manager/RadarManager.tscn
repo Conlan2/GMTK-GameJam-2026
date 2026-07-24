@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b1qmm885tslhk"]
+
+[ext_resource type="Script" uid="uid://euydqdha3blu" path="res://Src/Gameplay/Radar/Manager/radar_manager.gd" id="1_wf5em"]
+
+[node name="RadarManager" type="Node" unique_id=505034229]
+script = ExtResource("1_wf5em")

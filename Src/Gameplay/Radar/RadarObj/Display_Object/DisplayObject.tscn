@@ -7,33 +7,33 @@
 script = ExtResource("1_o0p6k")
 
 [node name="ObjectName" type="Label" parent="." unique_id=23128668]
-offset_left = 38.0
-offset_top = -2.0
-offset_right = 78.0
-offset_bottom = 15.0
+offset_left = 21.0
+offset_top = -21.0
+offset_right = 61.0
+offset_bottom = -4.0
 theme_override_colors/font_color = Color(0.19879997, 0.71, 0.26696002, 1)
 theme_override_font_sizes/font_size = 12
 text = "Test"
 
 [node name="Object Distance" type="Label" parent="." unique_id=1321843066]
-offset_left = 38.0
-offset_top = 9.0
-offset_right = 78.0
-offset_bottom = 26.0
+offset_left = 21.0
+offset_top = -10.0
+offset_right = 61.0
+offset_bottom = 7.0
 theme_override_colors/font_color = Color(0.2, 0.70980394, 0.26666668, 1)
 theme_override_font_sizes/font_size = 12
 text = "Test"
 
 [node name="Object Height" type="Label" parent="." unique_id=1710000046]
-offset_left = 38.0
-offset_top = 20.0
-offset_right = 78.0
-offset_bottom = 37.0
+offset_left = 21.0
+offset_top = 1.0
+offset_right = 61.0
+offset_bottom = 18.0
 theme_override_colors/font_color = Color(0.2, 0.70980394, 0.26666668, 1)
 theme_override_font_sizes/font_size = 12
 text = "Test"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=595263632]
-position = Vector2(18, 19)
+position = Vector2(1.0000019, 1.9073486e-06)
 scale = Vector2(0.36, 0.39)
 texture = ExtResource("1_j678m")

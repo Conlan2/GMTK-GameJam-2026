@@ -2,8 +2,10 @@
 
 [ext_resource type="PackedScene" uid="uid://b8ibmli73b5vb" path="res://Src/Gameplay/Radar/Radar.tscn" id="1_62u8d"]
 [ext_resource type="PackedScene" uid="uid://ccqvew2deu0je" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawnController/RadarSpawnController.tscn" id="3_07i7e"]
+[ext_resource type="Script" uid="uid://d3ita8cbrrge" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/InterceptorLauncher.gd" id="4_3us8k"]
 [ext_resource type="Script" uid="uid://chyla2r1jmi7q" path="res://Src/Gameplay/Radar/RadarWorld/lock_display.gd" id="4_460j6"]
 [ext_resource type="PackedScene" uid="uid://b80y5n1b5okx4" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/RadarSpawner.tscn" id="4_fdkwe"]
+[ext_resource type="PackedScene" uid="uid://hllud8kpkk4d" path="res://Src/Gameplay/Radar/RadarObj/Interceptor/Interceptor.tscn" id="5_3us8k"]
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -43,6 +45,10 @@ rotation_deviation = 5.0
 [node name="NorthBarrageRight" parent="RadarSpawnController" unique_id=1241518478 instance=ExtResource("4_fdkwe")]
 position = Vector2(118.99994, -594)
 rotation = 3.4470253
+
+[node name="InterceptorLauncher" parent="RadarSpawnController" unique_id=1088217971 instance=ExtResource("4_fdkwe")]
+script = ExtResource("4_3us8k")
+packed_interceptor = ExtResource("5_3us8k")
 
 [node name="LockDisplay" type="Node2D" parent="." unique_id=1946758950]
 visible = false

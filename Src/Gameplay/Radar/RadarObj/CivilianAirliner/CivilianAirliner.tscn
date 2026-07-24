@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://c6scut0ku47fh" path="res://Src/Gameplay/Radar/RadarObj/Display_Object/DisplayObject.tscn" id="2_1c41p"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xfdhx"]
-size = Vector2(2, 2)
+size = Vector2(20, 16)
 
 [node name="CivilianAirliner" type="Area2D" unique_id=1287891570]
 script = ExtResource("1_xfdhx")

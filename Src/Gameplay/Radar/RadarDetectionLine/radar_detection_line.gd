@@ -1,5 +1,5 @@
 extends Node2D
-
+class_name RadarDetector
 
 
 enum RadarMode {
@@ -19,12 +19,14 @@ var _rotate_left: bool = true
 func _ready() -> void:
 	HiddenButtonManager.set_radar_lock.connect(lock)
 	HiddenButtonManager.turn_radar_lock.connect(turn_radar)
+	RadarManager.detection_object = self
 
 
 func _physics_process(delta: float) -> void:
 
 	handle_rotation(delta)
 	_create_fade_out()
+	
 	
 
 	
@@ -73,11 +75,11 @@ func handle_rotation(delta: float) -> void:
 		var within_range = true
 		if target_angle - 20 > rotation_degrees:
 			within_range = false
-			true_speed = true_speed * 2
+			true_speed = true_speed * 4
 			
 		if target_angle + 20 < rotation_degrees:
 			within_range = false
-			true_speed = true_speed * 2
+			true_speed = true_speed * 4
 			
 		if !within_range:
 			if rotation_degrees < target_angle:
@@ -85,13 +87,12 @@ func handle_rotation(delta: float) -> void:
 			else:
 				_rotate_left = true
 
+
 			
 		if _rotate_left:
 			rotate(-true_speed)
 		else:
-			rotate(true_speed)
-			
-		
+			rotate(true_speed)		
 				
 	
 func _create_fade_out() -> void:

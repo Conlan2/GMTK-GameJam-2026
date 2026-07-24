@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://hllud8kpkk4d"]
+
+[ext_resource type="Script" uid="uid://dpbbn6uiq331l" path="res://Src/Gameplay/Radar/RadarObj/Interceptor/interceptor.gd" id="1_oovuj"]
+[ext_resource type="PackedScene" uid="uid://c6scut0ku47fh" path="res://Src/Gameplay/Radar/RadarObj/Display_Object/DisplayObject.tscn" id="2_vhmxx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oovuj"]
+size = Vector2(28, 30)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_oovuj"]
+radius = 77.02597
+
+[node name="Interceptor" type="Area2D" unique_id=1137941092]
+script = ExtResource("1_oovuj")
+movement_speed = 20.0
+object_name = "Interceptor"
+start_height = 1000.0
+plane_type = 5
+packed_display_object = ExtResource("2_vhmxx")
+metadata/_custom_type_script = "uid://v6ywksg1wsyy"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1289472190]
+shape = SubResource("RectangleShape2D_oovuj")
+
+[node name="LockOn" type="Area2D" parent="." unique_id=2125229562]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LockOn" unique_id=762791992]
+shape = SubResource("CircleShape2D_oovuj")
+
+[connection signal="area_entered" from="LockOn" to="." method="_on_lock_on_area_entered"]

@@ -23,9 +23,13 @@ signal detected
 
 func _ready() -> void:
 	detected.connect(create_radar_image)
+	_update_move_vector()
+	current_height = start_height
+	
+	
+func _update_move_vector() -> void:
 	_movement_vector = Vector2(0, -movement_speed)\
 		.rotated(deg_to_rad(movement_angle_deg))
-	current_height = start_height
 	
 func _physics_process(delta: float) -> void:
 	position += _movement_vector * delta
