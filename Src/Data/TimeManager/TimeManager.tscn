@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dwt0n55v17vgm"]
+
+[ext_resource type="Script" uid="uid://pah55x5ixoik" path="res://Src/Data/TimeManager/time_manager.gd" id="1_ruft3"]
+
+[node name="TimeManager" type="Node" unique_id=1164045964]
+script = ExtResource("1_ruft3")
+
+[node name="Timer" type="Timer" parent="." unique_id=1339092469]
+wait_time = 4096.0

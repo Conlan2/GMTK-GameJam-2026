@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://b4iakckgcx1ew"]
+
+[ext_resource type="Script" uid="uid://bx6ojpbkydmrs" path="res://Src/Data/ConversationManager/conversation_manager.gd" id="1_62vr3"]
+
+[node name="ConversationManager" type="Node" unique_id=1029930681]
+script = ExtResource("1_62vr3")

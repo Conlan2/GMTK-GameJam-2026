@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dfulyln3ceg03"]
+
+[ext_resource type="Script" uid="uid://b2pokqmnb8yrx" path="res://Src/Data/PlaneSpawner/plane_spawner.gd" id="1_dqkeo"]
+
+[node name="PlaneSpawner" type="Node" unique_id=1044702196]
+script = ExtResource("1_dqkeo")

@@ -24,6 +24,10 @@ NuclearWarManager="*uid://brbkm0s4oansd"
 RadarObjectTypes="*uid://b112qr05u2sml"
 PhoneManager="*uid://cit82vdl6g2sq"
 RadarManager="*uid://b1qmm885tslhk"
+ConversationManager="*uid://b4iakckgcx1ew"
+TimeManager="*uid://dwt0n55v17vgm"
+PlaneSpawner="*uid://dfulyln3ceg03"
+SpawnData="*uid://dui5o8adea0bu"
 
 [display]
 

@@ -15,6 +15,7 @@ const FADE_OUT_INTERVAL: int = 1
 var current_radar_mode: RadarMode = RadarMode.NO_LOCK
 var radar_lock_angle: float = 0
 var _rotate_left: bool = true
+var _in_range: bool = true
 
 func _ready() -> void:
 	HiddenButtonManager.set_radar_lock.connect(lock)
@@ -35,6 +36,7 @@ func lock() -> void:
 		current_radar_mode = RadarMode.NO_LOCK
 	else:
 		current_radar_mode = RadarMode.LOCKED
+		radar_lock_angle = rotation_degrees
 	
 func turn_radar(turn_amount: float) -> void:
 	radar_lock_angle += turn_amount
@@ -81,11 +83,17 @@ func handle_rotation(delta: float) -> void:
 			within_range = false
 			true_speed = true_speed * 4
 			
+		
+			
 		if !within_range:
+			_in_range = false
 			if rotation_degrees < target_angle:
 				_rotate_left = false
 			else:
 				_rotate_left = true
+		else:
+			_in_range = true
+	
 
 
 			
@@ -96,6 +104,10 @@ func handle_rotation(delta: float) -> void:
 				
 	
 func _create_fade_out() -> void:
+	if !_in_range:
+		return
+	
+	
 	if Engine.get_process_frames() % FADE_OUT_INTERVAL != 0:
 		return
 		

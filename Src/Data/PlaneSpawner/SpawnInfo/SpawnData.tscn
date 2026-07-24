@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dui5o8adea0bu"]
+
+[ext_resource type="Script" uid="uid://bndl5d5aayo1a" path="res://Src/Data/PlaneSpawner/SpawnInfo/spawn_data.gd" id="1_yvq4q"]
+
+[node name="SpawnData" type="Node" unique_id=482654578]
+script = ExtResource("1_yvq4q")

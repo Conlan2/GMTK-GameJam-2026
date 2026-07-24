@@ -17,6 +17,7 @@ limit_enabled = false
 [node name="Radar" parent="." unique_id=1130873436 instance=ExtResource("1_62u8d")]
 
 [node name="RadarSpawnController" parent="." unique_id=555480956 instance=ExtResource("3_07i7e")]
+civilian_plane = ExtResource("7_uthek")
 
 [node name="CivilianAirlinesSouthToEast" parent="RadarSpawnController" unique_id=2004940261 instance=ExtResource("4_fdkwe")]
 position = Vector2(83.999985, 553)
@@ -72,10 +73,3 @@ offset_bottom = -446.0
 theme_override_colors/font_color = Color(0.22783944, 0.87261593, 0.32291675, 1)
 text = "Degrees"
 horizontal_alignment = 1
-
-[node name="CivilianAirliner" parent="." unique_id=1287891570 instance=ExtResource("7_uthek")]
-position = Vector2(191, -276)
-movement_angle_deg = 180.0
-
-[node name="CivilianAirliner2" parent="." unique_id=1562940055 instance=ExtResource("7_uthek")]
-position = Vector2(194, -180)
