@@ -26,6 +26,10 @@ func _delete_tracked_object(index: int) -> void:
 		tracked_objects.remove_at(index)
 		
 	_calculate_impact_timer()
+	
+func _process(delta: float) -> void:
+	if active_incoming:
+		impact_time_left -= delta
 		
 func _get_alarmed_tracked() -> Array:
 	var alarm_tracked: Array = []

@@ -9,17 +9,6 @@
 [ext_resource type="Script" uid="uid://ccibmlh77hnpp" path="res://Src/Gameplay/Timers/TimerIcon/milliseconds__1.gd" id="7_fyxyd"]
 [ext_resource type="Script" uid="uid://cax2lwcnqgp3t" path="res://Src/Gameplay/Timers/TimerIcon/milliseconds____1.gd" id="8_uoysd"]
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_igati"]
-viewport_path = NodePath("SubViewport")
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ji4kc"]
-resource_local_to_scene = true
-albedo_texture = SubResource("ViewportTexture_igati")
-metallic = 0.46
-metallic_specular = 1.0
-uv1_scale = Vector3(1.1, 1.1, 1.1)
-uv1_offset = Vector3(-0.03, -0.24, 0)
-
 [sub_resource type="ViewportTexture" id="ViewportTexture_uoccs"]
 viewport_path = NodePath("SubViewport")
 
@@ -47,24 +36,26 @@ metallic_specular = 1.0
 uv1_scale = Vector3(1.1, 1.1, 1.1)
 uv1_offset = Vector3(0.06, -0.24, 0)
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_5n30f"]
+viewport_path = NodePath("SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uoysd"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_5n30f")
+metallic = 0.46
+metallic_specular = 1.0
+uv1_scale = Vector3(1.1, 1.1, 1.1)
+uv1_offset = Vector3(-0.03, -0.24, 0)
+
 [node name="InterceptTimer" type="Node3D" unique_id=161129933]
 
 [node name="Timer" parent="." unique_id=54419799 instance=ExtResource("1_vml8k")]
-
-[node name="Colon2" parent="." unique_id=438044772 instance=ExtResource("3_s1ku7")]
-transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, -0.7442174, 0, 0)
-surface_world = SubResource("StandardMaterial3D_ji4kc")
-
-[node name="SubViewport" type="SubViewport" parent="Colon2" unique_id=1660762123]
-
-[node name="TimerWorld" parent="Colon2/SubViewport" unique_id=1979080085 instance=ExtResource("4_sk3ao")]
-text = ":"
 
 [node name="Seconds10s2" parent="." unique_id=1684783061 node_paths=PackedStringArray("timer_world") instance=ExtResource("3_s1ku7")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.461754, 0, 0)
 script = ExtResource("4_4m12k")
 surface_world = SubResource("StandardMaterial3D_5n30f")
-timer_world = NodePath("../Colon2/SubViewport/TimerWorld")
+timer_world = NodePath("SubViewport/TimerWorld")
 
 [node name="SubViewport" type="SubViewport" parent="Seconds10s2" unique_id=2141404193]
 
@@ -114,3 +105,13 @@ timer_world = NodePath("SubViewport/TimerWorld")
 
 [node name="TimerWorld" parent="Milliseconds___2/SubViewport" unique_id=715310779 instance=ExtResource("4_sk3ao")]
 text = "0"
+
+[node name="Colon2" parent="." unique_id=347652017 node_paths=PackedStringArray("timer_world") instance=ExtResource("3_s1ku7")]
+transform = Transform3D(0.5, 0, 0, 0, 1, 0, 0, 0, 1, -0.7442174, 0, 0)
+surface_world = SubResource("StandardMaterial3D_uoysd")
+timer_world = NodePath("SubViewport/TimerWorld")
+
+[node name="SubViewport" type="SubViewport" parent="Colon2" unique_id=604610402]
+
+[node name="TimerWorld" parent="Colon2/SubViewport" unique_id=689566419 instance=ExtResource("4_sk3ao")]
+text = ":"
