@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://c23f4sj8gw8ee"
-path="res://.godot/imported/Timer.glb-a79da35b05b6d066afcbf0183a8d0989.scn"
+uid="uid://skrc72jcxxr5"
+path="res://.godot/imported/ArrowButton.glb-784652c0d8f977e486f75c01c7a800fe.scn"
 
 [deps]
 
-source_file="res://Assets/Timer/Timer.glb"
-dest_files=["res://.godot/imported/Timer.glb-a79da35b05b6d066afcbf0183a8d0989.scn"]
+source_file="res://Assets/Radar/Blender/ArrowButton.glb"
+dest_files=["res://.godot/imported/ArrowButton.glb-784652c0d8f977e486f75c01c7a800fe.scn"]
 
 [params]
 
@@ -39,12 +39,12 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Material": {
+"Button Material": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Src/Resources/Metals/MetalType1.tres",
-"use_external/path": "uid://31vif2tntt7k"
+"use_external/fallback_path": "res://Src/Resources/Plastic/GreenPlastic.tres",
+"use_external/path": "uid://dcjx1emgtjc3h"
 },
-"TimerMaterial": {
+"Material": {
 "use_external/enabled": true,
 "use_external/fallback_path": "res://Src/Resources/Metals/RustedMetalMaterial.tres",
 "use_external/path": "uid://d332y8ffgq1sc"

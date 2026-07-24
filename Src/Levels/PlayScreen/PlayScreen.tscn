@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 [ext_resource type="Script" uid="uid://cd0gyx0vwbdya" path="res://Src/Levels/PlayScreen/camera_positions.gd" id="8_thj8l"]
 [ext_resource type="PackedScene" uid="uid://dscrvxv32wx2y" path="res://Src/Gameplay/Interactable/InterceptorButton/InterceptorButton.tscn" id="8_v1r55"]
+[ext_resource type="PackedScene" uid="uid://0piv5kohd7p" path="res://Src/ImportedInherited/ArrowButton/arrow_button.tscn" id="8_y6pca"]
 [ext_resource type="PackedScene" uid="uid://hl1xedpgouq6" path="res://Src/Gameplay/Interactable/Phone/PhoneHead.tscn" id="9_hqfgc"]
 [ext_resource type="PackedScene" uid="uid://1tp4557iv7n6" path="res://Src/Gameplay/Interactable/NukeButton/Nukebutton.tscn" id="10_v1r55"]
 [ext_resource type="PackedScene" uid="uid://m2pktt77w64v" path="res://Src/Gameplay/Interactable/Phone/PhoneBase.tscn" id="11_bsaxd"]
@@ -73,9 +74,21 @@ spot_range = 1.0
 base_light_energy = 2.0
 flicker_strength = 0.5
 
+[node name="DEBUGBRIGHt" parent="Lights" unique_id=572583412 instance=ExtResource("6_ib1hx")]
+transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
+visible = false
+light_color = Color(1, 1, 1, 1)
+light_specular = 0.37
+base_light_energy = 12.0
+flicker_strength = 2.0
+flicker_interval = 4.0
+
 [node name="Interactable" type="Node" parent="." unique_id=1431242840]
 
 [node name="Meshes" type="Node" parent="Interactable" unique_id=575528061]
+
+[node name="LeftArrowButton" parent="Interactable/Meshes" unique_id=381398099 instance=ExtResource("8_y6pca")]
+transform = Transform3D(0.05, 0, 0, 0, 0.040450852, -0.029389262, 0, 0.029389262, 0.040450852, 0.5354949, 0.9878719, -1.8224322)
 
 [node name="InterceptorButton" parent="Interactable/Meshes" unique_id=1283627247 instance=ExtResource("8_v1r55")]
 transform = Transform3D(-0.1, 5.138582e-09, -7.0726514e-09, 0, 0.080901705, 0.058778524, 8.742278e-09, 0.058778524, -0.080901705, -0.217, 0.92043567, -1.731)
@@ -88,6 +101,10 @@ transform = Transform3D(-0.1, 5.138582e-09, -7.0726514e-09, 0, 0.080901705, 0.05
 
 [node name="LockButton" parent="Interactable/Meshes" unique_id=470249109 instance=ExtResource("11_i346g")]
 transform = Transform3D(0.075, 0, 0, 0, 0.080901705, -0.029389262, 0, 0.058778524, 0.040450852, 0.6401438, 0.98481107, -1.8268588)
+
+[node name="RightArrowButton" parent="Interactable" unique_id=1004500389 instance=ExtResource("8_y6pca")]
+transform = Transform3D(-0.05, 2.569291e-09, -3.5363257e-09, 0, 0.040450852, 0.029389262, 4.371139e-09, 0.029389262, -0.040450852, 0.745637, 0.98599064, -1.8224322)
+is_left = false
 
 [node name="Spawners" type="Node" parent="." unique_id=831314474]
 
@@ -121,5 +138,13 @@ transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-
 [node name="NukeTimer" parent="InformationDisplay" unique_id=161129933 instance=ExtResource("11_s6dog")]
 transform = Transform3D(0.1, 0, 0, 0, 0.079863556, -0.0601815, 0, 0.0601815, 0.079863556, -0.7398108, 1.2310207, -2.1524563)
 
-[node name="InterceptTimer" parent="InformationDisplay" unique_id=73936983 instance=ExtResource("12_hbd1k")]
+[node name="InterceptTimer" parent="InformationDisplay" unique_id=77385895 instance=ExtResource("12_hbd1k")]
 transform = Transform3D(0.1, 0, 0, 0, 0.079863556, -0.0601815, 0, 0.0601815, 0.079863556, -0.74, 0.9246917, -1.7315022)
+
+[node name="PhonePositions" type="Node" parent="." unique_id=745836715]
+
+[node name="Phone Home Position" type="Marker3D" parent="PhonePositions" unique_id=709960192]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, 0.12, 1.221, 1.269)
+
+[node name="Phone Ear Position" type="Marker3D" parent="PhonePositions" unique_id=764990053]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.22966287, 1.3853253, -1.1012286)
