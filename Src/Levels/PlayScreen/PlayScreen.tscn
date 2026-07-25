@@ -31,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://bg84j8tm050mb" path="res://Src/Audio/Detection/DetectionBeep.tscn" id="26_1hmsl"]
 [ext_resource type="PackedScene" uid="uid://i8st0ry6kvvn" path="res://Src/Audio/InterceptorFail/InterceptorFail.tscn" id="30_g33bu"]
 [ext_resource type="PackedScene" uid="uid://bkyg6ii4mu85y" path="res://Src/Audio/InterceptorLaunch/InterceptorLaunch.tscn" id="30_hm452"]
+[ext_resource type="PackedScene" uid="uid://7ah1fmycsmcy" path="res://Src/Audio/NukeAlarm/NukeAlarm.tscn" id="32_uvvq8"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y2smv"]
 material = ExtResource("7_kp5a2")
@@ -334,5 +335,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.076215, 1.2979476, -2.04382
 volume_db = 20.0
 
 [node name="InterceptorLaunch" parent="Audio" unique_id=1154243834 instance=ExtResource("30_hm452")]
+
+[node name="NukeAlarm" parent="Audio" unique_id=752078051 instance=ExtResource("32_uvvq8")]
 
 [node name="Decal" type="Node" parent="." unique_id=128386182]

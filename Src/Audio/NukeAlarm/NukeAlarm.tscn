@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://7ah1fmycsmcy"]
+
+[ext_resource type="AudioStream" uid="uid://ddps15prwnbc4" path="res://Audio/NukeAlarm.mp3" id="1_yas8c"]
+[ext_resource type="Script" uid="uid://s8ab8e7hjaep" path="res://Src/Audio/NukeAlarm/NukeAlarm.gd" id="2_qhjxd"]
+
+[node name="NukeAlarm" type="AudioStreamPlayer3D" unique_id=1209617505]
+stream = ExtResource("1_yas8c")
+volume_db = 10.0
+max_db = 6.0
+pitch_scale = 0.6
+script = ExtResource("2_qhjxd")
+
+[connection signal="finished" from="." to="." method="_on_finished"]
