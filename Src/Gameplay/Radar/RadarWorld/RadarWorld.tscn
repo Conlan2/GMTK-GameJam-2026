@@ -2,10 +2,16 @@
 
 [ext_resource type="PackedScene" uid="uid://b8ibmli73b5vb" path="res://Src/Gameplay/Radar/Radar.tscn" id="1_62u8d"]
 [ext_resource type="PackedScene" uid="uid://ccqvew2deu0je" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawnController/RadarSpawnController.tscn" id="3_07i7e"]
+[ext_resource type="PackedScene" uid="uid://c3fbsm3cqbmmf" path="res://Src/Gameplay/Radar/RadarSpawners/FinalAttackSpawner/FinalAttackSpawner.tscn" id="3_uthek"]
 [ext_resource type="Script" uid="uid://d3ita8cbrrge" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/InterceptorLauncher.gd" id="4_3us8k"]
 [ext_resource type="Script" uid="uid://chyla2r1jmi7q" path="res://Src/Gameplay/Radar/RadarWorld/lock_display.gd" id="4_460j6"]
 [ext_resource type="PackedScene" uid="uid://b80y5n1b5okx4" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/RadarSpawner.tscn" id="4_fdkwe"]
 [ext_resource type="PackedScene" uid="uid://hllud8kpkk4d" path="res://Src/Gameplay/Radar/RadarObj/Interceptor/Interceptor.tscn" id="5_3us8k"]
+[ext_resource type="Script" uid="uid://1ryc8qphiufc" path="res://Src/Gameplay/Radar/RadarWorld/imapact_zone.gd" id="8_eblxc"]
+[ext_resource type="PackedScene" uid="uid://crcv1gbna4lt5" path="res://Src/Gameplay/Radar/RadarObj/EnemyHypersonic/EnemyHypersonic.tscn" id="9_mdl10"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uthek"]
+radius = 21.023796
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -17,7 +23,7 @@ limit_enabled = false
 
 [node name="RadarSpawnController" parent="." unique_id=555480956 instance=ExtResource("3_07i7e")]
 
-[node name="CivilianAirlinesSouthToEast" parent="RadarSpawnController" unique_id=2004940261 instance=ExtResource("4_fdkwe")]
+[node name="CivilianAirlinesSouthToEast" parent="RadarSpawnController" unique_id=1796370012 instance=ExtResource("4_fdkwe")]
 position = Vector2(83.999985, 553)
 rotation = 0.23212878
 rotation_deviation = 5.0
@@ -91,6 +97,34 @@ position = Vector2(-164.99997, -280)
 rotation = -0.50569355
 scale = Vector2(0.8547036, 1.4615364)
 
+[node name="FinalAttackSpawner" parent="RadarSpawnController" unique_id=2004940261 instance=ExtResource("3_uthek")]
+position = Vector2(-14, -526)
+
+[node name="FinalAttackSpawner2" parent="RadarSpawnController" unique_id=429834847 instance=ExtResource("3_uthek")]
+position = Vector2(-113, -505)
+
+[node name="FinalAttackSpawner3" parent="RadarSpawnController" unique_id=1228689507 instance=ExtResource("3_uthek")]
+position = Vector2(105, -521)
+scale = Vector2(0.17160091, 263.25967)
+
+[node name="FinalAttackSpawner4" parent="RadarSpawnController" unique_id=280583458 instance=ExtResource("3_uthek")]
+position = Vector2(178, -503)
+
+[node name="FinalAttackSpawner5" parent="RadarSpawnController" unique_id=1847099820 instance=ExtResource("3_uthek")]
+position = Vector2(-206, -485)
+
+[node name="FinalAttackSpawner6" parent="RadarSpawnController" unique_id=289275620 instance=ExtResource("3_uthek")]
+position = Vector2(-323, -438)
+
+[node name="FinalAttackSpawner7" parent="RadarSpawnController" unique_id=697462122 instance=ExtResource("3_uthek")]
+position = Vector2(-297, -583)
+
+[node name="FinalAttackSpawner8" parent="RadarSpawnController" unique_id=1387964639 instance=ExtResource("3_uthek")]
+position = Vector2(323, -554)
+
+[node name="FinalAttackSpawner9" parent="RadarSpawnController" unique_id=1899448528 instance=ExtResource("3_uthek")]
+position = Vector2(435, -458)
+
 [node name="LockDisplay" type="Node2D" parent="." unique_id=1946758950]
 visible = false
 position = Vector2(-1, 99)
@@ -117,3 +151,18 @@ theme_override_font_sizes/font_size = 24
 text = "Degrees"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="FinalAttackSpawners" type="Node2D" parent="." unique_id=1765805153]
+
+[node name="ImapactZone" type="Area2D" parent="." unique_id=1037419149]
+collision_layer = 8
+collision_mask = 8
+script = ExtResource("8_eblxc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ImapactZone" unique_id=730159120]
+shape = SubResource("CircleShape2D_uthek")
+
+[node name="EnemyHypersonic" parent="." unique_id=1287891570 instance=ExtResource("9_mdl10")]
+position = Vector2(-1, 428)
+
+[connection signal="area_entered" from="ImapactZone" to="ImapactZone" method="_on_area_entered"]

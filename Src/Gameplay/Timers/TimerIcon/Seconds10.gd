@@ -6,5 +6,5 @@ func _process(delta: float) -> void:
 		
 	else:
 		timer_world.text = str(\
-		int(floor(RadarManager.impact_time_left/10))\
+		int(floor((RadarManager.impact_time_left-1)/10))\
 		)

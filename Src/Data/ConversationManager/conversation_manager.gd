@@ -19,6 +19,20 @@ func load_conversations() -> void:
 		{"who": "Phone", "text": "We are not a hostile flight"}
 	],
 	)
+	load_conversation(550,
+	[
+		{"who": "Phone", "text": "EMERGENCY ALERT FROM CIC."},
+		{"who": "Phone", "text": "A Geomagnetic storm has caused false signatures to detected."},
+		{"who": "Phone", "text": "These are NOT a nuclear attack."}
+	],
+	)
+	load_conversation(660,
+	[
+		{"who": "Phone", "text": "Warning from CIC."},
+		{"who": "Phone", "text": "Flight IL196 is a hostile aircraft, and was falsly added to the record by spies."},
+		{"who": "Phone", "text": "Shootdown authorised."}
+	],
+	)
 	
 func load_conversation(conversation_time: float, conversation_data: Array) -> void:
 	var new_conversation = Conversation.new()
@@ -46,9 +60,9 @@ func _initial_message() -> void:
 		{"who": "Phone", "text": "Your defense battery has been equiped with interception capable missles."},
 		{"who": "Phone", "text": "The enemy is aware of this, and may strike your system with conventional aircraft."},
 		{"who": "Phone", "text": "Unfortunatly, our government did not want to cause a panic, and our airspace is open to civilian traffic."},
-		{"who": "Phone", "text": "The enemy may attempt to disguise a plane as a civilan craft."},
+		{"who": "Phone", "text": "The enemy may attempt to disguise an attack as a civilan craft."},
 		{"who": "Phone", "text": "We have provided a sheet with all authorised flights in your area."},
-		{"who": "Phone", "text": "You are authorized to shoot down any plane that is not registered."},
+		{"who": "Phone", "text": "You are authorized to shoot down any aircraft that is not registered."},
 		{"who": "Phone", "text": "Confirm message recived."},
 		{"who": "Ear", "text": "Confirm message recived."},
 		{"who": "Phone", "text": "CIC Out."},

@@ -17,7 +17,7 @@ var spawn_array: Array = [
 		"spawn_point": "CivilianAirlinesEastToSouth"
 	},
 		{
-		"name": "IL313",
+		"name": "IL352",
 		"type": RadarObjectTypes.type.CIVILIAN,
 		"spawn_time": 29,
 		"spawn_point": "CivilianAirlinesWestToEast"
@@ -99,14 +99,14 @@ var spawn_array: Array = [
 	},
 	
 		{
-		"name": "BR213",
+		"name": "TR213",
 		"type": RadarObjectTypes.type.ENEMY_AIR,
 		"spawn_time": 392,
 		"spawn_point": "CivilianAirlinesSouthToEast"
 	},
 	
 	{
-		"name": "BR313",
+		"name": "IL393",
 		"type": RadarObjectTypes.type.ENEMY_AIR,
 		"spawn_time": 402,
 		"spawn_point": "CivilianAirlinesEastToSouth"
@@ -120,7 +120,7 @@ var spawn_array: Array = [
 	},
 	
 	{
-		"name": "IL449",
+		"name": "TR449",
 		"type": RadarObjectTypes.type.CIVILIAN,
 		"spawn_time": 452,
 		"spawn_point": "CivilianAirlinesEastToWest"
@@ -198,7 +198,7 @@ var spawn_array: Array = [
 		"spawn_point": "CivilianAirlinesWestToEast"
 	},
 			{
-		"name": "IL196",
+		"name": "IL196", # FALSE RECORD 
 		"type": RadarObjectTypes.type.ENEMY_AIR,
 		"spawn_time": 646,
 		"spawn_point": "CivilianAirlinesEastToWest"

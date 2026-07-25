@@ -17,4 +17,11 @@ func _cancel_launch() -> void:
 
 
 func _on_war_timer_timeout() -> void:
-	pass # Replace with function body.
+	if TimeManager.game_timer < 500:
+		EndingManager.play_ending.emit("Early_Nuke")
+		
+	elif TimeManager.game_timer < 600:
+		EndingManager.play_ending.emit("Glitch_Nuke")
+		
+	else:
+		EndingManager.play_ending.emit("Final_Attack_Nuke")

@@ -30,6 +30,7 @@ TimeManager="*uid://dwt0n55v17vgm"
 PlaneSpawner="*uid://dfulyln3ceg03"
 SpawnData="*uid://dui5o8adea0bu"
 Loader="*uid://dyq6t2hujiqb4"
+EndingManager="*uid://clw4rphpnjko3"
 
 [display]
 
@@ -59,6 +60,7 @@ turn_left={
 
 3d_physics/layer_1="Geometry"
 3d_physics/layer_2="Player"
+2d_physics/layer_4="Impact"
 
 [physics]
 

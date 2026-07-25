@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://clw4rphpnjko3"]
+
+[ext_resource type="Script" uid="uid://dgh5weafgsq2p" path="res://Src/Levels/EndingScreens/ending_manager.gd" id="1_twkml"]
+
+[node name="EndingManager" type="Node" unique_id=1219353007]
+script = ExtResource("1_twkml")

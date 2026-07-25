@@ -10,7 +10,7 @@ var lock_state: bool = false
 func _ready() -> void:
 	HiddenButtonManager.set_radar_lock.connect(_set_visible)
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var local= round(RadarManager.detection_object.radar_lock_angle)
 	if local < 0:
 		local += 360

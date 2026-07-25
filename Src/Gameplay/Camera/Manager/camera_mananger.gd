@@ -21,7 +21,7 @@ func _ready() -> void:
 func _add_camera(new_camera: Camera3D):
 	camera = new_camera
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if !is_instance_valid(camera):
 		return
 	
