@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://i8st0ry6kvvn"]
+
+[ext_resource type="AudioStream" uid="uid://bi3dsohd82q1n" path="res://Audio/ButtonFail.mp3" id="1_osxfr"]
+[ext_resource type="Script" uid="uid://6vy4bevy8jss" path="res://Src/Audio/InterceptorFail/interceptorfail.gd" id="2_awxum"]
+
+[node name="InterceptorFail" type="AudioStreamPlayer3D" unique_id=1209617505]
+stream = ExtResource("1_osxfr")
+volume_db = 10.0
+max_polyphony = 4
+script = ExtResource("2_awxum")

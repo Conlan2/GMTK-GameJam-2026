@@ -15,7 +15,7 @@ var endings: Dictionary = {
 		"SubTitle": "Every error with nuclear weapons can lead to the end of the world. You are the one who finally made the wrong call.",
 	},
 	"Final_Attack_No_Nuke": {
-		"Title": "You refused to launch a nuclear counterstrike",
+		"Title": "You did not launch a nuclear counterstrike",
 		"SubTitle": "Now only half, instead of all, of the world is dead.",
 	},
 	"Final_Attack_Nuke": {

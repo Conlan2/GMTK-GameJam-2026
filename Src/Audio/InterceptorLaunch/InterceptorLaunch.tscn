@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bkyg6ii4mu85y"]
+
+[ext_resource type="AudioStream" uid="uid://bpgjg1jy0k61g" path="res://Audio/InterceptorLaunch.mp3" id="1_wkwos"]
+[ext_resource type="Script" uid="uid://c7xi47720loel" path="res://Src/Audio/InterceptorLaunch/interceptor.gd" id="2_peict"]
+
+[node name="InterceptorLaunch" type="AudioStreamPlayer3D" unique_id=1209617505]
+stream = ExtResource("1_wkwos")
+volume_db = -20.0
+max_polyphony = 4
+script = ExtResource("2_peict")
