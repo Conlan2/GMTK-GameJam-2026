@@ -15,9 +15,6 @@ func _ready() -> void:
 func _new_conversation(new_conversation: Conversation) -> void:
 	visible = true
 	
-	for child in container.get_children():
-		queue_free()
-		
 	conversation = new_conversation
 	active_conversation = true
 	_new_line()
@@ -39,12 +36,17 @@ func _update_children() -> void:
 				child.queue_free()
 	
 func _new_line() -> void:
-	if len(conversation.conversation) == 0:
+	if len(conversation.conversation) == 0 and active_conversation == true:
 		active_conversation = false
 		visible = false
 		conversation = null
 		PhoneManager.conversation_finished.emit()
 		ConversationManager.intro_finished.emit()
+		
+		for child in container.get_children():
+			child.queue_free()
+		
+		
 		return
 	
 	_update_children()

@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cxi75m86yae1w"]
+
+[ext_resource type="Texture2D" uid="uid://b1wdkru03o7w" path="res://Assets/FlightLogs/Paper.png" id="1_217o0"]
+[ext_resource type="Script" uid="uid://bmjbukctoq2bu" path="res://Src/Gameplay/Interactable/PlaneLog/plane_log.gd" id="1_pbr13"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_m1c7e"]
+size = Vector3(1, 0.1, 1.6)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_217o0"]
+albedo_color = Color(0.4, 0.1854, 0.051999997, 1)
+
+[node name="PlaneLog" type="Node3D" unique_id=638335108]
+script = ExtResource("1_pbr13")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1727387497]
+mesh = SubResource("BoxMesh_m1c7e")
+surface_material_override/0 = SubResource("StandardMaterial3D_217o0")
+
+[node name="Decal" type="Decal" parent="." unique_id=779493593]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026031077, 0.0717926, 0.0020141602)
+size = Vector3(1.0234985, 0.25460815, 1.6378174)
+texture_albedo = ExtResource("1_217o0")
+upper_fade = 0.33287078
+
+[node name="MovementTimer" type="Timer" parent="." unique_id=243544085]
+wait_time = 0.5
+
+[connection signal="timeout" from="MovementTimer" to="." method="_on_movement_timer_timeout"]

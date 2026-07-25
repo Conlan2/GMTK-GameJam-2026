@@ -50,7 +50,7 @@ func turn_radar(turn_amount: float) -> void:
 	
 func handle_rotation(delta: float) -> void:
 
-	if rotation_degrees > 360 + 180:
+	if rotation_degrees > 360:
 		rotation_degrees -= 360
 		
 	if rotation_degrees < -180:
@@ -76,11 +76,9 @@ func handle_rotation(delta: float) -> void:
 		var within_range = true
 		if target_angle - 20 > rotation_degrees:
 			within_range = false
-			true_speed = true_speed * 4
 			
 		if target_angle + 20 < rotation_degrees:
 			within_range = false
-			true_speed = true_speed * 4
 			
 		
 			
@@ -95,6 +93,7 @@ func handle_rotation(delta: float) -> void:
 	
 		if abs(rotation_degrees - radar_lock_angle) > 40:
 			rotation_degrees = radar_lock_angle
+			
 
 			
 		if _rotate_left:
@@ -104,8 +103,6 @@ func handle_rotation(delta: float) -> void:
 				
 	
 func _create_fade_out() -> void:
-	if !_in_range:
-		return
 	
 	
 	if Engine.get_process_frames() % FADE_OUT_INTERVAL != 0:

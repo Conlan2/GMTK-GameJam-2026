@@ -5,8 +5,36 @@ signal intro_finished
 
 var _initial_conversation: Conversation = Conversation.new()
 
+var conversations: Array = []
+
 func _ready() -> void:
 	_initial_message()
+	load_conversations()
+	
+func load_conversations() -> void:
+	load_conversation(180,
+	[
+		{"who": "Phone", "text": "This is flight IL121."},
+		{"who": "Phone", "text": "We are an emergency medical transport, and our flight is not logged"},
+		{"who": "Phone", "text": "We are not a hostile flight"}
+	],
+	)
+	
+func load_conversation(conversation_time: float, conversation_data: Array) -> void:
+	var new_conversation = Conversation.new()
+	new_conversation.conversation = conversation_data
+	conversations.append({"time": conversation_time, "conversation": new_conversation})
+	
+func _process(delta: float) -> void:
+	if len(conversations) <= 0:
+		return
+	
+	for conversation_log in conversations:
+		if conversation_log["time"] <= TimeManager.game_timer:
+			PhoneManager.add_conversation_to_queue.emit(
+				conversations.pop_front()["conversation"]
+			)
+	
 	
 func _initial_message() -> void:
 	_initial_conversation.conversation = [
@@ -24,8 +52,6 @@ func _initial_message() -> void:
 		{"who": "Phone", "text": "Confirm message recived."},
 		{"who": "Ear", "text": "Confirm message recived."},
 		{"who": "Phone", "text": "CIC Out."},
-
-
 	]
 	
 	PhoneManager.add_conversation_to_queue.emit(_initial_conversation)

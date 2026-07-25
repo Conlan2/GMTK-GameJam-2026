@@ -38,8 +38,12 @@ func _process(delta: float) -> void:
 		impact_time_left -= delta
 		
 func _get_alarmed_tracked() -> Array:
+	
 	var alarm_tracked: Array = []
 	for object in tracked_objects:
+		if !is_instance_valid(object):
+			tracked_objects.remove_at(tracked_objects.find(null))
+			continue
 	
 		if object is not RadarObject:
 			continue

@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://bh6us85na2388" path="res://Src/Ui/HiddenButtons/radar_right_button_2.gd" id="6_ukbsd"]
 [ext_resource type="Script" uid="uid://dgn2iecqwsk26" path="res://Src/Ui/HiddenButtons/intercept_disarm.gd" id="7_3jsii"]
 [ext_resource type="Script" uid="uid://3fur6a6d377f" path="res://Src/Ui/HiddenButtons/nuke_disarm.gd" id="8_mh0hb"]
+[ext_resource type="Script" uid="uid://bn7158mgr765p" path="res://Src/Ui/HiddenButtons/move_plane_log.gd" id="9_g38fk"]
 
 [node name="HiddenButtonCenter" type="Control" unique_id=1201638531]
 layout_mode = 3
@@ -103,6 +104,27 @@ offset_bottom = 190.0
 text = "TEST"
 script = ExtResource("8_mh0hb")
 
+[node name="MovePlaneLog" type="Button" parent="." unique_id=1471940117]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 380.0
+offset_top = 198.0
+offset_right = 476.0
+offset_bottom = 313.0
+text = "TEST"
+script = ExtResource("9_g38fk")
+
+[node name="Remove_plane_log" type="Button" parent="." unique_id=943775580]
+visible = false
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 170.0
+offset_top = 4.0
+offset_right = 504.0
+offset_bottom = 369.0
+text = "TEST"
+script = ExtResource("7_3jsii")
+
 [connection signal="button_down" from="Nuke Button" to="Nuke Button" method="_on_button_down"]
 [connection signal="button_down" from="InterceptButton" to="InterceptButton" method="_on_button_down"]
 [connection signal="button_down" from="Radar Lock Button" to="Radar Lock Button" method="_on_button_down"]
@@ -115,3 +137,5 @@ script = ExtResource("8_mh0hb")
 [connection signal="button_down" from="PhoneUpButton" to="PhoneUpButton" method="_on_button_down"]
 [connection signal="button_down" from="InterceptDisarm" to="InterceptDisarm" method="_on_button_down"]
 [connection signal="button_down" from="NukeDisarm" to="NukeDisarm" method="_on_button_down"]
+[connection signal="button_down" from="MovePlaneLog" to="MovePlaneLog" method="_on_button_down"]
+[connection signal="button_down" from="Remove_plane_log" to="Remove_plane_log" method="_on_button_down"]

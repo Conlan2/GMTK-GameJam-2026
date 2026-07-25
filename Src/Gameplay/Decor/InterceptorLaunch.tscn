@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dmb2jeqs40e6w"]
+
+[ext_resource type="Texture2D" uid="uid://b83gtl8wbrqyt" path="res://Assets/NukeButton/NuclearSymbolexport.png" id="1_uh7gu"]
+
+[node name="InterceptorLaunch" type="Decal" unique_id=208691923]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14508826, 0)
+texture_albedo = ExtResource("1_uh7gu")

@@ -18,6 +18,9 @@ func _on_lock_on_area_entered(area: Area2D) -> void:
 		movement_speed = movement_speed * 2
 		
 func check_special_properties() -> void:
+	if !is_instance_valid(target):
+		return
+	
 	if is_locked_on:
 		movement_angle_deg = rad_to_deg((position - target.position).angle())-90 
 		_update_move_vector()

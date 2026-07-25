@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bblvu2pftghd7" path="res://Src/Gameplay/Timers/InterceptTimer/InterceptTimer.tscn" id="12_hbd1k"]
 [ext_resource type="PackedScene" uid="uid://dqy220bhlmyfy" path="res://Src/Gameplay/Interactable/DisarmInterceptor/DisarmKeyObj.tscn" id="14_11i1f"]
 [ext_resource type="PackedScene" uid="uid://b5h4wqpt3ybfy" path="res://Src/Gameplay/Interactable/DisarmNuke/DisarmKeyNuke.tscn" id="15_48qf5"]
+[ext_resource type="PackedScene" uid="uid://cxi75m86yae1w" path="res://Src/Gameplay/Interactable/PlaneLog/PlaneLog.tscn" id="19_to35m"]
 [ext_resource type="Script" uid="uid://cy1c2cgddmo3e" path="res://Src/Levels/PlayScreen/phone_positions.gd" id="20_hjvg2"]
 [ext_resource type="PackedScene" uid="uid://jkku5gpu6mhl" path="res://Src/Audio/Phone/PhoneRinging.tscn" id="23_mfnry"]
 [ext_resource type="PackedScene" uid="uid://dnny7y1lpf1me" path="res://Src/Audio/ElectricalHum/ElectricalHum.tscn" id="24_q8lxy"]
@@ -211,6 +212,13 @@ right_pos_name = "Center"
 
 [node name="InformationDisplay" type="Node" parent="." unique_id=1653424123]
 
+[node name="PlaneLog" parent="InformationDisplay" unique_id=638335108 instance=ExtResource("19_to35m")]
+transform = Transform3D(0.2, 0, 0, 0, 0.16180341, -0.11755705, 0, 0.11755705, 0.16180341, 0.091, 0.975, -1.788)
+position_1 = Vector3(0.091, 0.975, -1.788)
+position_2 = Vector3(-0.217, 1.39, -1.328)
+angle_1 = Vector3(36, 0, 0)
+angle_2 = Vector3(90, 0, 0)
+
 [node name="CrtMonitor" parent="InformationDisplay" unique_id=954634751 instance=ExtResource("8_dki3i")]
 transform = Transform3D(-1.7484556e-08, 0, -0.4, 0, 0.4, 0, 0.4, 0, -1.7484556e-08, 0.63982296, 1.1302415, -2.1954815)
 
@@ -251,3 +259,5 @@ volume_db = -35.0
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.076215, 1.2979476, -2.0438213)
 
 [node name="DetectionBeep" parent="Audio" unique_id=1123702376 instance=ExtResource("26_1hmsl")]
+
+[node name="Decal" type="Node" parent="." unique_id=128386182]
