@@ -6,7 +6,6 @@
 [ext_resource type="Script" uid="uid://chyla2r1jmi7q" path="res://Src/Gameplay/Radar/RadarWorld/lock_display.gd" id="4_460j6"]
 [ext_resource type="PackedScene" uid="uid://b80y5n1b5okx4" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/RadarSpawner.tscn" id="4_fdkwe"]
 [ext_resource type="PackedScene" uid="uid://hllud8kpkk4d" path="res://Src/Gameplay/Radar/RadarObj/Interceptor/Interceptor.tscn" id="5_3us8k"]
-[ext_resource type="PackedScene" uid="uid://b1pukekcu635y" path="res://Src/Gameplay/Radar/RadarObj/CivilianAirliner/CivilianAirliner.tscn" id="7_uthek"]
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -17,7 +16,6 @@ limit_enabled = false
 [node name="Radar" parent="." unique_id=1130873436 instance=ExtResource("1_62u8d")]
 
 [node name="RadarSpawnController" parent="." unique_id=555480956 instance=ExtResource("3_07i7e")]
-civilian_plane = ExtResource("7_uthek")
 
 [node name="CivilianAirlinesSouthToEast" parent="RadarSpawnController" unique_id=2004940261 instance=ExtResource("4_fdkwe")]
 position = Vector2(83.999985, 553)
@@ -51,6 +49,47 @@ rotation = 3.4470253
 [node name="InterceptorLauncher" parent="RadarSpawnController" unique_id=1088217971 instance=ExtResource("4_fdkwe")]
 script = ExtResource("4_3us8k")
 packed_interceptor = ExtResource("5_3us8k")
+
+[node name="SouthBarrageLeft" parent="RadarSpawnController" unique_id=592234691 instance=ExtResource("4_fdkwe")]
+position = Vector2(-511, 237.99994)
+rotation = 1.4050825
+rotation_deviation = 5.0
+
+[node name="SouthBarrageRight" parent="RadarSpawnController" unique_id=1073328895 instance=ExtResource("4_fdkwe")]
+position = Vector2(-424.99997, 388.00003)
+rotation = 0.6925269
+rotation_deviation = 5.0
+
+[node name="GlitchSpawnBL1" parent="RadarSpawnController" unique_id=1390654684 instance=ExtResource("4_fdkwe")]
+position = Vector2(-28, 328)
+rotation = -2.83616
+
+[node name="GlitchSpawnBL2" parent="RadarSpawnController" unique_id=1746877614 instance=ExtResource("4_fdkwe")]
+position = Vector2(-213, 252)
+rotation = -2.83616
+
+[node name="GlitchSpawnBR1" parent="RadarSpawnController" unique_id=1992369742 instance=ExtResource("4_fdkwe")]
+position = Vector2(264, 256.00003)
+rotation = 1.8224299
+
+[node name="GlitchSpawnBR2" parent="RadarSpawnController" unique_id=1064824913 instance=ExtResource("4_fdkwe")]
+position = Vector2(301.00003, 141.00003)
+rotation = 1.8224299
+
+[node name="GlitchSpawnTR" parent="RadarSpawnController" unique_id=34286454 instance=ExtResource("4_fdkwe")]
+position = Vector2(307, -198)
+rotation = 1.1312156
+scale = Vector2(0.8547036, 1.4615364)
+
+[node name="GlitchSpawnTL1" parent="RadarSpawnController" unique_id=1522634690 instance=ExtResource("4_fdkwe")]
+position = Vector2(-164.99997, -280)
+rotation = -0.50569355
+scale = Vector2(0.8547036, 1.4615364)
+
+[node name="GlitchSpawnTL2" parent="RadarSpawnController" unique_id=123342527 instance=ExtResource("4_fdkwe")]
+position = Vector2(-164.99997, -280)
+rotation = -0.50569355
+scale = Vector2(0.8547036, 1.4615364)
 
 [node name="LockDisplay" type="Node2D" parent="." unique_id=1946758950]
 visible = false

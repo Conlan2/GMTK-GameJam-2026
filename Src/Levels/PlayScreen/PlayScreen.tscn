@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://ddaip7h0veyd5" path="res://Src/Gameplay/Geometry/NukeDesk/NukeDesk.tscn" id="4_f8yna"]
 [ext_resource type="PackedScene" uid="uid://cwkqg7b278d5s" path="res://Src/Gameplay/Lights/Light.tscn" id="6_ib1hx"]
 [ext_resource type="PackedScene" uid="uid://bq2avqe351rnd" path="res://Src/Gameplay/Camera/CameraPositions/CameraPositions.tscn" id="6_yrc57"]
+[ext_resource type="Material" uid="uid://t50bkcuar6jp" path="res://Src/Resources/Metals/MetalType2.tres" id="7_kp5a2"]
 [ext_resource type="PackedScene" uid="uid://fgore3af6giy" path="res://Src/Gameplay/Lights/OrangeLight/OrangeLight.tscn" id="8_8afcl"]
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 [ext_resource type="Script" uid="uid://cd0gyx0vwbdya" path="res://Src/Levels/PlayScreen/camera_positions.gd" id="8_thj8l"]
@@ -27,6 +28,10 @@
 [ext_resource type="PackedScene" uid="uid://dnny7y1lpf1me" path="res://Src/Audio/ElectricalHum/ElectricalHum.tscn" id="24_q8lxy"]
 [ext_resource type="PackedScene" uid="uid://co6b534eh6ngo" path="res://Src/Audio/Alarm/SpeedAlarm.tscn" id="25_oelqu"]
 [ext_resource type="PackedScene" uid="uid://bg84j8tm050mb" path="res://Src/Audio/Detection/DetectionBeep.tscn" id="26_1hmsl"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_y2smv"]
+material = ExtResource("7_kp5a2")
+size = Vector3(0.2, 10, 0.2)
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
@@ -65,6 +70,18 @@ transform = Transform3D(-0.99993896, 0.011047767, 0, -0.011047767, -0.99993896, 
 
 [node name="PhoneBase" parent="Geometry" unique_id=1629503737 instance=ExtResource("11_bsaxd")]
 transform = Transform3D(0.2, 0, 0, 0, 0.16180341, -0.11755705, 0, 0.11755705, 0.16180341, 0.1195447, 1.2416551, -2.1693242)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Geometry" unique_id=1027651123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.051225305, 0, -2.5544143)
+mesh = SubResource("BoxMesh_y2smv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="Geometry" unique_id=1581038925]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.9277077, 0, -2.5544143)
+mesh = SubResource("BoxMesh_y2smv")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="Geometry" unique_id=1699498890]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.79909897, 0, -2.5544143)
+mesh = SubResource("BoxMesh_y2smv")
 
 [node name="Lights" type="Node" parent="." unique_id=265775821]
 
@@ -127,7 +144,9 @@ light_specular = 0.81
 omni_range = 0.25
 base_light_energy = 0.5
 
-[node name="OrangeLight5" parent="Lights" unique_id=238523757 instance=ExtResource("8_8afcl")]
+[node name="LeftLightBottom" type="Node3D" parent="Lights" unique_id=1037854344]
+
+[node name="OrangeLight5" parent="Lights/LeftLightBottom" unique_id=238523757 instance=ExtResource("8_8afcl")]
 transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -1.0933831, 0.86454785, -1.611601)
 light_energy = 2.0
 light_indirect_energy = 1.475
@@ -137,7 +156,7 @@ base_light_energy = 0.3
 flicker_strength = 0.1
 flicker_interval = 1.0
 
-[node name="OrangeLight6" parent="Lights" unique_id=1835451026 instance=ExtResource("8_8afcl")]
+[node name="OrangeLight6" parent="Lights/LeftLightBottom" unique_id=1835451026 instance=ExtResource("8_8afcl")]
 transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -0.7765236, 0.86454785, -1.611601)
 light_energy = 2.0
 light_indirect_energy = 1.475
@@ -147,7 +166,7 @@ base_light_energy = 0.3
 flicker_strength = 0.05
 flicker_interval = 0.1
 
-[node name="OrangeLight7" parent="Lights" unique_id=1622952830 instance=ExtResource("8_8afcl")]
+[node name="OrangeLight7" parent="Lights/LeftLightBottom" unique_id=1622952830 instance=ExtResource("8_8afcl")]
 transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -0.4144536, 0.86454785, -1.611601)
 light_energy = 2.0
 light_indirect_energy = 1.475
@@ -155,6 +174,49 @@ light_specular = 0.81
 omni_range = 0.25
 base_light_energy = 0.3
 flicker_strength = 0.01
+flicker_interval = 1.0
+
+[node name="LeftLightTop" type="Node3D" parent="Lights" unique_id=637604577]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.45607316, -0.6223252)
+
+[node name="OrangeLight5" parent="Lights/LeftLightTop" unique_id=470923326 instance=ExtResource("8_8afcl")]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -1.0933831, 0.86454785, -1.611601)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.3
+flicker_strength = 0.1
+flicker_interval = 1.0
+
+[node name="OrangeLight6" parent="Lights/LeftLightTop" unique_id=987804418 instance=ExtResource("8_8afcl")]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -0.7765236, 0.86454785, -1.611601)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.3
+flicker_strength = 0.05
+flicker_interval = 0.1
+
+[node name="OrangeLight7" parent="Lights/LeftLightTop" unique_id=1290958347 instance=ExtResource("8_8afcl")]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, -0.4144536, 0.86454785, -1.611601)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.3
+flicker_strength = 0.01
+flicker_interval = 1.0
+
+[node name="OrangeLight5" parent="Lights" unique_id=715025628 instance=ExtResource("8_8afcl")]
+transform = Transform3D(1, 0, 0, 0, 0.809017, -0.58778524, 0, 0.58778524, 0.809017, 0.12950635, 1.3283927, -2.2409225)
+light_energy = 2.0
+light_indirect_energy = 1.475
+light_specular = 0.81
+omni_range = 0.25
+base_light_energy = 0.3
+flicker_strength = 0.1
 flicker_interval = 1.0
 
 [node name="Interactable" type="Node" parent="." unique_id=1431242840]
@@ -204,11 +266,6 @@ right_pos_name = "Radar"
 transform = Transform3D(1, 0, 0, 0, 0.93969256, 0.3420201, 0, -0.3420201, 0.93969256, 0.635, 1.55, -1.261)
 position_name = "Radar"
 left_pos_name = "Center"
-
-[node name="BackPosition" parent="CameraPositions" unique_id=294651067 instance=ExtResource("6_yrc57")]
-transform = Transform3D(-1, -5.0143644e-08, 7.161254e-08, 0, 0.819152, 0.5735764, -8.742278e-08, 0.5735764, -0.819152, -0.007993728, 1.4549211, -1.034884)
-position_name = "Back"
-right_pos_name = "Center"
 
 [node name="InformationDisplay" type="Node" parent="." unique_id=1653424123]
 
