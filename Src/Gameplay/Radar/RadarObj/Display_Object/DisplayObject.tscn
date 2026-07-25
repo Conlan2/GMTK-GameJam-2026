@@ -7,11 +7,12 @@
 script = ExtResource("1_o0p6k")
 
 [node name="ObjectName" type="Label" parent="." unique_id=23128668]
-offset_left = 21.0
-offset_top = -21.0
-offset_right = 61.0
-offset_bottom = -4.0
+offset_left = 16.0
+offset_top = -37.0
+offset_right = 81.0
+offset_bottom = 8.0
 theme_override_colors/font_color = Color(0.19879997, 0.71, 0.26696002, 1)
+theme_override_font_sizes/font_size = 32
 text = "Test"
 
 [node name="Object Distance" type="Label" parent="." unique_id=1321843066]

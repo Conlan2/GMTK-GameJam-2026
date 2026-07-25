@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b80y5n1b5okx4" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/RadarSpawner.tscn" id="4_fdkwe"]
 [ext_resource type="PackedScene" uid="uid://hllud8kpkk4d" path="res://Src/Gameplay/Radar/RadarObj/Interceptor/Interceptor.tscn" id="5_3us8k"]
 [ext_resource type="PackedScene" uid="uid://b1pukekcu635y" path="res://Src/Gameplay/Radar/RadarObj/CivilianAirliner/CivilianAirliner.tscn" id="7_uthek"]
-[ext_resource type="PackedScene" uid="uid://mpmxgs3ti7of" path="res://Src/Gameplay/Radar/RadarObj/RadarObject.tscn" id="8_eblxc"]
+[ext_resource type="PackedScene" uid="uid://bfjnq1dmyesmb" path="res://Src/Gameplay/Radar/RadarObj/EnemyAir/EnemyAir.tscn" id="8_eblxc"]
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -80,14 +80,5 @@ text = "Degrees"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="RadarObject" parent="." unique_id=650020510 instance=ExtResource("8_eblxc")]
-position = Vector2(2, 503)
-movement_speed = 25.0
-object_name = "TESTATTACK"
-plane_type = 3
-
-[node name="RadarObject3" parent="." unique_id=2005422469 instance=ExtResource("8_eblxc")]
-position = Vector2(-56, 661)
-movement_speed = 25.0
-object_name = "TESTATTACK"
-plane_type = 3
+[node name="EnemyAir" parent="." unique_id=1287891570 instance=ExtResource("8_eblxc")]
+position = Vector2(282, 362)

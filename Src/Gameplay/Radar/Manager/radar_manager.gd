@@ -9,6 +9,8 @@ var active_incoming: bool = false
 
 signal add_tracked_object(object: RadarObject)
 signal delete_tracked_object(object: RadarObject)
+
+signal scanned_object
 signal finished_update
 
 func _ready() -> void:

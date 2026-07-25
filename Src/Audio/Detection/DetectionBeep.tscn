@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://bg84j8tm050mb"]
+
+[ext_resource type="AudioStream" uid="uid://b6mkhvd70mlm3" path="res://Audio/DetectionBeeb.mp3" id="1_msbod"]
+[ext_resource type="Script" uid="uid://bul1cmfb2b4op" path="res://Src/Audio/Detection/detection_beep.gd" id="2_d3wo1"]
+
+[node name="DetectionBeep" type="AudioStreamPlayer3D" unique_id=1123702376]
+stream = ExtResource("1_msbod")
+volume_db = -25.0
+script = ExtResource("2_d3wo1")

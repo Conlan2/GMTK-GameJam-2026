@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://jkku5gpu6mhl" path="res://Src/Audio/Phone/PhoneRinging.tscn" id="23_mfnry"]
 [ext_resource type="PackedScene" uid="uid://dnny7y1lpf1me" path="res://Src/Audio/ElectricalHum/ElectricalHum.tscn" id="24_q8lxy"]
 [ext_resource type="PackedScene" uid="uid://co6b534eh6ngo" path="res://Src/Audio/Alarm/SpeedAlarm.tscn" id="25_oelqu"]
+[ext_resource type="PackedScene" uid="uid://bg84j8tm050mb" path="res://Src/Audio/Detection/DetectionBeep.tscn" id="26_1hmsl"]
 
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
@@ -244,7 +245,9 @@ delay = 1.0
 
 [node name="ElectricalHum2" parent="Audio" unique_id=1707168449 instance=ExtResource("24_q8lxy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5550447, 0)
-volume_db = -30.0
+volume_db = -35.0
 
 [node name="SpeedAlarm" parent="Audio" unique_id=1209617505 instance=ExtResource("25_oelqu")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.076215, 1.2979476, -2.0438213)
+
+[node name="DetectionBeep" parent="Audio" unique_id=1123702376 instance=ExtResource("26_1hmsl")]

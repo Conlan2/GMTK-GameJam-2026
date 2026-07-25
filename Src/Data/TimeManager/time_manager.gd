@@ -2,7 +2,7 @@ extends Node
 
 
 var game_timer = 0
-var is_started: bool = true
+var is_started: bool = false
 
 
 func _ready() -> void:

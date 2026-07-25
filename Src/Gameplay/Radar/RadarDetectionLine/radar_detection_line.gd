@@ -93,7 +93,8 @@ func handle_rotation(delta: float) -> void:
 		else:
 			_in_range = true
 	
-
+		if abs(rotation_degrees - radar_lock_angle) > 40:
+			rotation_degrees = radar_lock_angle
 
 			
 		if _rotate_left:
@@ -128,3 +129,4 @@ func _on_detection_area_area_entered(area: Area2D) -> void:
 	if area is RadarObject:
 		RadarManager.add_tracked_object.emit(area)
 		area.create_radar_image()
+		RadarManager.scanned_object.emit()

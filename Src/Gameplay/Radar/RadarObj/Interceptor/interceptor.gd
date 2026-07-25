@@ -19,7 +19,7 @@ func _on_lock_on_area_entered(area: Area2D) -> void:
 		
 func check_special_properties() -> void:
 	if is_locked_on:
-		movement_angle_deg = rad_to_deg((position - target.position).angle() - 90) 
+		movement_angle_deg = rad_to_deg((position - target.position).angle())-90 
 		_update_move_vector()
 		
 func _special_ready() -> void:

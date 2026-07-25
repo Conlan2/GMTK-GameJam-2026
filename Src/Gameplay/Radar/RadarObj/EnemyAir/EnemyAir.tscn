@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://bfjnq1dmyesmb"]
+
+[ext_resource type="Script" uid="uid://dpy6tj6b6i2vx" path="res://Src/Gameplay/Radar/RadarObj/EnemyAir/EnemyAir.gd" id="1_y1d7a"]
+[ext_resource type="PackedScene" uid="uid://c6scut0ku47fh" path="res://Src/Gameplay/Radar/RadarObj/Display_Object/DisplayObject.tscn" id="2_5jp1b"]
+[ext_resource type="PackedScene" uid="uid://d2ndu2t38u7or" path="res://Src/Gameplay/Radar/RadarObj/EnemyALM/EnemyALM.tscn" id="2_xhts6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfdhx"]
+size = Vector2(20, 16)
+
+[node name="EnemyAir" type="Area2D" unique_id=1287891570]
+script = ExtResource("1_y1d7a")
+alm_packed = ExtResource("2_xhts6")
+object_name = "FlightName"
+start_height = 38000.0
+plane_type = 1
+packed_display_object = ExtResource("2_5jp1b")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1843476934]
+shape = SubResource("RectangleShape2D_xfdhx")
+
+[node name="Timer" type="Timer" parent="." unique_id=1323728723]
+wait_time = 2.0
+one_shot = true
+autostart = true
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
