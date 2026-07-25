@@ -20,10 +20,10 @@ texture = ExtResource("1_b3uem")
 
 [node name="Label" type="Label" parent="." unique_id=2040785404]
 layout_mode = 0
-offset_left = -9.0
-offset_top = -18.0
-offset_right = 179.0
-offset_bottom = 316.0
+offset_left = -66.0
+offset_top = -32.0
+offset_right = 122.0
+offset_bottom = 302.0
 theme_override_colors/font_color = Color(0.06839998, 0.76, 0.20672001, 1)
 theme_override_font_sizes/font_size = 500
 text = "E"

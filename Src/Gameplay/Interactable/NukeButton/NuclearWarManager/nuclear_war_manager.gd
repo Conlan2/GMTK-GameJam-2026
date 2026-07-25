@@ -14,3 +14,7 @@ func _start_launch() -> void:
 	
 func _cancel_launch() -> void:
 	war_timer.stop()
+
+
+func _on_war_timer_timeout() -> void:
+	pass # Replace with function body.

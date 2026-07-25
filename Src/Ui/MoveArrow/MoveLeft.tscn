@@ -21,10 +21,10 @@ flip_h = true
 
 [node name="Label" type="Label" parent="." unique_id=2040785404]
 layout_mode = 0
-offset_left = 250.0
-offset_top = -10.0
-offset_right = 438.0
-offset_bottom = 324.0
+offset_left = 285.0
+offset_top = -28.0
+offset_right = 473.0
+offset_bottom = 306.0
 theme_override_colors/font_color = Color(0.06839998, 0.76, 0.20672001, 1)
 theme_override_font_sizes/font_size = 500
 text = "Q"

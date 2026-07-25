@@ -24,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://b5h4wqpt3ybfy" path="res://Src/Gameplay/Interactable/DisarmNuke/DisarmKeyNuke.tscn" id="15_48qf5"]
 [ext_resource type="PackedScene" uid="uid://cxi75m86yae1w" path="res://Src/Gameplay/Interactable/PlaneLog/PlaneLog.tscn" id="19_to35m"]
 [ext_resource type="Script" uid="uid://cy1c2cgddmo3e" path="res://Src/Levels/PlayScreen/phone_positions.gd" id="20_hjvg2"]
+[ext_resource type="Script" uid="uid://ccpltwlvh2c81" path="res://Src/Levels/PlayScreen/menu_position.gd" id="20_y2smv"]
 [ext_resource type="PackedScene" uid="uid://jkku5gpu6mhl" path="res://Src/Audio/Phone/PhoneRinging.tscn" id="23_mfnry"]
 [ext_resource type="PackedScene" uid="uid://dnny7y1lpf1me" path="res://Src/Audio/ElectricalHum/ElectricalHum.tscn" id="24_q8lxy"]
 [ext_resource type="PackedScene" uid="uid://co6b534eh6ngo" path="res://Src/Audio/Alarm/SpeedAlarm.tscn" id="25_oelqu"]
@@ -36,7 +37,7 @@ size = Vector3(0.2, 10, 0.2)
 [node name="PlayScreen" type="Node3D" unique_id=179326684 node_paths=PackedStringArray("player_spawner", "camera_spawner", "Camera_Position_Root")]
 script = ExtResource("1_3qknf")
 player_spawner = NodePath("Spawners/PlayerSpawner")
-camera_spawner = NodePath("CameraPositions/CenterPosition")
+camera_spawner = NodePath("CameraPositions/MenuPosition")
 Camera_Scene = ExtResource("2_vmich")
 Camera_Position_Root = NodePath("CameraPositions")
 
@@ -267,6 +268,16 @@ transform = Transform3D(1, 0, 0, 0, 0.93969256, 0.3420201, 0, -0.3420201, 0.9396
 position_name = "Radar"
 left_pos_name = "Center"
 
+[node name="MenuPosition" type="Marker3D" parent="CameraPositions" unique_id=1209537069]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 35.239872, 110.44268)
+script = ExtResource("20_y2smv")
+position_name = "Menu"
+metadata/_custom_type_script = "uid://ddk545gjvnjsa"
+
+[node name="ElectricalHum2" parent="CameraPositions/MenuPosition" unique_id=1258871208 instance=ExtResource("24_q8lxy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5550447, 0)
+volume_db = -35.0
+
 [node name="InformationDisplay" type="Node" parent="." unique_id=1653424123]
 
 [node name="PlaneLog" parent="InformationDisplay" unique_id=638335108 instance=ExtResource("19_to35m")]
@@ -302,7 +313,7 @@ script = null
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.077471316, 1.272092, -2.141278)
 volume_db = -25.0
 
-[node name="ElectricalHum1" parent="Audio" unique_id=1258871208 instance=ExtResource("24_q8lxy")]
+[node name="ElectricalHum1" parent="Audio" unique_id=1439575170 instance=ExtResource("24_q8lxy")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.5550447, 0)
 volume_db = -35.0
 autoplay = false

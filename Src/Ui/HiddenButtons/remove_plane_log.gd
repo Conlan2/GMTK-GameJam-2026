@@ -10,6 +10,9 @@ func _active() -> void:
 	remove_plane_log.visible = true
 	
 func _process(delta: float) -> void:
+	if !is_instance_valid(CameraMananger.current_position ):
+		return
+	
 	if CameraMananger.current_position.name != "CenterPosition":
 		remove_plane_log.visible  = false
 

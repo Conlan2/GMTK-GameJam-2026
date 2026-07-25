@@ -15,6 +15,7 @@ config/description="Created for the GMTK Game Jam 2026"
 config/version="1.0.0"
 run/main_scene="uid://die48pt43kpam"
 config/features=PackedStringArray("4.6", "Forward Plus")
+config/icon="uid://qm6x2fu4dr13"
 
 [autoload]
 
@@ -28,6 +29,7 @@ ConversationManager="*uid://b4iakckgcx1ew"
 TimeManager="*uid://dwt0n55v17vgm"
 PlaneSpawner="*uid://dfulyln3ceg03"
 SpawnData="*uid://dui5o8adea0bu"
+Loader="*uid://dyq6t2hujiqb4"
 
 [display]
 

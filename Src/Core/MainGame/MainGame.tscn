@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://die48pt43kpam"]
 
 [ext_resource type="Script" uid="uid://c0c6avwyq0wob" path="res://Src/Core/MainGame/main_game.gd" id="1_vw7tv"]
+[ext_resource type="Script" uid="uid://b7ircxchknbqn" path="res://Src/Core/MainGame/hud_root.gd" id="2_2y7aj"]
 [ext_resource type="PackedScene" uid="uid://d3odf7tdx37id" path="res://Src/Ui/MoveArrow/MoveLeft.tscn" id="2_l7vac"]
 [ext_resource type="PackedScene" uid="uid://dbcidraogoip7" path="res://Src/Ui/HiddenButtons/HiddenButtons.tscn" id="2_ludp0"]
 [ext_resource type="PackedScene" uid="uid://bgufycwg4m85f" path="res://Src/Ui/MoveArrow/MoveRight.tscn" id="3_2y7aj"]
 [ext_resource type="PackedScene" uid="uid://da8wvolljcnsc" path="res://Src/Ui/Conversation/ConversationHud.tscn" id="3_d353d"]
+[ext_resource type="PackedScene" uid="uid://x7vmy200dthk" path="res://Src/Levels/MainMenu/MainMenu.tscn" id="7_nen8t"]
 
 [node name="MainGame" type="Node" unique_id=1014377801]
 process_mode = 3
@@ -31,6 +33,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 641.0
 offset_bottom = 361.0
+script = ExtResource("2_2y7aj")
 
 [node name="MoveArrows" type="Control" parent="HudLayer/HudRoot" unique_id=238916069]
 anchors_preset = 0
@@ -64,6 +67,9 @@ offset_top = -2.0
 offset_right = -1.0
 offset_bottom = -5.0
 mouse_filter = 2
+
+[node name="MainMenu" parent="HudLayer/HudRoot" unique_id=797403698 instance=ExtResource("7_nen8t")]
+layout_mode = 0
 
 [node name="PauseLayer" type="CanvasLayer" parent="." unique_id=156184588]
 process_mode = 2

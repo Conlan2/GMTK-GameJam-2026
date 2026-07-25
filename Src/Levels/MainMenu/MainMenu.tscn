@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://x7vmy200dthk"]
+
+[ext_resource type="Texture2D" uid="uid://qm6x2fu4dr13" path="res://Assets/MainMenuBackground.png" id="1_3p0wo"]
+[ext_resource type="Script" uid="uid://cmuxww1q4ibml" path="res://Src/Levels/MainMenu/main_menu.gd" id="1_anbrv"]
+[ext_resource type="Script" uid="uid://uby5e2byce0x" path="res://Src/Levels/MainMenu/flicker.gd" id="2_31hwq"]
+[ext_resource type="Script" uid="uid://cy5jutniwjf4" path="res://Src/Levels/MainMenu/playbutton.gd" id="4_ocutr"]
+
+[sub_resource type="Gradient" id="Gradient_31hwq"]
+offsets = PackedFloat32Array(0.96803653, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_anbrv"]
+gradient = SubResource("Gradient_31hwq")
+
+[node name="MainMenu" type="Control" unique_id=797403698]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_anbrv")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1224680107]
+layout_mode = 0
+offset_right = 663.0
+offset_bottom = 361.0
+texture = SubResource("GradientTexture1D_anbrv")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1108397981]
+layout_mode = 0
+offset_left = 141.0
+offset_top = -24.0
+offset_right = 866.0
+offset_bottom = 686.0
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3p0wo")
+
+[node name="Label" type="Label" parent="." unique_id=334086785]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 94.0
+offset_right = 641.0
+offset_bottom = 116.0
+theme_override_colors/font_color = Color(0.38731673, 0.85, 0.24650003, 1)
+theme_override_font_sizes/font_size = 32
+text = "30 Seconds to Impact"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1690537364]
+position = Vector2(323, 153)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_3p0wo")
+script = ExtResource("2_31hwq")
+flicker_interval = 8.0
+
+[node name="Playbutton" type="Button" parent="." unique_id=807055348]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 206.0
+offset_right = 341.0
+offset_bottom = 225.0
+text = "Play"
+script = ExtResource("4_ocutr")
+
+[node name="ExitButton" type="Button" parent="." unique_id=1163992967]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 244.0
+offset_right = 341.0
+offset_bottom = 263.0
+text = "Exit"
+
+[connection signal="button_down" from="Playbutton" to="Playbutton" method="_on_button_down"]

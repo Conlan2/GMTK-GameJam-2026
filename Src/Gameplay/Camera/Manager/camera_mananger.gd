@@ -11,7 +11,7 @@ var current_position: CameraSpawner = null
 var camera_moving: bool = false
 
 signal add_camera(new_camera: Camera3D)
-signal moving_camera(new_camera_position: String)
+signal moving_camera(new_camera_position: String, timer_amount: float)
 
 
 func _ready() -> void:
@@ -36,8 +36,11 @@ func _process(delta: float) -> void:
 			current_position.rotation_degrees,\
 			sqrt(1.0 - move_timer.time_left/move_timer.wait_time)
 		)
+	else:
+		camera.global_position = current_position.global_position
+		camera.rotation_degrees = current_position.rotation_degrees
 	
-func change_camera_position(new_position_name: String) -> void:
+func change_camera_position(new_position_name: String, time_adjust: float = 0.5) -> void:
 	if camera_moving or PhoneManager.phone_current_location.name != "home":
 		return
 	
@@ -50,7 +53,7 @@ func change_camera_position(new_position_name: String) -> void:
 	HiddenButtonManager.remove_plane_log.emit()
 	_old_position = current_position
 	current_position = camera_positions[new_position_name]
-	move_timer.start()
+	move_timer.start(time_adjust)
 	camera_moving = true
 
 func _on_move_timer_timeout() -> void:
@@ -58,7 +61,7 @@ func _on_move_timer_timeout() -> void:
 	
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("turn_right"):
-		moving_camera.emit(current_position.right_pos_name)
+		moving_camera.emit(current_position.right_pos_name, 0.5)
 		
 	if event.is_action_pressed("turn_left"):
-		moving_camera.emit(current_position.left_pos_name)
+		moving_camera.emit(current_position.left_pos_name, 0.5)
