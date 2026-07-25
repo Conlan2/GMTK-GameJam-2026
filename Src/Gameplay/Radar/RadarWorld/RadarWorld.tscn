@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://b80y5n1b5okx4" path="res://Src/Gameplay/Radar/RadarSpawners/RadarSpawner/RadarSpawner.tscn" id="4_fdkwe"]
 [ext_resource type="PackedScene" uid="uid://hllud8kpkk4d" path="res://Src/Gameplay/Radar/RadarObj/Interceptor/Interceptor.tscn" id="5_3us8k"]
 [ext_resource type="PackedScene" uid="uid://b1pukekcu635y" path="res://Src/Gameplay/Radar/RadarObj/CivilianAirliner/CivilianAirliner.tscn" id="7_uthek"]
-[ext_resource type="PackedScene" uid="uid://bfjnq1dmyesmb" path="res://Src/Gameplay/Radar/RadarObj/EnemyAir/EnemyAir.tscn" id="8_eblxc"]
+[ext_resource type="PackedScene" uid="uid://di3iasoiduus1" path="res://Src/Gameplay/Radar/RadarObj/Glitch/Glitch.tscn" id="8_eblxc"]
 
 [node name="RadarWorld" type="Node2D" unique_id=1989488353]
 
@@ -80,5 +80,5 @@ text = "Degrees"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="EnemyAir" parent="." unique_id=1287891570 instance=ExtResource("8_eblxc")]
-position = Vector2(282, 362)
+[node name="Glitch" parent="." unique_id=1287891570 instance=ExtResource("8_eblxc")]
+position = Vector2(273, 78)

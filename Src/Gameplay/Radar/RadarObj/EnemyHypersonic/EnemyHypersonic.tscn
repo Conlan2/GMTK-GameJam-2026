@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://crcv1gbna4lt5"]
+
+[ext_resource type="Script" uid="uid://wjfie387vd3j" path="res://Src/Gameplay/Radar/RadarObj/EnemyHypersonic/EnemyHypersonic.gd" id="1_6dqfu"]
+[ext_resource type="PackedScene" uid="uid://c6scut0ku47fh" path="res://Src/Gameplay/Radar/RadarObj/Display_Object/DisplayObject.tscn" id="2_11q36"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xfdhx"]
+size = Vector2(20, 16)
+
+[node name="EnemyHypersonic" type="Area2D" unique_id=1287891570]
+script = ExtResource("1_6dqfu")
+movement_speed = 30.0
+object_name = "Hypersonic"
+start_height = 38000.0
+plane_type = 3
+packed_display_object = ExtResource("2_11q36")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1843476934]
+shape = SubResource("RectangleShape2D_xfdhx")
+
+[node name="Timer" type="Timer" parent="." unique_id=1323728723]
+wait_time = 30.0
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
