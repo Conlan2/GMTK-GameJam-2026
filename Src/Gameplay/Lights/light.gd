@@ -1,3 +1,4 @@
+
 extends SpotLight3D
 
 @export var base_light_energy = 1.0

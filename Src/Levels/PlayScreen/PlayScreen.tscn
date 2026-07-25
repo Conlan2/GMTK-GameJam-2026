@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://fgore3af6giy" path="res://Src/Gameplay/Lights/OrangeLight/OrangeLight.tscn" id="8_8afcl"]
 [ext_resource type="PackedScene" uid="uid://b0ykdejhsh35m" path="res://Src/Gameplay/CRT-Monitor/CRTMonitor.tscn" id="8_dki3i"]
 [ext_resource type="Script" uid="uid://cd0gyx0vwbdya" path="res://Src/Levels/PlayScreen/camera_positions.gd" id="8_thj8l"]
+[ext_resource type="PackedScene" uid="uid://vkwjklaq2y3c" path="res://Src/Gameplay/Lights/AlarmLight/AlarmLight.tscn" id="8_tsrua"]
 [ext_resource type="PackedScene" uid="uid://dscrvxv32wx2y" path="res://Src/Gameplay/Interactable/InterceptorButton/InterceptorButton.tscn" id="8_v1r55"]
 [ext_resource type="PackedScene" uid="uid://0piv5kohd7p" path="res://Src/ImportedInherited/ArrowButton/arrow_button.tscn" id="8_y6pca"]
 [ext_resource type="PackedScene" uid="uid://hl1xedpgouq6" path="res://Src/Gameplay/Interactable/Phone/PhoneHead.tscn" id="9_hqfgc"]
@@ -89,14 +90,15 @@ mesh = SubResource("BoxMesh_y2smv")
 
 [node name="Lights" type="Node" parent="." unique_id=265775821]
 
-[node name="SpotLight3D" parent="Lights" unique_id=1731974892 instance=ExtResource("6_ib1hx")]
+[node name="SpotLight3D3" parent="Lights" unique_id=1731974892 instance=ExtResource("8_tsrua")]
+transform = Transform3D(1, 0, 0, 0, -0.17093179, 0.9852829, 0, -0.9852829, -0.17093179, 0.8843708, 2.6155121, -2.5679193)
+
+[node name="SpotLight3D" parent="Lights" unique_id=1419688245 instance=ExtResource("6_ib1hx")]
 transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
 light_specular = 0.37
 shadow_enabled = true
 spot_angle = 107.38
 base_light_energy = 2.0
-flicker_strength = 1.0
-flicker_interval = 4.0
 
 [node name="SpotLight3D2" parent="Lights" unique_id=1205251488 instance=ExtResource("6_ib1hx")]
 transform = Transform3D(1, 0, 0, 0, 0.99926627, 0.038300544, 0, -0.038300544, 0.99926627, 0.63695043, 1.4103272, -1.5211422)
@@ -104,7 +106,6 @@ light_color = Color(0.20329455, 0.37335882, 0.102753736, 1)
 light_energy = 0.2
 spot_range = 1.0
 base_light_energy = 2.0
-flicker_strength = 0.5
 
 [node name="DEBUGBRIGHt" parent="Lights" unique_id=572583412 instance=ExtResource("6_ib1hx")]
 transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
@@ -112,8 +113,6 @@ visible = false
 light_color = Color(1, 1, 1, 1)
 light_specular = 0.37
 base_light_energy = 12.0
-flicker_strength = 2.0
-flicker_interval = 4.0
 
 [node name="OrangeLight" parent="Lights" unique_id=271995569 instance=ExtResource("8_8afcl")]
 transform = Transform3D(-3.5363257e-08, 2.569291e-08, 1, 0.58778524, 0.809017, 0, -0.809017, 0.58778524, -4.371139e-08, 1.0456616, 1.0421314, -1.8507068)
