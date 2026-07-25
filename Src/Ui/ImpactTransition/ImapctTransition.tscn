@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://cqfun4xvd6bff"]
+
+[ext_resource type="Script" uid="uid://dtox6bkvr7vgt" path="res://Src/Ui/ImpactTransition/texture_rect.gd" id="1_ccj6u"]
+[ext_resource type="Script" uid="uid://bp72peunlkmq" path="res://Src/Ui/ImpactTransition/imapct_transition.gd" id="1_f70xt"]
+[ext_resource type="Script" uid="uid://kbfbgblvmoxm" path="res://Src/Ui/ImpactTransition/fade_out.gd" id="2_jfj5r"]
+[ext_resource type="Script" uid="uid://c5xedaq2bcnl1" path="res://Src/Ui/ImpactTransition/label.gd" id="4_qkj37"]
+
+[sub_resource type="Gradient" id="Gradient_qkj37"]
+offsets = PackedFloat32Array(0.94063926, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_nihmt"]
+gradient = SubResource("Gradient_qkj37")
+
+[sub_resource type="Gradient" id="Gradient_jfj5r"]
+offsets = PackedFloat32Array(0, 0.07305936)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_f70xt"]
+gradient = SubResource("Gradient_jfj5r")
+
+[node name="EndingSlide" type="Control" unique_id=391095530]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_f70xt")
+
+[node name="FadeOut" type="TextureRect" parent="." unique_id=1132658430]
+visible = false
+layout_mode = 0
+offset_left = -9.0
+offset_top = -1.0
+offset_right = 712.0
+offset_bottom = 359.0
+texture = SubResource("GradientTexture1D_nihmt")
+script = ExtResource("2_jfj5r")
+
+[node name="FadeIn" type="TextureRect" parent="." unique_id=1163232204]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = -61.0
+offset_right = 660.0
+offset_bottom = 360.0
+texture = SubResource("GradientTexture1D_f70xt")
+script = ExtResource("1_ccj6u")
+
+[node name="LabelTitle" type="Label" parent="." unique_id=1761367374]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 45.0
+offset_top = 43.0
+offset_right = -49.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.2912, 0.65, 0.18199998, 1)
+theme_override_font_sizes/font_size = 48
+text = "In the name of your nation you launched a nuclear strike."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("4_qkj37")
+
+[node name="LabelSubtext" type="Label" parent="." unique_id=757123958]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 77.0
+offset_top = 176.0
+offset_right = -58.0
+offset_bottom = -60.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.2912, 0.65, 0.18199998, 1)
+theme_override_font_sizes/font_size = 32
+text = "Now 8 billion are dead instead of only 5 billion. Your nation should be proud."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+script = ExtResource("4_qkj37")

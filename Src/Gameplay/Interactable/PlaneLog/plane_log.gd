@@ -45,15 +45,17 @@ func _process(delta: float) -> void:
 	
 	
 func _move_pos_1() -> void:
-	moving = true
-	at_desk = true
-	movement_timer.start()
+	if !at_desk:
+		moving = true
+		at_desk = true
+		movement_timer.start()
 
 	
 func _move_pos_2() -> void:
-	moving = true
-	at_desk = false
-	movement_timer.start()
+	if at_desk:
+		moving = true
+		at_desk = false
+		movement_timer.start()
 	
 
 

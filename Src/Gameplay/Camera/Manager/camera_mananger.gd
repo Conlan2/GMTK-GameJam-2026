@@ -47,6 +47,7 @@ func change_camera_position(new_position_name: String) -> void:
 	if current_position.position_name == new_position_name:
 		return
 		
+	HiddenButtonManager.remove_plane_log.emit()
 	_old_position = current_position
 	current_position = camera_positions[new_position_name]
 	move_timer.start()

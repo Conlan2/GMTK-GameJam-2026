@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://die48pt43kpam"]
 
 [ext_resource type="Script" uid="uid://c0c6avwyq0wob" path="res://Src/Core/MainGame/main_game.gd" id="1_vw7tv"]
+[ext_resource type="PackedScene" uid="uid://d3odf7tdx37id" path="res://Src/Ui/MoveArrow/MoveLeft.tscn" id="2_l7vac"]
 [ext_resource type="PackedScene" uid="uid://dbcidraogoip7" path="res://Src/Ui/HiddenButtons/HiddenButtons.tscn" id="2_ludp0"]
+[ext_resource type="PackedScene" uid="uid://bgufycwg4m85f" path="res://Src/Ui/MoveArrow/MoveRight.tscn" id="3_2y7aj"]
 [ext_resource type="PackedScene" uid="uid://da8wvolljcnsc" path="res://Src/Ui/Conversation/ConversationHud.tscn" id="3_d353d"]
 
 [node name="MainGame" type="Node" unique_id=1014377801]
@@ -29,6 +31,27 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 641.0
 offset_bottom = 361.0
+
+[node name="MoveArrows" type="Control" parent="HudLayer/HudRoot" unique_id=238916069]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="MoveLeft" parent="HudLayer/HudRoot/MoveArrows" unique_id=2087158946 instance=ExtResource("2_l7vac")]
+layout_mode = 1
+offset_left = 5.9999995
+offset_top = 317.00003
+offset_right = 6.0
+offset_bottom = 317.00003
+scale = Vector2(0.1, 0.1)
+
+[node name="MoveRight" parent="HudLayer/HudRoot/MoveArrows" unique_id=337081105 instance=ExtResource("3_2y7aj")]
+layout_mode = 1
+offset_left = 599.00006
+offset_top = 316.00003
+offset_right = 599.00006
+offset_bottom = 316.00003
+scale = Vector2(0.1, 0.1)
 
 [node name="HiddenButtons" parent="HudLayer/HudRoot" unique_id=1201638531 instance=ExtResource("2_ludp0")]
 layout_mode = 1

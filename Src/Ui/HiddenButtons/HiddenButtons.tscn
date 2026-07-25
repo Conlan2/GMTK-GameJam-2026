@@ -6,7 +6,8 @@
 [ext_resource type="Script" uid="uid://dtnx40tso11gb" path="res://Src/Ui/HiddenButtons/radar_left_button.gd" id="4_ukbsd"]
 [ext_resource type="Script" uid="uid://crq0o1ck88jwe" path="res://Src/Ui/HiddenButtons/radar_right_button.gd" id="5_3jsii"]
 [ext_resource type="Script" uid="uid://bh6us85na2388" path="res://Src/Ui/HiddenButtons/radar_right_button_2.gd" id="6_ukbsd"]
-[ext_resource type="Script" uid="uid://dgn2iecqwsk26" path="res://Src/Ui/HiddenButtons/intercept_disarm.gd" id="7_3jsii"]
+[ext_resource type="Script" uid="uid://dgn2iecqwsk26" path="res://Src/Ui/HiddenButtons/remove_plane_log.gd" id="7_3jsii"]
+[ext_resource type="Script" uid="uid://dxk13c202tayc" path="res://Src/Ui/HiddenButtons/intercept_disarm.gd" id="8_22xvc"]
 [ext_resource type="Script" uid="uid://3fur6a6d377f" path="res://Src/Ui/HiddenButtons/nuke_disarm.gd" id="8_mh0hb"]
 [ext_resource type="Script" uid="uid://bn7158mgr765p" path="res://Src/Ui/HiddenButtons/move_plane_log.gd" id="9_g38fk"]
 
@@ -92,7 +93,7 @@ offset_top = 220.0
 offset_right = 347.0
 offset_bottom = 251.0
 text = "TEST"
-script = ExtResource("7_3jsii")
+script = ExtResource("8_22xvc")
 
 [node name="NukeDisarm" type="Button" parent="." unique_id=1037998422]
 modulate = Color(1, 1, 1, 0)
@@ -115,13 +116,11 @@ text = "TEST"
 script = ExtResource("9_g38fk")
 
 [node name="Remove_plane_log" type="Button" parent="." unique_id=943775580]
-visible = false
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_left = 170.0
-offset_top = 4.0
-offset_right = 504.0
-offset_bottom = 369.0
+offset_left = 90.0
+offset_right = 604.0
+offset_bottom = 365.0
 text = "TEST"
 script = ExtResource("7_3jsii")
 

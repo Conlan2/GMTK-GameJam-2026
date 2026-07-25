@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d3odf7tdx37id"]
+
+[ext_resource type="Texture2D" uid="uid://bg7i2un5oyj7t" path="res://Assets/MoveArrow/moveArrow.png" id="1_idb0v"]
+[ext_resource type="Script" uid="uid://bghv1xkw4we3r" path="res://Src/Ui/MoveArrow/move_left.gd" id="1_s2i3u"]
+
+[node name="MoveLeft" type="Control" unique_id=2087158946]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s2i3u")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1980274203]
+layout_mode = 0
+offset_right = 400.0
+offset_bottom = 400.0
+texture = ExtResource("1_idb0v")
+flip_h = true
+
+[node name="Label" type="Label" parent="." unique_id=2040785404]
+layout_mode = 0
+offset_left = 250.0
+offset_top = -10.0
+offset_right = 438.0
+offset_bottom = 324.0
+theme_override_colors/font_color = Color(0.06839998, 0.76, 0.20672001, 1)
+theme_override_font_sizes/font_size = 500
+text = "Q"
