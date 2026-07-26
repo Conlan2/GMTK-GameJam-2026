@@ -1,7 +1,39 @@
 [gd_scene format=3 uid="uid://dmb2jeqs40e6w"]
 
+[ext_resource type="Shader" uid="uid://foqf6idimvb0" path="res://addons/decal_compatibility/decal.gdshader" id="1_74evl"]
 [ext_resource type="Texture2D" uid="uid://b83gtl8wbrqyt" path="res://Assets/NukeButton/NuclearSymbolexport.png" id="1_uh7gu"]
+[ext_resource type="Script" uid="uid://feckn7f3pmud" path="res://addons/decal_compatibility/decal_compatibility.gd" id="3_xx23l"]
 
-[node name="InterceptorLaunch" type="Decal" unique_id=208691923]
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3fidg"]
+render_priority = 0
+shader = ExtResource("1_74evl")
+shader_parameter/albedo = ExtResource("1_uh7gu")
+shader_parameter/modulate = Color(0.68565357, 0.48682803, 0.14875329, 1)
+shader_parameter/albedo_mix = 1.0
+shader_parameter/scale_mod = Vector3(0.5, 0.5, 0.5)
+shader_parameter/cube_half_size = Vector3(1, 1, 1)
+shader_parameter/enable_y_fade = false
+shader_parameter/fade_start = 0.3
+shader_parameter/fade_end = 0.7
+shader_parameter/fade_power = 1.0
+shader_parameter/is_flipbook = false
+shader_parameter/is_one_shot = false
+shader_parameter/time_stamp = 0.0
+shader_parameter/x_frames = 5
+shader_parameter/y_frames = 5
+shader_parameter/flipbook_speed = 12.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_afeq2"]
+material = SubResource("ShaderMaterial_3fidg")
+size = Vector3(2, 2, 2)
+
+[node name="InterceptorLaunch" type="MeshInstance3D" unique_id=23314681]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.14508826, 0)
-texture_albedo = ExtResource("1_uh7gu")
+cast_shadow = 0
+gi_lightmap_scale = 0
+mesh = SubResource("BoxMesh_afeq2")
+Skeleton = null
+script = ExtResource("3_xx23l")
+texture = ExtResource("1_uh7gu")
+modulate = Color(0.68565357, 0.48682803, 0.14875329, 1)
+metadata/_custom_type_script = "uid://feckn7f3pmud"
