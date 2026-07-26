@@ -27,12 +27,16 @@ var endings: Dictionary = {
 signal play_ending(ending_title: String)
 signal ending_info(title: String, subtitle: String)
 
+var ending_played: bool = false
 
 func _ready() -> void:
 	
 	play_ending.connect(_play_ending)
 	
 func _play_ending(ending_title: String) -> void:
+	if ending_played:
+		return
+	ending_played = true
 	var ending = endings[ending_title]
 	ending_info.emit(ending["Title"], ending["SubTitle"])
 	

@@ -12,21 +12,21 @@ func _ready() -> void:
 	load_conversations()
 	
 func load_conversations() -> void:
-	load_conversation(190,
+	load_conversation(200,
 	[
 		{"who": "Phone", "text": "This is flight IL121."},
 		{"who": "Phone", "text": "We are an emergency medical transport, and our flight is not logged"},
 		{"who": "Phone", "text": "We are not a hostile flight"}
 	],
 	)
-	load_conversation(550,
+	load_conversation(530,
 	[
 		{"who": "Phone", "text": "EMERGENCY ALERT FROM CIC."},
 		{"who": "Phone", "text": "A Geomagnetic storm has caused false signatures to detected."},
 		{"who": "Phone", "text": "These are NOT a nuclear attack."}
 	],
 	)
-	load_conversation(675,
+	load_conversation(685,
 	[
 		{"who": "Phone", "text": "Warning from CIC."},
 		{"who": "Phone", "text": "Flight IL196 is a hostile aircraft, and was falsly added to the record by spies."},

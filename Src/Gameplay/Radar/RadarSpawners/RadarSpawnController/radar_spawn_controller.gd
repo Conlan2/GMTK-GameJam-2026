@@ -36,6 +36,12 @@ func _spawn(type: RadarObjectTypes.type, location: String, name: String) -> void
 			rad_obj = enemy_hypersonic.instantiate()
 			rad_obj.start_height += (randf()-0.5) * 2 * 2000 + 12000
 			
+		RadarObjectTypes.type.ENEMY_HYPERSONIC_ENDING:
+			rad_obj = enemy_hypersonic.instantiate()
+			rad_obj.movement_speed = 10
+			rad_obj.track_base = false
+			rad_obj.start_height += (randf()-0.5) * 2 * 2000 + 12000
+			
 		RadarObjectTypes.type.GLITCH:
 			rad_obj = glitch.instantiate()
 			rad_obj.start_height += (randf()-0.5) * 2 * -2000

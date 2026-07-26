@@ -99,11 +99,12 @@ mesh = SubResource("BoxMesh_y2smv")
 transform = Transform3D(1, 0, 0, 0, -0.17093179, 0.9852829, 0, -0.9852829, -0.17093179, 0.8843708, 2.6155121, -2.5679193)
 
 [node name="SpotLight3D" parent="Lights" unique_id=1419688245 instance=ExtResource("6_ib1hx")]
-transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 4.179714, 0)
+transform = Transform3D(1, 0, 0, 0, 0.42972332, 0.90296066, 0, -0.90296066, 0.42972332, 0, 3.5814927, 0)
 light_specular = 0.37
 shadow_enabled = true
 spot_angle = 107.38
-base_light_energy = 2.0
+base_light_energy = 4.0
+flicker_strength = 0.4
 
 [node name="SpotLight3D2" parent="Lights" unique_id=1205251488 instance=ExtResource("6_ib1hx")]
 transform = Transform3D(1, 0, 0, 0, 0.99926627, 0.038300544, 0, -0.038300544, 0.99926627, 0.63695043, 1.4103272, -1.5211422)

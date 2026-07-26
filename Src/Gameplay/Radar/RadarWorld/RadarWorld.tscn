@@ -97,7 +97,7 @@ rotation = -0.50569355
 scale = Vector2(0.8547036, 1.4615364)
 
 [node name="FinalAttackSpawner" parent="RadarSpawnController" unique_id=2004940261 instance=ExtResource("3_uthek")]
-position = Vector2(-14, -526)
+position = Vector2(236, -478)
 
 [node name="FinalAttackSpawner2" parent="RadarSpawnController" unique_id=429834847 instance=ExtResource("3_uthek")]
 position = Vector2(-113, -505)
@@ -123,6 +123,14 @@ position = Vector2(323, -554)
 
 [node name="FinalAttackSpawner9" parent="RadarSpawnController" unique_id=1899448528 instance=ExtResource("3_uthek")]
 position = Vector2(435, -458)
+
+[node name="FinalAttackSpawner10" parent="RadarSpawnController" unique_id=1268975918 instance=ExtResource("3_uthek")]
+position = Vector2(114, -512)
+rotation = -0.1400567
+
+[node name="FinalAttackSpawner11" parent="RadarSpawnController" unique_id=534383480 instance=ExtResource("3_uthek")]
+position = Vector2(-88.000046, -519)
+rotation = 0.06748977
 
 [node name="LockDisplay" type="Node2D" parent="." unique_id=1946758950]
 visible = false

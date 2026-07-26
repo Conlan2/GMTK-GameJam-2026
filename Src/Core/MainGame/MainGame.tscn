@@ -80,13 +80,13 @@ layout_mode = 1
 layout_mode = 0
 offset_left = 43.0
 offset_top = 38.0
-offset_right = 181.0
+offset_right = 246.0
 offset_bottom = 77.0
 script = ExtResource("9_03m32")
 
 [node name="Label" type="Label" parent="HudLayer/HudRoot/TutotialBox" unique_id=475799066]
 layout_mode = 2
-text = "ESC to open tutorial"
+text = "Press ESC to open the tutorial"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2

@@ -128,47 +128,90 @@ var spawn_array: Array = [
 	
 	# GLITCH WAVE
 	# Add more
-	{
+	{ #
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
 		"spawn_time": 500,
 		"spawn_point": "GlitchSpawnBL1"
 	},
-		{
+		{ #
+		"name": "???",
+		"type": RadarObjectTypes.type.GLITCH,
+		"spawn_time": 500,
+		"spawn_point": "GlitchSpawnTR"
+	},
+		{ #
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
 		"spawn_time": 500,
 		"spawn_point": "GlitchSpawnBL2"
 	},
-		{
+			{ #
+		"name": "???",
+		"type": RadarObjectTypes.type.GLITCH,
+		"spawn_time": 500,
+		"spawn_point": "GlitchSpawnTL1"
+	},
+		{ #
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
 		"spawn_time": 510,
 		"spawn_point": "GlitchSpawnBR1"
 	},
-		{
+			{ #
+		"name": "???",
+		"type": RadarObjectTypes.type.GLITCH,
+		"spawn_time": 510,
+		"spawn_point": "GlitchSpawnBR2"
+	},
+	
+	{
+		"name": "???",
+		"type": RadarObjectTypes.type.GLITCH,
+		"spawn_time": 510,
+		"spawn_point": "GlitchSpawnTR"
+	},
+		{ #
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
 		"spawn_time": 505,
 		"spawn_point": "GlitchSpawnBR1"
 	},
-		{
+		{ #
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
 		"spawn_time": 507,
 		"spawn_point": "GlitchSpawnTR"
 	},
-		{
+		{ #
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
 		"spawn_time": 512,
 		"spawn_point": "GlitchSpawnTL1"
 	},
-		{
+		{ #
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
 		"spawn_time": 516,
-		"spawn_point": "GlitchSpawnTL1"
+		"spawn_point": "GlitchSpawnTL2"
+	},
+			{ #
+		"name": "???",
+		"type": RadarObjectTypes.type.GLITCH,
+		"spawn_time": 512,
+		"spawn_point": "GlitchSpawnBL1"
+	},
+		{ #
+		"name": "???",
+		"type": RadarObjectTypes.type.GLITCH,
+		"spawn_time": 516,
+		"spawn_point": "GlitchSpawnBL2"
+	},
+			{ #
+		"name": "???",
+		"type": RadarObjectTypes.type.GLITCH,
+		"spawn_time": 516,
+		"spawn_point": "GlitchSpawnBR2"
 	},
 	
 	# End Glitch wave
