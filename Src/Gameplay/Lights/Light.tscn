@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://bnx2x3dj0wbtb" path="res://Src/Gameplay/Lights/light.gd" id="1_t2r12"]
 
-[node name="light" type="SpotLight3D" unique_id=1731974892]
+[node name="light" type="OmniLight3D" unique_id=1205395850]
 light_color = Color(0.611267, 0, 0.16609782, 1)
-spot_range = 14.586
 script = ExtResource("1_t2r12")

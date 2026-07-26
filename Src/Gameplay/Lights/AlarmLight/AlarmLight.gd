@@ -1,4 +1,4 @@
-extends SpotLight3D
+extends OmniLight3D
 
 @export var base_light_energy = 1.0
 @export var timer: Timer

@@ -2,12 +2,37 @@
 
 [ext_resource type="Texture2D" uid="uid://b1wdkru03o7w" path="res://Assets/FlightLogs/Paper.png" id="1_217o0"]
 [ext_resource type="Script" uid="uid://bmjbukctoq2bu" path="res://Src/Gameplay/Interactable/PlaneLog/plane_log.gd" id="1_pbr13"]
+[ext_resource type="Shader" uid="uid://foqf6idimvb0" path="res://addons/decal_compatibility/decal.gdshader" id="2_shkkk"]
+[ext_resource type="Script" uid="uid://feckn7f3pmud" path="res://addons/decal_compatibility/decal_compatibility.gd" id="4_q6c1x"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_m1c7e"]
 size = Vector3(1, 0.1, 1.6)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_217o0"]
 albedo_color = Color(0.4, 0.1854, 0.051999997, 1)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_n7tws"]
+render_priority = 0
+shader = ExtResource("2_shkkk")
+shader_parameter/albedo = ExtResource("1_217o0")
+shader_parameter/modulate = Color(0.4, 0.4, 0.4, 1)
+shader_parameter/albedo_mix = 1.0
+shader_parameter/scale_mod = Vector3(0.97704095, 3.927604, 0.6105687)
+shader_parameter/cube_half_size = Vector3(0.51174927, 0.12730408, 0.8189087)
+shader_parameter/enable_y_fade = false
+shader_parameter/fade_start = 0.3
+shader_parameter/fade_end = 0.7
+shader_parameter/fade_power = 1.0
+shader_parameter/is_flipbook = false
+shader_parameter/is_one_shot = false
+shader_parameter/time_stamp = 0.0
+shader_parameter/x_frames = 5
+shader_parameter/y_frames = 5
+shader_parameter/flipbook_speed = 12.0
+
+[sub_resource type="BoxMesh" id="BoxMesh_qnbdo"]
+material = SubResource("ShaderMaterial_n7tws")
+size = Vector3(1.0234985, 0.25460815, 1.6378174)
 
 [node name="PlaneLog" type="Node3D" unique_id=638335108]
 script = ExtResource("1_pbr13")
@@ -16,11 +41,17 @@ script = ExtResource("1_pbr13")
 mesh = SubResource("BoxMesh_m1c7e")
 surface_material_override/0 = SubResource("StandardMaterial3D_217o0")
 
-[node name="Decal" type="Decal" parent="." unique_id=779493593]
+[node name="Decal" type="MeshInstance3D" parent="." unique_id=1031137689]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.026031077, 0.0717926, 0.0020141602)
+cast_shadow = 0
+gi_lightmap_scale = 0
+mesh = SubResource("BoxMesh_qnbdo")
+Skeleton = null
+script = ExtResource("4_q6c1x")
 size = Vector3(1.0234985, 0.25460815, 1.6378174)
-texture_albedo = ExtResource("1_217o0")
-upper_fade = 0.33287078
+texture = ExtResource("1_217o0")
+modulate = Color(0.4, 0.4, 0.4, 1)
+metadata/_custom_type_script = "uid://feckn7f3pmud"
 
 [node name="MovementTimer" type="Timer" parent="." unique_id=243544085]
 wait_time = 0.5

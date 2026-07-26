@@ -39,6 +39,10 @@ window/size/viewport_height=360
 window/size/mode=2
 window/stretch/mode="canvas_items"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/decal_compatibility/plugin.cfg")
+
 [gui]
 
 theme/custom_font="uid://8akki3iutmmt"

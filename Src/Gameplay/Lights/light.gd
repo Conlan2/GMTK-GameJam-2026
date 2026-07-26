@@ -1,5 +1,5 @@
 
-extends SpotLight3D
+extends OmniLight3D
 
 @export var base_light_energy = 1.0
 @export var flicker_strength: float = 0.2

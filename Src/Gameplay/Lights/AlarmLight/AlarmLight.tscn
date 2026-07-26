@@ -2,10 +2,9 @@
 
 [ext_resource type="Script" uid="uid://4lq38uhdfavf" path="res://Src/Gameplay/Lights/AlarmLight/AlarmLight.gd" id="1_xn55i"]
 
-[node name="AlarmLight" type="SpotLight3D" unique_id=1731974892 node_paths=PackedStringArray("timer")]
+[node name="AlarmLight" type="OmniLight3D" unique_id=1751697400 node_paths=PackedStringArray("timer")]
 light_color = Color(0.611267, 0, 0.16609782, 1)
 light_energy = 3.0
-spot_range = 14.586
 script = ExtResource("1_xn55i")
 timer = NodePath("Timer")
 
