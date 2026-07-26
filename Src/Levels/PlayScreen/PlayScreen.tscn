@@ -33,6 +33,11 @@
 [ext_resource type="PackedScene" uid="uid://i8st0ry6kvvn" path="res://Src/Audio/InterceptorFail/InterceptorFail.tscn" id="30_g33bu"]
 [ext_resource type="PackedScene" uid="uid://bkyg6ii4mu85y" path="res://Src/Audio/InterceptorLaunch/InterceptorLaunch.tscn" id="30_hm452"]
 [ext_resource type="PackedScene" uid="uid://7ah1fmycsmcy" path="res://Src/Audio/NukeAlarm/NukeAlarm.tscn" id="32_uvvq8"]
+[ext_resource type="Texture2D" uid="uid://cn868owo22lib" path="res://Assets/DecalText/ImpactTimer.png" id="34_s87pc"]
+[ext_resource type="Texture2D" uid="uid://83x18txjvoj5" path="res://Assets/DecalText/LaunchTimer.png" id="35_hant8"]
+[ext_resource type="Texture2D" uid="uid://gxrw554qpvhh" path="res://Assets/DecalText/LaunchNote.png" id="36_tc4m0"]
+[ext_resource type="Texture2D" uid="uid://wmg0w0hr7p4u" path="res://Assets/DecalText/Disarm.png" id="37_j5r0v"]
+[ext_resource type="Texture2D" uid="uid://cnfyfrokd5phn" path="res://Assets/DecalText/Lock.png" id="38_e5218"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_y2smv"]
 material = ExtResource("7_kp5a2")
@@ -338,3 +343,38 @@ volume_db = 20.0
 [node name="NukeAlarm" parent="Audio" unique_id=752078051 instance=ExtResource("32_uvvq8")]
 
 [node name="Decal" type="Node" parent="." unique_id=128386182]
+
+[node name="Impacttimer" type="Decal" parent="Decal" unique_id=379378986]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7358129, 0.88214624, -1.9568865)
+size = Vector3(1, 1, 0.3)
+texture_albedo = ExtResource("34_s87pc")
+
+[node name="Launchtimer" type="Decal" parent="Decal" unique_id=745648614]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.70432484, 1.01287, -2.0761652)
+size = Vector3(1, 1, 0.3)
+texture_albedo = ExtResource("35_hant8")
+
+[node name="LaunchNuke" type="Decal" parent="Decal" unique_id=694236910]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.20588636, 0.88214624, -2.1394176)
+size = Vector3(0.5, 1, 0.15)
+texture_albedo = ExtResource("36_tc4m0")
+
+[node name="LaunchNuke2" type="Decal" parent="Decal" unique_id=653516835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.21055385, 0.88214624, -1.7141427)
+size = Vector3(0.5, 1, 0.15)
+texture_albedo = ExtResource("36_tc4m0")
+
+[node name="Disarm" type="Decal" parent="Decal" unique_id=1064160617]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19468865, 0.88214624, -1.9515914)
+size = Vector3(0.5, 1, 0.15)
+texture_albedo = ExtResource("37_j5r0v")
+
+[node name="Disarm2" type="Decal" parent="Decal" unique_id=1305727126]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.19468865, 0.88214624, -2.0163517)
+size = Vector3(0.5, 1, 0.15)
+texture_albedo = ExtResource("37_j5r0v")
+
+[node name="Disarm3" type="Decal" parent="Decal" unique_id=2035200313]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.642329, 0.9421687, -1.8583322)
+size = Vector3(0.5, 0.2, 0.15)
+texture_albedo = ExtResource("38_e5218")

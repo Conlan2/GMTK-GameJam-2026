@@ -60,7 +60,7 @@ var spawn_array: Array = [
 	},
 	
 	{
-		"name": "IL422", 
+		"name": "TR422", 
 		"type": RadarObjectTypes.type.CIVILIAN,
 		"spawn_time": 212,
 		"spawn_point": "CivilianAirlinesEastToSouth"
@@ -127,7 +127,7 @@ var spawn_array: Array = [
 	},
 	
 	# GLITCH WAVE
-
+	# Add more
 	{
 		"name": "???",
 		"type": RadarObjectTypes.type.GLITCH,
