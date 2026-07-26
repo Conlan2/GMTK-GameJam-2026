@@ -35,6 +35,7 @@
 [ext_resource type="PackedScene" uid="uid://7ah1fmycsmcy" path="res://Src/Audio/NukeAlarm/NukeAlarm.tscn" id="32_uvvq8"]
 [ext_resource type="Shader" uid="uid://foqf6idimvb0" path="res://addons/decal_compatibility/decal.gdshader" id="34_js0wt"]
 [ext_resource type="Texture2D" uid="uid://cn868owo22lib" path="res://Assets/DecalText/ImpactTimer.png" id="34_s87pc"]
+[ext_resource type="PackedScene" uid="uid://bmhnq35j3rhl2" path="res://Src/Audio/FinalBoom/FinalBoom.tscn" id="34_sdmbj"]
 [ext_resource type="Texture2D" uid="uid://83x18txjvoj5" path="res://Assets/DecalText/LaunchTimer.png" id="35_hant8"]
 [ext_resource type="Script" uid="uid://feckn7f3pmud" path="res://addons/decal_compatibility/decal_compatibility.gd" id="35_pxp85"]
 [ext_resource type="Texture2D" uid="uid://gxrw554qpvhh" path="res://Assets/DecalText/LaunchNote.png" id="36_tc4m0"]
@@ -505,6 +506,8 @@ volume_db = 20.0
 [node name="InterceptorLaunch" parent="Audio" unique_id=1154243834 instance=ExtResource("30_hm452")]
 
 [node name="NukeAlarm" parent="Audio" unique_id=752078051 instance=ExtResource("32_uvvq8")]
+
+[node name="FinalBoom" parent="Audio" unique_id=1425405481 instance=ExtResource("34_sdmbj")]
 
 [node name="Decal" type="Node" parent="." unique_id=128386182]
 

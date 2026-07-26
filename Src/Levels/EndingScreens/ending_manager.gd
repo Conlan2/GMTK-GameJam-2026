@@ -3,15 +3,15 @@ extends Node
 
 var endings: Dictionary = {
 	"Early_Nuke": {
-		"Title": "You launched a nuclear attack without provocation",
+		"Title": "You launched a nuclear first strike, with minimal provocation.",
 		"SubTitle": "",
 	},
 	"Failed_Defense": {
-		"Title": "Your defense station was destroyed.",
+		"Title": "Your defense station was destroyed",
 		"SubTitle": "",
 	},
 	"Glitch_Nuke": {
-		"Title": "You launched a nuclear counterstrike due a computer glich.",
+		"Title": "You launched a nuclear counterstrike due a computer glich",
 		"SubTitle": "Every error with nuclear weapons can lead to the end of the world. You are the one who finally made the wrong call.",
 	},
 	"Final_Attack_No_Nuke": {

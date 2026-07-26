@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bmhnq35j3rhl2"]
+
+[ext_resource type="AudioStream" uid="uid://bhfrul821ryf2" path="res://Audio/FinalExplosion.mp3" id="1_kwar4"]
+[ext_resource type="Script" uid="uid://i0vn37j4swqr" path="res://Src/Audio/FinalBoom/Finalboom.gd" id="2_wq4ei"]
+
+[node name="FinalBoom" type="AudioStreamPlayer3D" unique_id=1209617505]
+stream = ExtResource("1_kwar4")
+max_db = 6.0
+pitch_scale = 0.6
+script = ExtResource("2_wq4ei")
+
+[node name="Timer" type="Timer" parent="." unique_id=1200642419]
+wait_time = 0.4
+one_shot = true
+
+[connection signal="finished" from="." to="." method="_on_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

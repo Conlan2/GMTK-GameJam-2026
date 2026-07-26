@@ -40,6 +40,7 @@ text = "TEST"
 script = ExtResource("2_sll2n")
 
 [node name="LaunchTimer" type="Timer" parent="InterceptButton" unique_id=1931198861]
+one_shot = true
 
 [node name="Radar Lock Button" type="Button" parent="." unique_id=201950012]
 modulate = Color(1, 1, 1, 0)

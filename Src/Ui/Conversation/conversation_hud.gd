@@ -45,6 +45,7 @@ func _new_line() -> void:
 		if !intro_done:
 			ConversationManager.intro_finished.emit()
 			intro_done = true
+			
 		
 		for child in container.get_children():
 			child.queue_free()
