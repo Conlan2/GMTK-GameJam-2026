@@ -122,15 +122,14 @@ metadata/_edit_lock_ = true
 
 [node name="TutorialBox10" parent="." unique_id=1062632687 instance=ExtResource("1_627uk")]
 layout_mode = 0
-offset_left = 4.0
+offset_left = 10.0
 offset_top = 2.0
-offset_right = 239.0
-offset_bottom = 77.0
+offset_right = 260.0
+offset_bottom = 55.0
 
 [node name="Label" type="Label" parent="TutorialBox10" unique_id=1610330318]
 layout_mode = 2
-text = "Use the mouse button to interact with all valid switches and buttons. Use Q and E to move the camera. 
-Press ESC to bring back this tutorial"
+text = "Press ESC to bring back this tutorial. There is no pause, think and act quickly when threats arrive."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -138,14 +137,14 @@ metadata/_edit_lock_ = true
 
 [node name="TutorialBox11" parent="." unique_id=1357053186 instance=ExtResource("1_627uk")]
 layout_mode = 0
-offset_left = 4.0
-offset_top = 77.0
-offset_right = 239.0
-offset_bottom = 123.0
+offset_left = 10.0
+offset_top = 65.0
+offset_right = 265.0
+offset_bottom = 119.0
 
 [node name="Label" type="Label" parent="TutorialBox11" unique_id=1570540314]
 layout_mode = 2
-text = "There is no pause, think and act quickly when threats arrive."
+text = "Use the mouse button to interact with all valid switches and buttons. Use Q and E to move the camera. "
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
