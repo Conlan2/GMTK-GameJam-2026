@@ -16,7 +16,9 @@ func _ending_process(_junk) -> void:
 
 func _on_timer_timeout() -> void:
 	stop()
+	queue_free()
 
 
 func _on_finished() -> void:
 	stop()
+	queue_free()

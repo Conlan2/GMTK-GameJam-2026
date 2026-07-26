@@ -7,5 +7,5 @@ extends RadarSpawner
 func _on_timer_timeout() -> void:
 	PlaneSpawner.spawn.emit(RadarObjectTypes.type.ENEMY_HYPERSONIC_ENDING,
 	name,
-	"ENEMY HYPERSONIC")
+	"NUCLEAR MISSILE")
 	timer.start(5)

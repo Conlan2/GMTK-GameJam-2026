@@ -4,11 +4,11 @@ extends Node
 var endings: Dictionary = {
 	"Early_Nuke": {
 		"Title": "You launched a nuclear first strike, with minimal provocation.",
-		"SubTitle": "",
+		"SubTitle": "2.702 million people. 8 billion to follow. You chose this.",
 	},
 	"Failed_Defense": {
 		"Title": "Your defense station was destroyed",
-		"SubTitle": "",
+		"SubTitle": "This is a mercy for what is to come.",
 	},
 	"Glitch_Nuke": {
 		"Title": "You launched a nuclear counterstrike due a computer glich",
@@ -16,7 +16,7 @@ var endings: Dictionary = {
 	},
 	"Final_Attack_No_Nuke": {
 		"Title": "You did not launch a nuclear counterstrike",
-		"SubTitle": "Now only half, instead of all, of the world is dead.",
+		"SubTitle": "Now only half instead of all of the world is dead.",
 	},
 	"Final_Attack_Nuke": {
 		"Title": "In the name of your nation you launched a nuclear strike.",
