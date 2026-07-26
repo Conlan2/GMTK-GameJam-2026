@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://bnvywuwbru1xr" path="res://Assets/Ui/NinePatchRect.png" id="1_sv4d8"]
 
 [node name="TutotialBox" type="PanelContainer" unique_id=1229348556]
-modulate = Color(1, 1, 1, 0.49411765)
+modulate = Color(1, 1, 1, 0.8235294)
 offset_right = 328.0
 offset_bottom = 180.0
 
