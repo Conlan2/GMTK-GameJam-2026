@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://cmuxww1q4ibml" path="res://Src/Levels/MainMenu/main_menu.gd" id="1_anbrv"]
 [ext_resource type="Script" uid="uid://uby5e2byce0x" path="res://Src/Levels/MainMenu/flicker.gd" id="2_31hwq"]
 [ext_resource type="Script" uid="uid://cy5jutniwjf4" path="res://Src/Levels/MainMenu/playbutton.gd" id="4_ocutr"]
+[ext_resource type="Script" uid="uid://bvsjkjsmkguuj" path="res://Src/Levels/MainMenu/exit_button.gd" id="5_gp56j"]
 
 [sub_resource type="Gradient" id="Gradient_31hwq"]
 offsets = PackedFloat32Array(0.96803653, 1)
@@ -71,6 +72,7 @@ offset_top = 244.0
 offset_right = 341.0
 offset_bottom = 263.0
 text = "Exit"
+script = ExtResource("5_gp56j")
 
 [node name="Label" type="Label" parent="." unique_id=1014852098]
 layout_mode = 0
@@ -85,3 +87,4 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [connection signal="button_down" from="Playbutton" to="Playbutton" method="_on_button_down"]
+[connection signal="button_down" from="ExitButton" to="ExitButton" method="_on_button_down"]

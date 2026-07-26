@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dbcidraogoip7" path="res://Src/Ui/HiddenButtons/HiddenButtons.tscn" id="2_ludp0"]
 [ext_resource type="PackedScene" uid="uid://bgufycwg4m85f" path="res://Src/Ui/MoveArrow/MoveRight.tscn" id="3_2y7aj"]
 [ext_resource type="PackedScene" uid="uid://da8wvolljcnsc" path="res://Src/Ui/Conversation/ConversationHud.tscn" id="3_d353d"]
+[ext_resource type="PackedScene" uid="uid://cjlqvlcpupum4" path="res://Src/Ui/Tutorial/TutorialScreen.tscn" id="7_k5gg8"]
 [ext_resource type="PackedScene" uid="uid://x7vmy200dthk" path="res://Src/Levels/MainMenu/MainMenu.tscn" id="7_nen8t"]
 [ext_resource type="PackedScene" uid="uid://cqfun4xvd6bff" path="res://Src/Ui/ImpactTransition/EndingSlide.tscn" id="8_t174b"]
 
@@ -68,6 +69,9 @@ offset_top = -2.0
 offset_right = -1.0
 offset_bottom = -5.0
 mouse_filter = 2
+
+[node name="TutorialScreen" parent="HudLayer/HudRoot" unique_id=1958239659 instance=ExtResource("7_k5gg8")]
+layout_mode = 1
 
 [node name="MainMenu" parent="HudLayer/HudRoot" unique_id=797403698 instance=ExtResource("7_nen8t")]
 layout_mode = 0

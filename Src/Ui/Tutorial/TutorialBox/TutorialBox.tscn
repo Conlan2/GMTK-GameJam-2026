@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://eg7n5ou7g3js"]
+
+[ext_resource type="Texture2D" uid="uid://bnvywuwbru1xr" path="res://Assets/Ui/NinePatchRect.png" id="1_sv4d8"]
+
+[node name="TutotialBox" type="PanelContainer" unique_id=1229348556]
+modulate = Color(1, 1, 1, 0.49411765)
+offset_right = 328.0
+offset_bottom = 180.0
+
+[node name="TutorialBox" type="NinePatchRect" parent="." unique_id=110567215]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+texture = ExtResource("1_sv4d8")
+patch_margin_left = 15
+patch_margin_top = 15
+patch_margin_right = 15
+patch_margin_bottom = 15
