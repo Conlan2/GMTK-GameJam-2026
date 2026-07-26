@@ -11,6 +11,27 @@ offsets = PackedFloat32Array(0.96803653, 1)
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_anbrv"]
 gradient = SubResource("Gradient_31hwq")
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gp56j"]
+bg_color = Color(0.30269593, 0.68145925, 0.19769228, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ocutr"]
+bg_color = Color(0.052299544, 0.19337177, 0.044486955, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gsg1s"]
+bg_color = Color(0.050980393, 0.19215687, 0.043137256, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
 [node name="MainMenu" type="Control" unique_id=797403698]
 layout_mode = 3
 anchors_preset = 0
@@ -21,6 +42,7 @@ layout_mode = 0
 offset_right = 663.0
 offset_bottom = 361.0
 texture = SubResource("GradientTexture1D_anbrv")
+metadata/_edit_lock_ = true
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=326018533]
 layout_mode = 0
@@ -30,16 +52,24 @@ offset_right = 866.0
 offset_bottom = 686.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_3p0wo")
+metadata/_edit_lock_ = true
 
-[node name="Playbutton" type="Button" parent="." unique_id=1789129870 node_paths=PackedStringArray("main_menu")]
+[node name="ExitPanel2" type="Panel" parent="." unique_id=766693439]
 layout_mode = 0
-offset_left = 309.0
-offset_top = 206.0
-offset_right = 341.0
-offset_bottom = 225.0
-text = "Play"
-script = ExtResource("4_ocutr")
-main_menu = NodePath("..")
+offset_left = 307.0
+offset_top = 205.0
+offset_right = 343.0
+offset_bottom = 226.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gp56j")
+
+[node name="ExitPanel" type="Panel" parent="." unique_id=2008333876]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 243.0
+offset_right = 343.0
+offset_bottom = 264.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_gp56j")
+metadata/_edit_lock_ = true
 
 [node name="ExitButton" type="Button" parent="." unique_id=326771900]
 layout_mode = 0
@@ -47,8 +77,11 @@ offset_left = 309.0
 offset_top = 244.0
 offset_right = 341.0
 offset_bottom = 263.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_styles/normal = SubResource("StyleBoxFlat_ocutr")
 text = "Exit"
 script = ExtResource("5_gp56j")
+metadata/_edit_lock_ = true
 
 [node name="Label" type="Label" parent="." unique_id=1014852098]
 layout_mode = 0
@@ -62,5 +95,16 @@ text = "30 Seconds to Impact"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[connection signal="button_down" from="Playbutton" to="Playbutton" method="_on_button_down"]
+[node name="Playbutton" type="Button" parent="." unique_id=1789129870 node_paths=PackedStringArray("main_menu")]
+layout_mode = 0
+offset_left = 309.0
+offset_top = 206.0
+offset_right = 341.0
+offset_bottom = 225.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_gsg1s")
+text = "Play"
+script = ExtResource("4_ocutr")
+main_menu = NodePath("..")
+
 [connection signal="button_down" from="ExitButton" to="ExitButton" method="_on_button_down"]
+[connection signal="button_down" from="Playbutton" to="Playbutton" method="_on_button_down"]
