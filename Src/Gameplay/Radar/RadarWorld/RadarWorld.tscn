@@ -98,39 +98,48 @@ scale = Vector2(0.8547036, 1.4615364)
 
 [node name="FinalAttackSpawner" parent="RadarSpawnController" unique_id=2004940261 instance=ExtResource("3_uthek")]
 position = Vector2(236, -478)
+rotation = -2.918068
 
 [node name="FinalAttackSpawner2" parent="RadarSpawnController" unique_id=429834847 instance=ExtResource("3_uthek")]
 position = Vector2(-113, -505)
+rotation = -3.1181207
 
 [node name="FinalAttackSpawner3" parent="RadarSpawnController" unique_id=1228689507 instance=ExtResource("3_uthek")]
 position = Vector2(105, -521)
+rotation = -3.1327026
 scale = Vector2(0.17160091, 263.25967)
 
 [node name="FinalAttackSpawner4" parent="RadarSpawnController" unique_id=280583458 instance=ExtResource("3_uthek")]
 position = Vector2(178, -503)
+rotation = -3.1327026
 
 [node name="FinalAttackSpawner5" parent="RadarSpawnController" unique_id=1847099820 instance=ExtResource("3_uthek")]
 position = Vector2(-206, -485)
+rotation = -3.1181207
 
 [node name="FinalAttackSpawner6" parent="RadarSpawnController" unique_id=289275620 instance=ExtResource("3_uthek")]
-position = Vector2(-323, -438)
+position = Vector2(-1.0000305, -520)
+rotation = -3.1732023
 
 [node name="FinalAttackSpawner7" parent="RadarSpawnController" unique_id=697462122 instance=ExtResource("3_uthek")]
 position = Vector2(-297, -583)
+rotation = -3.1181207
 
 [node name="FinalAttackSpawner8" parent="RadarSpawnController" unique_id=1387964639 instance=ExtResource("3_uthek")]
 position = Vector2(323, -554)
+rotation = -2.918068
 
 [node name="FinalAttackSpawner9" parent="RadarSpawnController" unique_id=1899448528 instance=ExtResource("3_uthek")]
 position = Vector2(435, -458)
+rotation = -2.918068
 
 [node name="FinalAttackSpawner10" parent="RadarSpawnController" unique_id=1268975918 instance=ExtResource("3_uthek")]
 position = Vector2(114, -512)
-rotation = -0.1400567
+rotation = -3.0581245
 
 [node name="FinalAttackSpawner11" parent="RadarSpawnController" unique_id=534383480 instance=ExtResource("3_uthek")]
 position = Vector2(-88.000046, -519)
-rotation = 0.06748977
+rotation = -3.0506308
 
 [node name="LockDisplay" type="Node2D" parent="." unique_id=1946758950]
 visible = false

@@ -39,6 +39,8 @@ offset_bottom = 303.0
 text = "TEST"
 script = ExtResource("2_sll2n")
 
+[node name="LaunchTimer" type="Timer" parent="InterceptButton" unique_id=1931198861]
+
 [node name="Radar Lock Button" type="Button" parent="." unique_id=201950012]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 0

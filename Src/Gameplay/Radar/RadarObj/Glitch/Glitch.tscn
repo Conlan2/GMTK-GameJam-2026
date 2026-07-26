@@ -11,7 +11,7 @@ script = ExtResource("1_ho71e")
 movement_speed = 20.0
 object_name = "???"
 start_height = -392.0
-plane_type = 4
+plane_type = 5
 packed_display_object = ExtResource("2_g8ucu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1843476934]

@@ -14,7 +14,7 @@ script = ExtResource("1_oovuj")
 movement_speed = 20.0
 object_name = "Interceptor"
 start_height = 1000.0
-plane_type = 5
+plane_type = 6
 packed_display_object = ExtResource("2_vhmxx")
 metadata/_custom_type_script = "uid://v6ywksg1wsyy"
 
