@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://qm6x2fu4dr13" path="res://Assets/MainMenuBackground.png" id="1_3p0wo"]
 [ext_resource type="Script" uid="uid://cmuxww1q4ibml" path="res://Src/Levels/MainMenu/main_menu.gd" id="1_anbrv"]
-[ext_resource type="Script" uid="uid://uby5e2byce0x" path="res://Src/Levels/MainMenu/flicker.gd" id="2_31hwq"]
 [ext_resource type="Script" uid="uid://cy5jutniwjf4" path="res://Src/Levels/MainMenu/playbutton.gd" id="4_ocutr"]
 [ext_resource type="Script" uid="uid://bvsjkjsmkguuj" path="res://Src/Levels/MainMenu/exit_button.gd" id="5_gp56j"]
 
@@ -31,29 +30,6 @@ offset_right = 866.0
 offset_bottom = 686.0
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_3p0wo")
-
-[node name="SubViewportContainer" type="SubViewportContainer" parent="." unique_id=861612445]
-visible = false
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="SubViewport" type="SubViewport" parent="SubViewportContainer" unique_id=1975776399]
-handle_input_locally = false
-scaling_3d_mode = 4
-canvas_item_default_texture_filter = 0
-size = Vector2i(1920, 1080)
-size_2d_override = Vector2i(1920, 1080)
-render_target_update_mode = 0
-
-[node name="Node2D" type="Node2D" parent="SubViewportContainer/SubViewport" unique_id=1884968530]
-
-[node name="PointLight2D" type="PointLight2D" parent="SubViewportContainer/SubViewport/Node2D" unique_id=1690537364]
-position = Vector2(322, 153)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_3p0wo")
-script = ExtResource("2_31hwq")
-flicker_interval = 8.0
 
 [node name="Playbutton" type="Button" parent="." unique_id=1789129870 node_paths=PackedStringArray("main_menu")]
 layout_mode = 0

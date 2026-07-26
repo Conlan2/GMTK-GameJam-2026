@@ -1,12 +1,14 @@
 [gd_scene format=3 uid="uid://c3fbsm3cqbmmf"]
 
 [ext_resource type="Script" uid="uid://c0be33g76itkh" path="res://Src/Gameplay/Radar/RadarSpawners/FinalAttackSpawner/FinalAttackspawner.gd" id="1_2y1ig"]
+[ext_resource type="Script" uid="uid://mymgab67b4u1" path="res://Src/Gameplay/Radar/RadarSpawners/FinalAttackSpawner/timer.gd" id="2_kls5u"]
 
 [node name="FinalAttackSpawner" type="Marker2D" unique_id=2004940261]
 script = ExtResource("1_2y1ig")
 
 [node name="Timer" type="Timer" parent="." unique_id=72511781]
+wait_time = 800.0
 one_shot = true
-autostart = true
+script = ExtResource("2_kls5u")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

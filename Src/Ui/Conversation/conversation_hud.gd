@@ -7,6 +7,7 @@ extends Control
 var conversation: Conversation = null
 var active_conversation: bool = false
 
+var intro_done: bool = false
 
 func _ready() -> void:
 	PhoneManager.conversation_listened.connect(_new_conversation)
@@ -41,7 +42,9 @@ func _new_line() -> void:
 		visible = false
 		conversation = null
 		PhoneManager.conversation_finished.emit()
-		ConversationManager.intro_finished.emit()
+		if !intro_done:
+			ConversationManager.intro_finished.emit()
+			intro_done = true
 		
 		for child in container.get_children():
 			child.queue_free()
